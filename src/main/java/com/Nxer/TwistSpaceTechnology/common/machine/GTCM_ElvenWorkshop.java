@@ -1,6 +1,5 @@
 package com.Nxer.TwistSpaceTechnology.common.machine;
 
-import static com.Nxer.TwistSpaceTechnology.util.TextHandler.texter;
 import static com.gtnewhorizon.structurelib.structure.StructureUtility.ofBlock;
 import static com.gtnewhorizon.structurelib.structure.StructureUtility.ofBlockAnyMeta;
 import static com.gtnewhorizon.structurelib.structure.StructureUtility.transpose;
@@ -175,21 +174,20 @@ public class GTCM_ElvenWorkshop extends GTCM_MultiMachineBase<GTCM_ElvenWorkshop
     @Override
     protected GT_Multiblock_Tooltip_Builder createTooltip() {
         final GT_Multiblock_Tooltip_Builder tt = new GT_Multiblock_Tooltip_Builder();
-        tt.addMachineType(TextLocalization.Tooltip_ElvenWorkshop_MachineType)
+        tt.addMachineType(TextLocalization.Tooltip_ElvenWorkshop_MachineType.toString())
             .addSeparator()
-            .addInfo(
-                texter(
-                    "For its unique structure, you may need to use Blueprint to build the machine.",
-                    "ElvenWorkshopStructureNote"))
-            .addInfo(TextLocalization.StructureTooComplex)
-            .addInfo(TextLocalization.BLUE_PRINT_INFO)
+            // #tr ElvenWorkshopStructureNote For its unique structure, you may need to use Blueprint to build the
+            // machine.
+            .addInfo(StatCollector.translateToLocal("ElvenWorkshopStructureNote"))
+            .addInfo(TextLocalization.StructureTooComplex.toString())
+            .addInfo(TextLocalization.BLUE_PRINT_INFO.toString())
             .beginStructureBlock(5, 3, 5, false)
-            .addInputHatch(TextLocalization.textUseBlueprint, 1)
-            .addInputBus(TextLocalization.textUseBlueprint, 1)
-            .addOutputBus(TextLocalization.textUseBlueprint, 1)
-            .addMaintenanceHatch(TextLocalization.textUseBlueprint, 1)
-            .addEnergyHatch(TextLocalization.textUseBlueprint, 1)
-            .toolTipFinisher(TextLocalization.ModName);
+            .addInputHatch(TextLocalization.textUseBlueprint.toString(), 1)
+            .addInputBus(TextLocalization.textUseBlueprint.toString(), 1)
+            .addOutputBus(TextLocalization.textUseBlueprint.toString(), 1)
+            .addMaintenanceHatch(TextLocalization.textUseBlueprint.toString(), 1)
+            .addEnergyHatch(TextLocalization.textUseBlueprint.toString(), 1)
+            .toolTipFinisher(TextLocalization.ModName.toString());
         return tt;
     }
 

@@ -167,20 +167,20 @@ public class Test_MultiStructMachine extends GT_TileEntity_MultiStructureMachine
     @Override
     protected GT_Multiblock_Tooltip_Builder createTooltip() {
         final GT_Multiblock_Tooltip_Builder tt = new GT_Multiblock_Tooltip_Builder();
-        tt.addMachineType(TextLocalization.Tooltip_ICD_MachineType)
-            .addInfo(StructureTooComplex)
-            .addInfo(BLUE_PRINT_INFO)
+        tt.addMachineType(TextLocalization.Tooltip_ICD_MachineType.toString())
+            .addInfo(StructureTooComplex.toString())
+            .addInfo(BLUE_PRINT_INFO.toString())
             .addSeparator()
             .beginStructureBlock(11, 13, 11, false)
-            .addController(textFrontBottom)
-            .addCasingInfoRange(textCasing, 8, 26, false)
-            .addInputHatch(textAnyCasing, 1)
-            .addOutputHatch(textAnyCasing, 1)
-            .addInputBus(textAnyCasing, 2)
-            .addOutputBus(textAnyCasing, 2)
-            .addMaintenanceHatch(textAnyCasing, 2)
-            .addEnergyHatch(textAnyCasing, 3)
-            .toolTipFinisher(ModName);
+            .addController(textFrontBottom.toString())
+            .addCasingInfoRange(textCasing.toString(), 8, 26, false)
+            .addInputHatch(textAnyCasing.toString(), 1)
+            .addOutputHatch(textAnyCasing.toString(), 1)
+            .addInputBus(textAnyCasing.toString(), 2)
+            .addOutputBus(textAnyCasing.toString(), 2)
+            .addMaintenanceHatch(textAnyCasing.toString(), 2)
+            .addEnergyHatch(textAnyCasing.toString(), 3)
+            .toolTipFinisher(ModName.toString());
         return tt;
     }
 

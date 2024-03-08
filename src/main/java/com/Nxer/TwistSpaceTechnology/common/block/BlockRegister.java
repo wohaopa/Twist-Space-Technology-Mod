@@ -50,112 +50,135 @@ public class BlockRegister {
 
     public static void registryBlockContainers() {
 
-        GTCMItemList.TestMetaBlock01_0.set(ItemBlockBase01.initMetaBlock01("TestMetaBlock01_0", 0));
-        GTCMItemList.PhotonControllerUpgradeLV
-            .set(PhotonControllerUpgradeCasing.photonControllerUpgradeCasingMeta("Photonic Intensifier LV Tier", 0));
-        GTCMItemList.PhotonControllerUpgradeMV
-            .set(PhotonControllerUpgradeCasing.photonControllerUpgradeCasingMeta("Photonic Intensifier MV Tier", 1));
-        GTCMItemList.PhotonControllerUpgradeHV
-            .set(PhotonControllerUpgradeCasing.photonControllerUpgradeCasingMeta("Photonic Intensifier HV Tier", 2));
-        GTCMItemList.PhotonControllerUpgradeEV
-            .set(PhotonControllerUpgradeCasing.photonControllerUpgradeCasingMeta("Photonic Intensifier EV Tier", 3));
-        GTCMItemList.PhotonControllerUpgradeIV
-            .set(PhotonControllerUpgradeCasing.photonControllerUpgradeCasingMeta("Photonic Intensifier IV Tier", 4));
-        GTCMItemList.PhotonControllerUpgradeLuV
-            .set(PhotonControllerUpgradeCasing.photonControllerUpgradeCasingMeta("Photonic Intensifier LuV Tier", 5));
-        GTCMItemList.PhotonControllerUpgradeZPM
-            .set(PhotonControllerUpgradeCasing.photonControllerUpgradeCasingMeta("Photonic Intensifier ZPM Tier", 6));
-        GTCMItemList.PhotonControllerUpgradeUV
-            .set(PhotonControllerUpgradeCasing.photonControllerUpgradeCasingMeta("Photonic Intensifier UV Tier", 7));
-        GTCMItemList.PhotonControllerUpgradeUHV
-            .set(PhotonControllerUpgradeCasing.photonControllerUpgradeCasingMeta("Photonic Intensifier UHV Tier", 8));
-        GTCMItemList.PhotonControllerUpgradeUEV
-            .set(PhotonControllerUpgradeCasing.photonControllerUpgradeCasingMeta("Photonic Intensifier UEV Tier", 9));
+        // #tr MetaBlock01.0.name TestMetaBlock01_0
+        GTCMItemList.TestMetaBlock01_0.set(ItemBlockBase01.initMetaBlock01(0));
+        // #tr PhotonControllerUpgrades.0.name Photonic Intensifier LV Tier
+        GTCMItemList.PhotonControllerUpgradeLV.set(PhotonControllerUpgradeCasing.photonControllerUpgradeCasingMeta(0));
+        // #tr PhotonControllerUpgrades.1.name Photonic Intensifier MV Tier
+        GTCMItemList.PhotonControllerUpgradeMV.set(PhotonControllerUpgradeCasing.photonControllerUpgradeCasingMeta(1));
+        // #tr PhotonControllerUpgrades.2.name Photonic Intensifier HV Tier
+        GTCMItemList.PhotonControllerUpgradeHV.set(PhotonControllerUpgradeCasing.photonControllerUpgradeCasingMeta(2));
+        // #tr PhotonControllerUpgrades.3.name Photonic Intensifier EV Tier
+        GTCMItemList.PhotonControllerUpgradeEV.set(PhotonControllerUpgradeCasing.photonControllerUpgradeCasingMeta(3));
+        // #tr PhotonControllerUpgrades.4.name Photonic Intensifier IV Tier
+        GTCMItemList.PhotonControllerUpgradeIV.set(PhotonControllerUpgradeCasing.photonControllerUpgradeCasingMeta(4));
+        // #tr PhotonControllerUpgrades.5.name Photonic Intensifier LuV Tier
+        GTCMItemList.PhotonControllerUpgradeLuV.set(PhotonControllerUpgradeCasing.photonControllerUpgradeCasingMeta(5));
+        // #tr PhotonControllerUpgrades.6.name Photonic Intensifier ZPM Tier
+        GTCMItemList.PhotonControllerUpgradeZPM.set(PhotonControllerUpgradeCasing.photonControllerUpgradeCasingMeta(6));
+        // #tr PhotonControllerUpgrades.7.name Photonic Intensifier UV Tier
+        GTCMItemList.PhotonControllerUpgradeUV.set(PhotonControllerUpgradeCasing.photonControllerUpgradeCasingMeta(7));
+        // #tr PhotonControllerUpgrades.8.name Photonic Intensifier UHV Tier
+        GTCMItemList.PhotonControllerUpgradeUHV.set(PhotonControllerUpgradeCasing.photonControllerUpgradeCasingMeta(8));
+        // #tr PhotonControllerUpgrades.9.name Photonic Intensifier UEV Tier
+        GTCMItemList.PhotonControllerUpgradeUEV.set(PhotonControllerUpgradeCasing.photonControllerUpgradeCasingMeta(9));
+        // #tr PhotonControllerUpgrades.10.name Photonic Intensifier UIV Tier
         GTCMItemList.PhotonControllerUpgradeUIV
-            .set(PhotonControllerUpgradeCasing.photonControllerUpgradeCasingMeta("Photonic Intensifier UIV Tier", 10));
+            .set(PhotonControllerUpgradeCasing.photonControllerUpgradeCasingMeta(10));
+        // #tr PhotonControllerUpgrades.11.name Photonic Intensifier UMV Tier
         GTCMItemList.PhotonControllerUpgradeUMV
-            .set(PhotonControllerUpgradeCasing.photonControllerUpgradeCasingMeta("Photonic Intensifier UMV Tier", 11));
+            .set(PhotonControllerUpgradeCasing.photonControllerUpgradeCasingMeta(11));
+        // #tr PhotonControllerUpgrades.12.name Photonic Intensifier UXV Tier
         GTCMItemList.PhotonControllerUpgradeUXV
-            .set(PhotonControllerUpgradeCasing.photonControllerUpgradeCasingMeta("Photonic Intensifier UXV Tier", 12));
+            .set(PhotonControllerUpgradeCasing.photonControllerUpgradeCasingMeta(12));
+        // #tr PhotonControllerUpgrades.13.name Photonic Intensifier MAX Tier
         GTCMItemList.PhotonControllerUpgradeMAX
-            .set(PhotonControllerUpgradeCasing.photonControllerUpgradeCasingMeta("Photonic Intensifier MAX Tier", 13));
+            .set(PhotonControllerUpgradeCasing.photonControllerUpgradeCasingMeta(13));
         // ---------------------------------------------------------------------------------------------------------------------------//
         if (Config.activateMegaSpaceStation) {
-            GTCMItemList.spaceStationStructureBlockLV.set(
-                SpaceStationStructureCasing.SpaceStationStructureCasingMeta("spaceStationStructureBlock LV Tier", 0));
-            GTCMItemList.spaceStationStructureBlockMV.set(
-                SpaceStationStructureCasing.SpaceStationStructureCasingMeta("spaceStationStructureBlock MV Tier", 1));
-            GTCMItemList.spaceStationStructureBlockHV.set(
-                SpaceStationStructureCasing.SpaceStationStructureCasingMeta("spaceStationStructureBlock HV Tier", 2));
-            GTCMItemList.spaceStationStructureBlockEV.set(
-                SpaceStationStructureCasing.SpaceStationStructureCasingMeta("spaceStationStructureBlock EV Tier", 3));
-            GTCMItemList.spaceStationStructureBlockIV.set(
-                SpaceStationStructureCasing.SpaceStationStructureCasingMeta("spaceStationStructureBlock IV Tier", 4));
-            GTCMItemList.spaceStationStructureBlockLuV.set(
-                SpaceStationStructureCasing.SpaceStationStructureCasingMeta("spaceStationStructureBlock LuV Tier", 5));
-            GTCMItemList.spaceStationStructureBlockZPM.set(
-                SpaceStationStructureCasing.SpaceStationStructureCasingMeta("spaceStationStructureBlock ZPM Tier", 6));
-            GTCMItemList.spaceStationStructureBlockUV.set(
-                SpaceStationStructureCasing.SpaceStationStructureCasingMeta("spaceStationStructureBlock UV Tier", 7));
-            GTCMItemList.spaceStationStructureBlockUHV.set(
-                SpaceStationStructureCasing.SpaceStationStructureCasingMeta("spaceStationStructureBlock UHV Tier", 8));
-            GTCMItemList.spaceStationStructureBlockUEV.set(
-                SpaceStationStructureCasing.SpaceStationStructureCasingMeta("spaceStationStructureBlock UEV Tier", 9));
-            GTCMItemList.spaceStationStructureBlockUIV.set(
-                SpaceStationStructureCasing.SpaceStationStructureCasingMeta("spaceStationStructureBlock UIV Tier", 10));
-            GTCMItemList.spaceStationStructureBlockUMV.set(
-                SpaceStationStructureCasing.SpaceStationStructureCasingMeta("spaceStationStructureBlock UMV Tier", 11));
-            GTCMItemList.spaceStationStructureBlockUXV.set(
-                SpaceStationStructureCasing.SpaceStationStructureCasingMeta("spaceStationStructureBlock UXV Tier", 12));
-            GTCMItemList.spaceStationStructureBlockMAX.set(
-                SpaceStationStructureCasing.SpaceStationStructureCasingMeta("spaceStationStructureBlock MAX Tier", 13));
+            // #tr SpaceStationStructureBlock.0.name spaceStationStructureBlock LV Tier
+            GTCMItemList.spaceStationStructureBlockLV
+                .set(SpaceStationStructureCasing.SpaceStationStructureCasingMeta(0));
+            // #tr SpaceStationStructureBlock.1.name spaceStationStructureBlock MV Tier
+            GTCMItemList.spaceStationStructureBlockMV
+                .set(SpaceStationStructureCasing.SpaceStationStructureCasingMeta(1));
+            // #tr SpaceStationStructureBlock.2.name spaceStationStructureBlock HV Tier
+            GTCMItemList.spaceStationStructureBlockHV
+                .set(SpaceStationStructureCasing.SpaceStationStructureCasingMeta(2));
+            // #tr SpaceStationStructureBlock.3.name spaceStationStructureBlock EV Tier
+            GTCMItemList.spaceStationStructureBlockEV
+                .set(SpaceStationStructureCasing.SpaceStationStructureCasingMeta(3));
+            // #tr SpaceStationStructureBlock.4.name spaceStationStructureBlock IV Tier
+            GTCMItemList.spaceStationStructureBlockIV
+                .set(SpaceStationStructureCasing.SpaceStationStructureCasingMeta(4));
+            // #tr SpaceStationStructureBlock.5.name spaceStationStructureBlock LuV Tier
+            GTCMItemList.spaceStationStructureBlockLuV
+                .set(SpaceStationStructureCasing.SpaceStationStructureCasingMeta(5));
+            // #tr SpaceStationStructureBlock.6.name spaceStationStructureBlock ZPM Tier
+            GTCMItemList.spaceStationStructureBlockZPM
+                .set(SpaceStationStructureCasing.SpaceStationStructureCasingMeta(6));
+            // #tr SpaceStationStructureBlock.7.name spaceStationStructureBlock UV Tier
+            GTCMItemList.spaceStationStructureBlockUV
+                .set(SpaceStationStructureCasing.SpaceStationStructureCasingMeta(7));
+            // #tr SpaceStationStructureBlock.8.name spaceStationStructureBlock UHV Tier
+            GTCMItemList.spaceStationStructureBlockUHV
+                .set(SpaceStationStructureCasing.SpaceStationStructureCasingMeta(8));
+            // #tr SpaceStationStructureBlock.9.name spaceStationStructureBlock UEV Tier
+            GTCMItemList.spaceStationStructureBlockUEV
+                .set(SpaceStationStructureCasing.SpaceStationStructureCasingMeta(9));
+            // #tr SpaceStationStructureBlock.10.name spaceStationStructureBlock UIV Tier
+            GTCMItemList.spaceStationStructureBlockUIV
+                .set(SpaceStationStructureCasing.SpaceStationStructureCasingMeta(10));
+            // #tr SpaceStationStructureBlock.11.name spaceStationStructureBlock UMV Tier
+            GTCMItemList.spaceStationStructureBlockUMV
+                .set(SpaceStationStructureCasing.SpaceStationStructureCasingMeta(11));
+            // #tr SpaceStationStructureBlock.12.name spaceStationStructureBlock UXV Tier
+            GTCMItemList.spaceStationStructureBlockUXV
+                .set(SpaceStationStructureCasing.SpaceStationStructureCasingMeta(12));
+            // #tr SpaceStationStructureBlock.13.name spaceStationStructureBlock MAX Tier
+            GTCMItemList.spaceStationStructureBlockMAX
+                .set(SpaceStationStructureCasing.SpaceStationStructureCasingMeta(13));
             // ----------------------------------------
-            GTCMItemList.SpaceStationAntiGravityBlockLV.set(
-                SpaceStationAntiGravityCasing
-                    .SpaceStationAntiGravityCasingMeta("SpaceStationAntiGravityBlock LV Tier", 0));
-            GTCMItemList.SpaceStationAntiGravityBlockMV.set(
-                SpaceStationAntiGravityCasing
-                    .SpaceStationAntiGravityCasingMeta("SpaceStationAntiGravityBlock MV Tier", 1));
-            GTCMItemList.SpaceStationAntiGravityBlockHV.set(
-                SpaceStationAntiGravityCasing
-                    .SpaceStationAntiGravityCasingMeta("SpaceStationAntiGravityBlock HV Tier", 2));
-            GTCMItemList.SpaceStationAntiGravityBlockEV.set(
-                SpaceStationAntiGravityCasing
-                    .SpaceStationAntiGravityCasingMeta("SpaceStationAntiGravityBlock EV Tier", 3));
-            GTCMItemList.SpaceStationAntiGravityBlockIV.set(
-                SpaceStationAntiGravityCasing
-                    .SpaceStationAntiGravityCasingMeta("SpaceStationAntiGravityBlock IV Tier", 4));
-            GTCMItemList.SpaceStationAntiGravityBlockLuV.set(
-                SpaceStationAntiGravityCasing
-                    .SpaceStationAntiGravityCasingMeta("SpaceStationAntiGravityBlock LuV Tier", 5));
-            GTCMItemList.SpaceStationAntiGravityBlockZPM.set(
-                SpaceStationAntiGravityCasing
-                    .SpaceStationAntiGravityCasingMeta("SpaceStationAntiGravityBlock ZPM Tier", 6));
-            GTCMItemList.SpaceStationAntiGravityBlockUV.set(
-                SpaceStationAntiGravityCasing
-                    .SpaceStationAntiGravityCasingMeta("SpaceStationAntiGravityBlock UV Tier", 7));
-            GTCMItemList.SpaceStationAntiGravityBlockUHV.set(
-                SpaceStationAntiGravityCasing
-                    .SpaceStationAntiGravityCasingMeta("SpaceStationAntiGravityBlock UHV Tier", 8));
-            GTCMItemList.SpaceStationAntiGravityBlockUEV.set(
-                SpaceStationAntiGravityCasing
-                    .SpaceStationAntiGravityCasingMeta("SpaceStationAntiGravityBlock UEV Tier", 9));
-            GTCMItemList.SpaceStationAntiGravityBlockUIV.set(
-                SpaceStationAntiGravityCasing
-                    .SpaceStationAntiGravityCasingMeta("SpaceStationAntiGravityBlock UIV Tier", 10));
-            GTCMItemList.SpaceStationAntiGravityBlockUMV.set(
-                SpaceStationAntiGravityCasing
-                    .SpaceStationAntiGravityCasingMeta("SpaceStationAntiGravityBlock UMV Tier", 11));
-            GTCMItemList.SpaceStationAntiGravityBlockUXV.set(
-                SpaceStationAntiGravityCasing
-                    .SpaceStationAntiGravityCasingMeta("SpaceStationAntiGravityBlock UXV Tier", 12));
-            GTCMItemList.SpaceStationAntiGravityBlockMAX.set(
-                SpaceStationAntiGravityCasing
-                    .SpaceStationAntiGravityCasingMeta("SpaceStationAntiGravityBlock MAX Tier", 13));
-            GTCMItemList.NuclearReactorStructure0.set(NuclearReactorBlockMeta("Nuclear Reactor structure block0", 0));
-            GTCMItemList.NuclearReactorStructure1.set(NuclearReactorBlockMeta("Nuclear Reactor structure block1", 1));
-            GTCMItemList.NuclearReactorStructure2.set(NuclearReactorBlockMeta("Nuclear Reactor structure block2", 2));
-            GTCMItemList.NuclearReactorStructure3.set(NuclearReactorBlockMeta("Nuclear Reactor structure block3", 3));
+            // #tr SpaceStationAntiGravityBlock.0.name SpaceStationAntiGravityBlock LV Tie
+            GTCMItemList.SpaceStationAntiGravityBlockLV
+                .set(SpaceStationAntiGravityCasing.SpaceStationAntiGravityCasingMeta(0));
+            // #tr SpaceStationAntiGravityBlock.1.name SpaceStationAntiGravityBlock MV Tie
+            GTCMItemList.SpaceStationAntiGravityBlockMV
+                .set(SpaceStationAntiGravityCasing.SpaceStationAntiGravityCasingMeta(1));
+            // #tr SpaceStationAntiGravityBlock.2.name SpaceStationAntiGravityBlock HV Tie
+            GTCMItemList.SpaceStationAntiGravityBlockHV
+                .set(SpaceStationAntiGravityCasing.SpaceStationAntiGravityCasingMeta(2));
+            // #tr SpaceStationAntiGravityBlock.3.name SpaceStationAntiGravityBlock EV Tie
+            GTCMItemList.SpaceStationAntiGravityBlockEV
+                .set(SpaceStationAntiGravityCasing.SpaceStationAntiGravityCasingMeta(3));
+            // #tr SpaceStationAntiGravityBlock.4.name SpaceStationAntiGravityBlock IV Tie
+            GTCMItemList.SpaceStationAntiGravityBlockIV
+                .set(SpaceStationAntiGravityCasing.SpaceStationAntiGravityCasingMeta(4));
+            // #tr SpaceStationAntiGravityBlock.5.name SpaceStationAntiGravityBlock LuV Tie
+            GTCMItemList.SpaceStationAntiGravityBlockLuV
+                .set(SpaceStationAntiGravityCasing.SpaceStationAntiGravityCasingMeta(5));
+            // #tr SpaceStationAntiGravityBlock.6.name SpaceStationAntiGravityBlock ZPM Tie
+            GTCMItemList.SpaceStationAntiGravityBlockZPM
+                .set(SpaceStationAntiGravityCasing.SpaceStationAntiGravityCasingMeta(6));
+            // #tr SpaceStationAntiGravityBlock.7.name SpaceStationAntiGravityBlock UV Tie
+            GTCMItemList.SpaceStationAntiGravityBlockUV
+                .set(SpaceStationAntiGravityCasing.SpaceStationAntiGravityCasingMeta(7));
+            // #tr SpaceStationAntiGravityBlock.8.name SpaceStationAntiGravityBlock UHV Tie
+            GTCMItemList.SpaceStationAntiGravityBlockUHV
+                .set(SpaceStationAntiGravityCasing.SpaceStationAntiGravityCasingMeta(8));
+            // #tr SpaceStationAntiGravityBlock.9.name SpaceStationAntiGravityBlock UEV Tie
+            GTCMItemList.SpaceStationAntiGravityBlockUEV
+                .set(SpaceStationAntiGravityCasing.SpaceStationAntiGravityCasingMeta(9));
+            // #tr SpaceStationAntiGravityBlock.10.name SpaceStationAntiGravityBlock UIV Tie
+            GTCMItemList.SpaceStationAntiGravityBlockUIV
+                .set(SpaceStationAntiGravityCasing.SpaceStationAntiGravityCasingMeta(10));
+            // #tr SpaceStationAntiGravityBlock.11.name SpaceStationAntiGravityBlock UMV Tie
+            GTCMItemList.SpaceStationAntiGravityBlockUMV
+                .set(SpaceStationAntiGravityCasing.SpaceStationAntiGravityCasingMeta(11));
+            // #tr SpaceStationAntiGravityBlock.12.name SpaceStationAntiGravityBlock UXV Tie
+            GTCMItemList.SpaceStationAntiGravityBlockUXV
+                .set(SpaceStationAntiGravityCasing.SpaceStationAntiGravityCasingMeta(12));
+            // #tr SpaceStationAntiGravityBlock.13.name SpaceStationAntiGravityBlock MAX Tie
+            GTCMItemList.SpaceStationAntiGravityBlockMAX
+                .set(SpaceStationAntiGravityCasing.SpaceStationAntiGravityCasingMeta(13));
+            // #tr nuclear.0.name Nuclear Reactor structure block0
+            GTCMItemList.NuclearReactorStructure0.set(NuclearReactorBlockMeta(0));
+            // #tr nuclear.1.name Nuclear Reactor structure block1
+            GTCMItemList.NuclearReactorStructure1.set(NuclearReactorBlockMeta(1));
+            // #tr nuclear.2.name Nuclear Reactor structure block2
+            GTCMItemList.NuclearReactorStructure2.set(NuclearReactorBlockMeta(2));
+            // #tr nuclear.3.name Nuclear Reactor structure block3
+            GTCMItemList.NuclearReactorStructure3.set(NuclearReactorBlockMeta(3));
         }
     }
 

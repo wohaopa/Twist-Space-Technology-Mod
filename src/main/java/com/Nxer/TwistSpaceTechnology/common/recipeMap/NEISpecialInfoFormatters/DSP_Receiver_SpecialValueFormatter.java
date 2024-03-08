@@ -1,9 +1,9 @@
 package com.Nxer.TwistSpaceTechnology.common.recipeMap.NEISpecialInfoFormatters;
 
-import static com.Nxer.TwistSpaceTechnology.util.TextHandler.texter;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import net.minecraft.util.StatCollector;
 
 import gregtech.nei.RecipeDisplayInfo;
 import gregtech.nei.formatter.INEISpecialInfoFormatter;
@@ -15,8 +15,9 @@ public class DSP_Receiver_SpecialValueFormatter implements INEISpecialInfoFormat
     @Override
     public List<String> format(RecipeDisplayInfo recipeInfo) {
         List<String> msgs = new ArrayList<>();
+        // #tr NEI.DSP_ReceiverRecipes.specialValue.pre Equivalence value of EU :
         msgs.add(
-            texter("Equivalence value of EU : ", "NEI.DSP_ReceiverRecipes.specialValue.pre")
+            StatCollector.translateToLocal("NEI.DSP_ReceiverRecipes.specialValue.pre")
                 + recipeInfo.recipe.mSpecialValue);
         return msgs;
     }

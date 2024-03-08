@@ -1,6 +1,5 @@
 package com.Nxer.TwistSpaceTechnology.common.machine.multiMachineClasses;
 
-import static com.Nxer.TwistSpaceTechnology.util.TextHandler.texter;
 import static com.Nxer.TwistSpaceTechnology.util.Utils.filterValidMTEs;
 
 import java.util.ArrayList;
@@ -14,6 +13,7 @@ import javax.annotation.Nonnull;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.StatCollector;
 
 import org.jetbrains.annotations.ApiStatus;
 import org.jetbrains.annotations.NotNull;
@@ -192,7 +192,7 @@ public abstract class GTCM_MultiMachineBase<T extends GTCM_MultiMachineBase<T>>
 
     /**
      * Forced get all input items, include all Dual Input Hatch slot.
-     * 
+     *
      * @return The items list.
      */
     public ArrayList<ItemStack> getStoredInputsNoSeparation() {
@@ -248,15 +248,16 @@ public abstract class GTCM_MultiMachineBase<T extends GTCM_MultiMachineBase<T>>
         String[] origin = super.getInfoData();
         String[] ret = new String[origin.length + 3];
         System.arraycopy(origin, 0, ret, 0, origin.length);
-        ret[origin.length] = EnumChatFormatting.AQUA + texter("Parallels", "MachineInfoData.Parallels")
+        // #tr MachineInfoData.Parallels Parallels
+        ret[origin.length] = EnumChatFormatting.AQUA + StatCollector.translateToLocal("MachineInfoData.Parallels")
             + ": "
             + EnumChatFormatting.GOLD
             + this.getLimitedMaxParallel();
-        ret[origin.length + 1] = EnumChatFormatting.AQUA + texter("Speed multiplier", "MachineInfoData.SpeedMultiplier")
-            + ": "
-            + EnumChatFormatting.GOLD
-            + dSpeed;
-        ret[origin.length + 2] = EnumChatFormatting.AQUA + texter("EU Modifier", "MachineInfoData.EuModifier")
+        // #tr MachineInfoData.SpeedMultiplier Speed multiplier
+        ret[origin.length + 1] = EnumChatFormatting.AQUA + StatCollector
+            .translateToLocal("MachineInfoData.SpeedMultiplier") + ": " + EnumChatFormatting.GOLD + dSpeed;
+        // #tr MachineInfoData.EuModifier EU Modifier
+        ret[origin.length + 2] = EnumChatFormatting.AQUA + StatCollector.translateToLocal("MachineInfoData.EuModifier")
             + ": "
             + EnumChatFormatting.GOLD
             + dEUMod;

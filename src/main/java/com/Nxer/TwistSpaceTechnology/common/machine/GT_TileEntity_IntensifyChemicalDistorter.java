@@ -419,28 +419,28 @@ public class GT_TileEntity_IntensifyChemicalDistorter
     @Override
     protected GT_Multiblock_Tooltip_Builder createTooltip() {
         final GT_Multiblock_Tooltip_Builder tt = new GT_Multiblock_Tooltip_Builder();
-        tt.addMachineType(TextLocalization.Tooltip_ICD_MachineType)
-            .addInfo(TextLocalization.Tooltip_ICD_00)
-            .addInfo(TextLocalization.Tooltip_ICD_01)
-            .addInfo(TextLocalization.Tooltip_ICD_02)
-            .addInfo(TextLocalization.Tooltip_ICD_03)
-            .addInfo(TextLocalization.Tooltip_ICD_04)
-            .addInfo(TextLocalization.Tooltip_ICD_05)
-            .addInfo(TextLocalization.Tooltip_ICD_06)
-            .addInfo(TextLocalization.Tooltip_ICD_07)
-            .addInfo(TextLocalization.StructureTooComplex)
-            .addInfo(TextLocalization.BLUE_PRINT_INFO)
+        tt.addMachineType(TextLocalization.Tooltip_ICD_MachineType.toString())
+            .addInfo(TextLocalization.Tooltip_ICD_00.toString())
+            .addInfo(TextLocalization.Tooltip_ICD_01.toString())
+            .addInfo(TextLocalization.Tooltip_ICD_02.toString())
+            .addInfo(TextLocalization.Tooltip_ICD_03.toString())
+            .addInfo(TextLocalization.Tooltip_ICD_04.toString())
+            .addInfo(TextLocalization.Tooltip_ICD_05.toString())
+            .addInfo(TextLocalization.Tooltip_ICD_06.toString())
+            .addInfo(TextLocalization.Tooltip_ICD_07.toString())
+            .addInfo(TextLocalization.StructureTooComplex.toString())
+            .addInfo(TextLocalization.BLUE_PRINT_INFO.toString())
             .addSeparator()
             .beginStructureBlock(11, 13, 11, false)
-            .addController(TextLocalization.textFrontBottom)
-            .addCasingInfoRange(TextLocalization.textCasing, 8, 26, false)
-            .addInputHatch(TextLocalization.textAnyCasing, 1)
-            .addOutputHatch(TextLocalization.textAnyCasing, 1)
-            .addInputBus(TextLocalization.textAnyCasing, 2)
-            .addOutputBus(TextLocalization.textAnyCasing, 2)
-            .addMaintenanceHatch(TextLocalization.textAnyCasing, 2)
-            .addEnergyHatch(TextLocalization.textAnyCasing, 3)
-            .toolTipFinisher(TextLocalization.ModName);
+            .addController(TextLocalization.textFrontBottom.toString())
+            .addCasingInfoRange(TextLocalization.textCasing.toString(), 8, 26, false)
+            .addInputHatch(TextLocalization.textAnyCasing.toString(), 1)
+            .addOutputHatch(TextLocalization.textAnyCasing.toString(), 1)
+            .addInputBus(TextLocalization.textAnyCasing.toString(), 2)
+            .addOutputBus(TextLocalization.textAnyCasing.toString(), 2)
+            .addMaintenanceHatch(TextLocalization.textAnyCasing.toString(), 2)
+            .addEnergyHatch(TextLocalization.textAnyCasing.toString(), 3)
+            .toolTipFinisher(TextLocalization.ModName.toString());
         return tt;
     }
 

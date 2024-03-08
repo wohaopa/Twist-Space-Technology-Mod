@@ -5,7 +5,6 @@ import static com.Nxer.TwistSpaceTechnology.system.OreProcess.logic.OP_Values.Or
 import static com.Nxer.TwistSpaceTechnology.system.OreProcess.logic.OP_Values.OreProcessRecipeEUt;
 import static com.Nxer.TwistSpaceTechnology.system.OreProcess.logic.OP_Values.moveUnprocessedItemsToOutputs;
 import static com.Nxer.TwistSpaceTechnology.system.OreProcess.logic.OP_Values.ticksOfPerFluidConsuming;
-import static com.Nxer.TwistSpaceTechnology.util.TextHandler.texter;
 import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_OreProcessingFactory_01;
 import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_OreProcessingFactory_02;
 import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_OreProcessingFactory_03;
@@ -43,6 +42,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraftforge.fluids.FluidStack;
@@ -127,11 +127,14 @@ public class TST_OreProcessingFactory extends GTCM_MultiMachineBase<TST_OreProce
         super.getWailaBody(itemStack, currentTip, accessor, config);
         final NBTTagCompound tag = accessor.getNBTData();
         if (tag.getBoolean("isWirelessMode")) {
-            currentTip.add(EnumChatFormatting.AQUA + texter("In Wireless mode", "Waila.TST_OreProcessingFactory.1"));
+            // #tr Waila.TST_OreProcessingFactory.1 In Wireless mode
+            currentTip
+                .add(EnumChatFormatting.AQUA + StatCollector.translateToLocal("Waila.TST_OreProcessingFactory.1"));
         }
         if (tag.getBoolean("isActive") && tag.getBoolean("isWirelessMode")) {
+            // #tr Waila.TST_OreProcessingFactory.2 Current Using EU:
             currentTip.add(
-                EnumChatFormatting.AQUA + texter("Current Using EU: ", "Waila.TST_OreProcessingFactory.2")
+                EnumChatFormatting.AQUA + StatCollector.translateToLocal("Waila.TST_OreProcessingFactory.2")
                     + EnumChatFormatting.GOLD
                     + GT_Utility.formatNumbers(tag.getLong("usingEU"))
                     + EnumChatFormatting.RESET
@@ -566,23 +569,23 @@ M -> ofFrame...(Materials.TungstenSteel, 0, ...);
     @Override
     protected GT_Multiblock_Tooltip_Builder createTooltip() {
         final GT_Multiblock_Tooltip_Builder tt = new GT_Multiblock_Tooltip_Builder();
-        tt.addMachineType(Tooltip_OreProcessingFactory_MachineType)
-            .addInfo(Tooltip_OreProcessingFactory_Controller)
-            .addInfo(Tooltip_OreProcessingFactory_01)
-            .addInfo(Tooltip_OreProcessingFactory_02)
-            .addInfo(Tooltip_OreProcessingFactory_03)
-            .addInfo(Tooltip_OreProcessingFactory_04)
-            .addInfo(Tooltip_OreProcessingFactory_05)
-            .addInfo(Tooltips_JoinWirelessNetWithoutEnergyHatch)
-            .addInfo(Tooltip_OreProcessingFactory_06)
+        tt.addMachineType(Tooltip_OreProcessingFactory_MachineType.toString())
+            .addInfo(Tooltip_OreProcessingFactory_Controller.toString())
+            .addInfo(Tooltip_OreProcessingFactory_01.toString())
+            .addInfo(Tooltip_OreProcessingFactory_02.toString())
+            .addInfo(Tooltip_OreProcessingFactory_03.toString())
+            .addInfo(Tooltip_OreProcessingFactory_04.toString())
+            .addInfo(Tooltip_OreProcessingFactory_05.toString())
+            .addInfo(Tooltips_JoinWirelessNetWithoutEnergyHatch.toString())
+            .addInfo(Tooltip_OreProcessingFactory_06.toString())
             .addSeparator()
-            .addInfo(TextLocalization.StructureTooComplex)
-            .addInfo(TextLocalization.BLUE_PRINT_INFO)
-            .addInputHatch(TextLocalization.textUseBlueprint, 1)
-            .addInputBus(TextLocalization.textUseBlueprint, 3)
-            .addOutputBus(TextLocalization.textUseBlueprint, 3)
-            .addEnergyHatch(TextLocalization.textUseBlueprint, 2)
-            .toolTipFinisher(TextLocalization.ModName);
+            .addInfo(TextLocalization.StructureTooComplex.toString())
+            .addInfo(TextLocalization.BLUE_PRINT_INFO.toString())
+            .addInputHatch(TextLocalization.textUseBlueprint.toString(), 1)
+            .addInputBus(TextLocalization.textUseBlueprint.toString(), 3)
+            .addOutputBus(TextLocalization.textUseBlueprint.toString(), 3)
+            .addEnergyHatch(TextLocalization.textUseBlueprint.toString(), 2)
+            .toolTipFinisher(TextLocalization.ModName.toString());
         return tt;
     }
 

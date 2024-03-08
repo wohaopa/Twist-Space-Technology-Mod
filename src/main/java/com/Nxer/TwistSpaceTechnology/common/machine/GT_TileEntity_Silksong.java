@@ -293,22 +293,22 @@ public class GT_TileEntity_Silksong extends GTCM_MultiMachineBase<GT_TileEntity_
     @Override
     protected GT_Multiblock_Tooltip_Builder createTooltip() {
         final GT_Multiblock_Tooltip_Builder tt = new GT_Multiblock_Tooltip_Builder();
-        tt.addMachineType(TextLocalization.Tooltip_Silksong_MachineType)
-            .addInfo(TextLocalization.Tooltip_Silksong_00)
-            .addInfo(TextLocalization.Tooltip_Silksong_01)
-            .addInfo(TextLocalization.Tooltip_Silksong_02)
-            .addInfo(TextLocalization.Tooltip_Silksong_03)
-            .addInfo(TextLocalization.Tooltip_Silksong_04)
+        tt.addMachineType(TextLocalization.Tooltip_Silksong_MachineType.toString())
+            .addInfo(TextLocalization.Tooltip_Silksong_00.toString())
+            .addInfo(TextLocalization.Tooltip_Silksong_01.toString())
+            .addInfo(TextLocalization.Tooltip_Silksong_02.toString())
+            .addInfo(TextLocalization.Tooltip_Silksong_03.toString())
+            .addInfo(TextLocalization.Tooltip_Silksong_04.toString())
             .addSeparator()
-            .addInfo(TextLocalization.StructureTooComplex)
-            .addInfo(TextLocalization.BLUE_PRINT_INFO)
-            .addInputHatch(TextLocalization.textUseBlueprint, 3)
-            .addOutputHatch(TextLocalization.textUseBlueprint, 3)
-            .addInputBus(TextLocalization.textUseBlueprint, 3)
-            .addOutputBus(TextLocalization.textUseBlueprint, 2)
-            .addMaintenanceHatch(TextLocalization.textUseBlueprint, 1)
-            .addEnergyHatch(TextLocalization.textUseBlueprint, 1)
-            .toolTipFinisher(TextLocalization.ModName);
+            .addInfo(TextLocalization.StructureTooComplex.toString())
+            .addInfo(TextLocalization.BLUE_PRINT_INFO.toString())
+            .addInputHatch(TextLocalization.textUseBlueprint.toString(), 3)
+            .addOutputHatch(TextLocalization.textUseBlueprint.toString(), 3)
+            .addInputBus(TextLocalization.textUseBlueprint.toString(), 3)
+            .addOutputBus(TextLocalization.textUseBlueprint.toString(), 2)
+            .addMaintenanceHatch(TextLocalization.textUseBlueprint.toString(), 1)
+            .addEnergyHatch(TextLocalization.textUseBlueprint.toString(), 1)
+            .toolTipFinisher(TextLocalization.ModName.toString());
         return tt;
     }
 

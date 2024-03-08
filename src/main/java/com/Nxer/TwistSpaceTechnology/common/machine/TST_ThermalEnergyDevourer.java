@@ -1,6 +1,5 @@
 package com.Nxer.TwistSpaceTechnology.common.machine;
 
-import static com.Nxer.TwistSpaceTechnology.util.TextHandler.texter;
 import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_DoNotNeedMaintenance;
 import static com.gtnewhorizon.structurelib.structure.StructureUtility.ofBlock;
 import static com.gtnewhorizon.structurelib.structure.StructureUtility.transpose;
@@ -103,9 +102,9 @@ public class TST_ThermalEnergyDevourer extends GTCM_MultiMachineBase<TST_Thermal
         super.getWailaBody(itemStack, currentTip, accessor, config);
         final NBTTagCompound tag = accessor.getNBTData();
         if (tag.getBoolean("isWirelessMode")) {
-            currentTip.add(EnumChatFormatting.LIGHT_PURPLE + TextLocalization.Waila_WirelessMode);
+            currentTip.add(EnumChatFormatting.LIGHT_PURPLE + TextLocalization.Waila_WirelessMode.toString());
             currentTip.add(
-                EnumChatFormatting.AQUA + TextLocalization.Waila_CurrentEuCost
+                EnumChatFormatting.AQUA + TextLocalization.Waila_CurrentEuCost.toString()
                     + EnumChatFormatting.RESET
                     + ": "
                     + EnumChatFormatting.GOLD
@@ -136,7 +135,8 @@ public class TST_ThermalEnergyDevourer extends GTCM_MultiMachineBase<TST_Thermal
         String[] ret = new String[origin.length + 1];
         System.arraycopy(origin, 0, ret, 0, origin.length);
         ret[origin.length] = EnumChatFormatting.AQUA
-            + texter("Coefficient Multiplier", "MachineInfoData.ThermalEnergyDevourer.coefficientMultiplier")
+            // #tr MachineInfoData.ThermalEnergyDevourer.coefficientMultiplier Coefficient Multiplier
+            + StatCollector.translateToLocal("MachineInfoData.ThermalEnergyDevourer.coefficientMultiplier")
             + ": "
             + EnumChatFormatting.GOLD
             + this.coefficientMultiplier;
@@ -408,36 +408,36 @@ F -> ofFrame...(Materials.NaquadahAlloy);
     @Override
     protected GT_Multiblock_Tooltip_Builder createTooltip() {
         final GT_Multiblock_Tooltip_Builder tt = new GT_Multiblock_Tooltip_Builder();
-        tt.addMachineType(TextLocalization.Tooltip_ThermalEnergyDevourer_MachineType)
-            .addInfo(TextLocalization.Tooltip_ThermalEnergyDevourer_Controller)
-            .addInfo(TextLocalization.Tooltip_ThermalEnergyDevourer_01)
-            .addInfo(TextLocalization.Tooltip_ThermalEnergyDevourer_02)
-            .addInfo(TextLocalization.Tooltip_ThermalEnergyDevourer_03)
-            .addInfo(TextLocalization.Tooltip_ThermalEnergyDevourer_04)
-            .addInfo(TextLocalization.textScrewdriverChangeMode)
-            .addInfo(TextLocalization.Tooltip_ThermalEnergyDevourer_05)
-            .addInfo(TextLocalization.Tooltip_ThermalEnergyDevourer_06)
-            .addInfo(TextLocalization.Tooltip_ThermalEnergyDevourer_07)
-            .addInfo(TextLocalization.Tooltip_ThermalEnergyDevourer_08)
-            .addInfo(TextLocalization.Tooltip_ThermalEnergyDevourer_09)
-            .addInfo(TextLocalization.Tooltip_ThermalEnergyDevourer_10)
-            .addInfo(TextLocalization.Tooltip_ThermalEnergyDevourer_11)
-            .addInfo(TextLocalization.Tooltip_ThermalEnergyDevourer_12)
-            .addInfo(TextLocalization.Tooltip_ThermalEnergyDevourer_13)
-            .addInfo(TextLocalization.Tooltip_ThermalEnergyDevourer_14)
+        tt.addMachineType(TextLocalization.Tooltip_ThermalEnergyDevourer_MachineType.toString())
+            .addInfo(TextLocalization.Tooltip_ThermalEnergyDevourer_Controller.toString())
+            .addInfo(TextLocalization.Tooltip_ThermalEnergyDevourer_01.toString())
+            .addInfo(TextLocalization.Tooltip_ThermalEnergyDevourer_02.toString())
+            .addInfo(TextLocalization.Tooltip_ThermalEnergyDevourer_03.toString())
+            .addInfo(TextLocalization.Tooltip_ThermalEnergyDevourer_04.toString())
+            .addInfo(TextLocalization.textScrewdriverChangeMode.toString())
+            .addInfo(TextLocalization.Tooltip_ThermalEnergyDevourer_05.toString())
+            .addInfo(TextLocalization.Tooltip_ThermalEnergyDevourer_06.toString())
+            .addInfo(TextLocalization.Tooltip_ThermalEnergyDevourer_07.toString())
+            .addInfo(TextLocalization.Tooltip_ThermalEnergyDevourer_08.toString())
+            .addInfo(TextLocalization.Tooltip_ThermalEnergyDevourer_09.toString())
+            .addInfo(TextLocalization.Tooltip_ThermalEnergyDevourer_10.toString())
+            .addInfo(TextLocalization.Tooltip_ThermalEnergyDevourer_11.toString())
+            .addInfo(TextLocalization.Tooltip_ThermalEnergyDevourer_12.toString())
+            .addInfo(TextLocalization.Tooltip_ThermalEnergyDevourer_13.toString())
+            .addInfo(TextLocalization.Tooltip_ThermalEnergyDevourer_14.toString())
             .addSeparator()
-            .addInfo(TextLocalization.StructureTooComplex)
-            .addInfo(TextLocalization.BLUE_PRINT_INFO)
-            .addStructureInfo(TextLocalization.Tooltip_ThermalEnergyDevourer_2_01)
-            .addStructureInfo(Tooltip_DoNotNeedMaintenance)
+            .addInfo(TextLocalization.StructureTooComplex.toString())
+            .addInfo(TextLocalization.BLUE_PRINT_INFO.toString())
+            .addStructureInfo(TextLocalization.Tooltip_ThermalEnergyDevourer_2_01.toString())
+            .addStructureInfo(Tooltip_DoNotNeedMaintenance.toString())
             .beginStructureBlock(15, 37, 15, false)
-            .addController(TextLocalization.textFrontBottom)
-            .addInputHatch(TextLocalization.textUseBlueprint, 1)
-            .addOutputHatch(TextLocalization.textUseBlueprint, 1)
-            .addInputBus(TextLocalization.textUseBlueprint, 1)
-            .addOutputBus(TextLocalization.textUseBlueprint, 1)
-            .addEnergyHatch(TextLocalization.textUseBlueprint, 2)
-            .toolTipFinisher(TextLocalization.ModName);
+            .addController(TextLocalization.textFrontBottom.toString())
+            .addInputHatch(TextLocalization.textUseBlueprint.toString(), 1)
+            .addOutputHatch(TextLocalization.textUseBlueprint.toString(), 1)
+            .addInputBus(TextLocalization.textUseBlueprint.toString(), 1)
+            .addOutputBus(TextLocalization.textUseBlueprint.toString(), 1)
+            .addEnergyHatch(TextLocalization.textUseBlueprint.toString(), 2)
+            .toolTipFinisher(TextLocalization.ModName.toString());
         return tt;
     }
 

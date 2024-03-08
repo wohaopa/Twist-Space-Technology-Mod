@@ -235,27 +235,27 @@ G -> ofFrame...(Materials.Neutronium);
     @Override
     protected GT_Multiblock_Tooltip_Builder createTooltip() {
         final GT_Multiblock_Tooltip_Builder tt = new GT_Multiblock_Tooltip_Builder();
-        tt.addMachineType(TextLocalization.Tooltip_VacuumFilterExtractor_MachineType)
-            .addInfo(TextLocalization.Tooltip_VacuumFilterExtractor_Controller)
-            .addInfo(TextLocalization.Tooltip_VacuumFilterExtractor_01)
-            .addInfo(TextLocalization.Tooltip_VacuumFilterExtractor_02)
-            .addInfo(TextLocalization.Tooltip_VacuumFilterExtractor_03)
-            .addInfo(TextLocalization.Tooltip_VacuumFilterExtractor_04)
-            .addInfo(TextLocalization.Tooltip_VacuumFilterExtractor_05)
-            .addInfo(TextLocalization.textScrewdriverChangeMode)
-            .addInfo(TextLocalization.Tooltip_VacuumFilterExtractor_06)
+        tt.addMachineType(TextLocalization.Tooltip_VacuumFilterExtractor_MachineType.toString())
+            .addInfo(TextLocalization.Tooltip_VacuumFilterExtractor_Controller.toString())
+            .addInfo(TextLocalization.Tooltip_VacuumFilterExtractor_01.toString())
+            .addInfo(TextLocalization.Tooltip_VacuumFilterExtractor_02.toString())
+            .addInfo(TextLocalization.Tooltip_VacuumFilterExtractor_03.toString())
+            .addInfo(TextLocalization.Tooltip_VacuumFilterExtractor_04.toString())
+            .addInfo(TextLocalization.Tooltip_VacuumFilterExtractor_05.toString())
+            .addInfo(TextLocalization.textScrewdriverChangeMode.toString())
+            .addInfo(TextLocalization.Tooltip_VacuumFilterExtractor_06.toString())
             .addSeparator()
-            .addInfo(TextLocalization.StructureTooComplex)
-            .addInfo(TextLocalization.BLUE_PRINT_INFO)
-            .addStructureInfo(TextLocalization.Tooltip_DoNotNeedMaintenance)
+            .addInfo(TextLocalization.StructureTooComplex.toString())
+            .addInfo(TextLocalization.BLUE_PRINT_INFO.toString())
+            .addStructureInfo(TextLocalization.Tooltip_DoNotNeedMaintenance.toString())
             .beginStructureBlock(13, 22, 14, false)
-            .addController(TextLocalization.textUseBlueprint)
-            .addInputHatch(TextLocalization.textUseBlueprint, 1)
-            .addOutputHatch(TextLocalization.textUseBlueprint, 1)
-            .addInputBus(TextLocalization.textUseBlueprint, 1)
-            .addOutputBus(TextLocalization.textUseBlueprint, 1)
-            .addEnergyHatch(TextLocalization.textUseBlueprint, 2)
-            .toolTipFinisher(TextLocalization.ModName);
+            .addController(TextLocalization.textUseBlueprint.toString())
+            .addInputHatch(TextLocalization.textUseBlueprint.toString(), 1)
+            .addOutputHatch(TextLocalization.textUseBlueprint.toString(), 1)
+            .addInputBus(TextLocalization.textUseBlueprint.toString(), 1)
+            .addOutputBus(TextLocalization.textUseBlueprint.toString(), 1)
+            .addEnergyHatch(TextLocalization.textUseBlueprint.toString(), 2)
+            .toolTipFinisher(TextLocalization.ModName.toString());
         return tt;
     }
 

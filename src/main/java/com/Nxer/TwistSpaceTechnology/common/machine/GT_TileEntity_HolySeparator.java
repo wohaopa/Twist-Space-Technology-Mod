@@ -308,24 +308,24 @@ G -> ofBlock...(gtplusplus.blockcasings.3, 15, ...);
     @Override
     protected GT_Multiblock_Tooltip_Builder createTooltip() {
         final GT_Multiblock_Tooltip_Builder tt = new GT_Multiblock_Tooltip_Builder();
-        tt.addMachineType(TextLocalization.Tooltip_HolySeparator_MachineType)
-            .addInfo(TextLocalization.Tooltip_HolySeparator_00)
-            .addInfo(TextLocalization.Tooltip_HolySeparator_01)
-            .addInfo(TextLocalization.Tooltip_HolySeparator_02)
-            .addInfo(TextLocalization.Tooltip_HolySeparator_03)
-            .addInfo(TextLocalization.Tooltip_HolySeparator_04)
-            .addInfo(TextLocalization.Tooltip_HolySeparator_05)
-            .addInfo(TextLocalization.textScrewdriverChangeMode)
+        tt.addMachineType(TextLocalization.Tooltip_HolySeparator_MachineType.toString())
+            .addInfo(TextLocalization.Tooltip_HolySeparator_00.toString())
+            .addInfo(TextLocalization.Tooltip_HolySeparator_01.toString())
+            .addInfo(TextLocalization.Tooltip_HolySeparator_02.toString())
+            .addInfo(TextLocalization.Tooltip_HolySeparator_03.toString())
+            .addInfo(TextLocalization.Tooltip_HolySeparator_04.toString())
+            .addInfo(TextLocalization.Tooltip_HolySeparator_05.toString())
+            .addInfo(TextLocalization.textScrewdriverChangeMode.toString())
             .addSeparator()
-            .addInfo(TextLocalization.StructureTooComplex)
-            .addInfo(TextLocalization.BLUE_PRINT_INFO)
-            .addInputHatch(TextLocalization.textUseBlueprint, 1)
-            .addOutputHatch(TextLocalization.textUseBlueprint, 1)
-            .addInputBus(TextLocalization.textUseBlueprint, 1)
-            .addOutputBus(TextLocalization.textUseBlueprint, 1)
-            .addMaintenanceHatch(TextLocalization.textUseBlueprint, 1)
-            .addEnergyHatch(TextLocalization.textUseBlueprint, 1)
-            .toolTipFinisher(TextLocalization.ModName);
+            .addInfo(TextLocalization.StructureTooComplex.toString())
+            .addInfo(TextLocalization.BLUE_PRINT_INFO.toString())
+            .addInputHatch(TextLocalization.textUseBlueprint.toString(), 1)
+            .addOutputHatch(TextLocalization.textUseBlueprint.toString(), 1)
+            .addInputBus(TextLocalization.textUseBlueprint.toString(), 1)
+            .addOutputBus(TextLocalization.textUseBlueprint.toString(), 1)
+            .addMaintenanceHatch(TextLocalization.textUseBlueprint.toString(), 1)
+            .addEnergyHatch(TextLocalization.textUseBlueprint.toString(), 1)
+            .toolTipFinisher(TextLocalization.ModName.toString());
         return tt;
     }
 

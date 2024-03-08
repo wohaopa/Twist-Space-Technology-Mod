@@ -3,7 +3,6 @@ package com.Nxer.TwistSpaceTechnology.common.machine;
 import static com.Nxer.TwistSpaceTechnology.common.machine.ValueEnum.EnablePerfectOverclock_AdvancedMegaOilCracker;
 import static com.Nxer.TwistSpaceTechnology.common.machine.ValueEnum.Parallel_AdvancedMegaOilCracker;
 import static com.Nxer.TwistSpaceTechnology.common.machine.ValueEnum.SpeedBonus_AdvancedMegaOilCracker;
-import static com.Nxer.TwistSpaceTechnology.util.TextHandler.texter;
 import static com.gtnewhorizon.structurelib.structure.StructureUtility.transpose;
 import static com.gtnewhorizon.structurelib.structure.StructureUtility.withChannel;
 import static gregtech.api.enums.GT_HatchElement.Energy;
@@ -23,6 +22,7 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.StatCollector;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import com.Nxer.TwistSpaceTechnology.common.machine.multiMachineClasses.GTCM_MultiMachineBase;
@@ -120,7 +120,8 @@ public class TST_AdvancedMegaOilCracker extends GTCM_MultiMachineBase<TST_Advanc
         String[] origin = super.getInfoData();
         String[] ret = new String[origin.length + 1];
         System.arraycopy(origin, 0, ret, 0, origin.length);
-        ret[origin.length] = EnumChatFormatting.AQUA + texter("Glass Tier", "MachineInfoData.GlassTier")
+        // #tr MachineInfoData.GlassTier Glass Tier
+        ret[origin.length] = EnumChatFormatting.AQUA + StatCollector.translateToLocal("MachineInfoData.GlassTier")
             + ": "
             + EnumChatFormatting.GOLD
             + this.glassTier;
@@ -234,20 +235,20 @@ public class TST_AdvancedMegaOilCracker extends GTCM_MultiMachineBase<TST_Advanc
     @Override
     protected GT_Multiblock_Tooltip_Builder createTooltip() {
         final GT_Multiblock_Tooltip_Builder tt = new GT_Multiblock_Tooltip_Builder();
-        tt.addMachineType(TextLocalization.Tooltips_AdvancedMegaOilCracker_MachineType)
-            .addInfo(TextLocalization.Tooltips_AdvancedMegaOilCracker_Controller)
-            .addInfo(TextLocalization.Tooltips_AdvancedMegaOilCracker_01)
-            .addInfo(TextLocalization.Tooltips_AdvancedMegaOilCracker_02)
+        tt.addMachineType(TextLocalization.Tooltips_AdvancedMegaOilCracker_MachineType.toString())
+            .addInfo(TextLocalization.Tooltips_AdvancedMegaOilCracker_Controller.toString())
+            .addInfo(TextLocalization.Tooltips_AdvancedMegaOilCracker_01.toString())
+            .addInfo(TextLocalization.Tooltips_AdvancedMegaOilCracker_02.toString())
             .addSeparator()
-            .addInfo(TextLocalization.StructureTooComplex)
-            .addInfo(TextLocalization.BLUE_PRINT_INFO)
-            .addInputBus(TextLocalization.textUseBlueprint, 1)
-            .addOutputBus(TextLocalization.textUseBlueprint, 1)
-            .addInputHatch(TextLocalization.textUseBlueprint, 2)
-            .addOutputHatch(TextLocalization.textUseBlueprint, 2)
-            .addEnergyHatch(TextLocalization.textUseBlueprint, 1)
-            .addStructureInfo(TextLocalization.Tooltip_DoNotNeedMaintenance)
-            .toolTipFinisher(TextLocalization.ModName);
+            .addInfo(TextLocalization.StructureTooComplex.toString())
+            .addInfo(TextLocalization.BLUE_PRINT_INFO.toString())
+            .addInputBus(TextLocalization.textUseBlueprint.toString(), 1)
+            .addOutputBus(TextLocalization.textUseBlueprint.toString(), 1)
+            .addInputHatch(TextLocalization.textUseBlueprint.toString(), 2)
+            .addOutputHatch(TextLocalization.textUseBlueprint.toString(), 2)
+            .addEnergyHatch(TextLocalization.textUseBlueprint.toString(), 1)
+            .addStructureInfo(TextLocalization.Tooltip_DoNotNeedMaintenance.toString())
+            .toolTipFinisher(TextLocalization.ModName.toString());
         return tt;
     }
 

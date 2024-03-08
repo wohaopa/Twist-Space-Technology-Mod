@@ -5,9 +5,6 @@ import static com.Nxer.TwistSpaceTechnology.common.machine.ValueEnum.ExtraEuCost
 import static com.Nxer.TwistSpaceTechnology.common.machine.ValueEnum.GlassTierLimit_LaserHatch_IndistinctTentacle;
 import static com.Nxer.TwistSpaceTechnology.common.machine.ValueEnum.GlassTierLimit_WirelessMode_IndistinctTentacle;
 import static com.Nxer.TwistSpaceTechnology.common.machine.ValueEnum.Mode_Default_IndistinctTentacle;
-import static com.Nxer.TwistSpaceTechnology.util.TextHandler.texter;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_DoNotNeedMaintenance;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.textUseBlueprint;
 import static com.github.technus.tectech.thing.CustomItemList.astralArrayFabricator;
 import static com.github.technus.tectech.thing.casing.GT_Block_CasingsTT.texturePage;
 import static com.github.technus.tectech.thing.casing.TT_Container_Casings.sBlockCasingsBA0;
@@ -124,12 +121,15 @@ public class TST_IndistinctTentacle extends GTCM_MultiMachineBase<TST_Indistinct
         String[] origin = super.getInfoData();
         String[] ret = new String[origin.length + 2];
         System.arraycopy(origin, 0, ret, 0, origin.length);
-        ret[origin.length] = EnumChatFormatting.AQUA + texter("Glass Tier", "MachineInfoData.GlassTier")
+        ret[origin.length] = EnumChatFormatting.AQUA
+            // #tr MachineInfoData.GlassTier Glass Tier
+            + StatCollector.translateToLocal("MachineInfoData.GlassTier")
             + ": "
             + EnumChatFormatting.GOLD
             + this.glassTier;
         ret[origin.length + 1] = EnumChatFormatting.AQUA
-            + texter("Component Block Tier", "MachineInfoData.ComponentBlockTier")
+            // #tr MachineInfoData.ComponentBlockTier Component Block Tier
+            + StatCollector.translateToLocal("MachineInfoData.ComponentBlockTier")
             + ": "
             + EnumChatFormatting.GOLD
             + (this.tierComponentCasing + 1);
@@ -159,9 +159,14 @@ public class TST_IndistinctTentacle extends GTCM_MultiMachineBase<TST_Indistinct
         }
         currentTip.add(modeName);
         if (tag.getBoolean("isWirelessMode")) {
-            currentTip.add(EnumChatFormatting.LIGHT_PURPLE + texter("Wireless Mode", "Waila.TST_IndistinctTentacle.1"));
             currentTip.add(
-                EnumChatFormatting.AQUA + texter("Current EU cost", "Waila.TST_MiracleDoor.1")
+                EnumChatFormatting.LIGHT_PURPLE
+                    // #tr Waila.TST_IndistinctTentacle.1 Wireless Mode
+                    + StatCollector.translateToLocal("Waila.TST_IndistinctTentacle.1"));
+            currentTip.add(
+                EnumChatFormatting.AQUA
+                    // #tr Waila.TST_MiracleDoor.1 Current EU cost
+                    + StatCollector.translateToLocal("Waila.TST_MiracleDoor.1")
                     + EnumChatFormatting.RESET
                     + ": "
                     + EnumChatFormatting.GOLD
@@ -170,16 +175,15 @@ public class TST_IndistinctTentacle extends GTCM_MultiMachineBase<TST_Indistinct
                     + " EU");
 
             if (1 != tag.getInteger("extraEuCostMultiplier")) {
-                currentTip.add(
-                    "" + EnumChatFormatting.BLUE
-                        + EnumChatFormatting.BOLD
-                        + texter("    Extra EU cost multiplier", "Waila.TST_IndistinctTentacle.2")
-                        + EnumChatFormatting.RESET
-                        + ": "
-                        + EnumChatFormatting.GOLD
-                        + EnumChatFormatting.BOLD
-                        + tag.getInteger("extraEuCostMultiplier")
-                        + EnumChatFormatting.RESET);
+                currentTip.add("" + EnumChatFormatting.BLUE + EnumChatFormatting.BOLD
+                // #tr Waila.TST_IndistinctTentacle.2 Extra EU cost multiplier
+                    + StatCollector.translateToLocal("Waila.TST_IndistinctTentacle.2")
+                    + EnumChatFormatting.RESET
+                    + ": "
+                    + EnumChatFormatting.GOLD
+                    + EnumChatFormatting.BOLD
+                    + tag.getInteger("extraEuCostMultiplier")
+                    + EnumChatFormatting.RESET);
             }
         }
     }
@@ -553,39 +557,39 @@ L -> ofBlock...(gt.blockcasingsTT, 12, ...); // io
     @Override
     protected GT_Multiblock_Tooltip_Builder createTooltip() {
         final GT_Multiblock_Tooltip_Builder tt = new GT_Multiblock_Tooltip_Builder();
-        tt.addMachineType(TextLocalization.Tooltip_IndistinctTentacle_MachineType)
-            .addInfo(TextLocalization.Tooltip_IndistinctTentacle_Controller)
-            .addInfo(TextLocalization.Tooltip_IndistinctTentacle_01)
-            .addInfo(TextLocalization.Tooltip_IndistinctTentacle_02)
-            .addInfo(TextLocalization.Tooltip_IndistinctTentacle_03)
-            .addInfo(TextLocalization.Tooltip_IndistinctTentacle_04)
-            .addInfo(TextLocalization.Tooltip_IndistinctTentacle_05)
-            .addInfo(TextLocalization.Tooltip_IndistinctTentacle_06)
-            .addInfo(TextLocalization.Tooltip_IndistinctTentacle_07)
-            .addInfo(TextLocalization.Tooltip_IndistinctTentacle_08)
-            .addInfo(TextLocalization.Tooltip_IndistinctTentacle_09)
-            .addInfo(TextLocalization.StructureTooComplex)
-            .addInfo(TextLocalization.BLUE_PRINT_INFO)
+        tt.addMachineType(TextLocalization.Tooltip_IndistinctTentacle_MachineType.toString())
+            .addInfo(TextLocalization.Tooltip_IndistinctTentacle_Controller.toString())
+            .addInfo(TextLocalization.Tooltip_IndistinctTentacle_01.toString())
+            .addInfo(TextLocalization.Tooltip_IndistinctTentacle_02.toString())
+            .addInfo(TextLocalization.Tooltip_IndistinctTentacle_03.toString())
+            .addInfo(TextLocalization.Tooltip_IndistinctTentacle_04.toString())
+            .addInfo(TextLocalization.Tooltip_IndistinctTentacle_05.toString())
+            .addInfo(TextLocalization.Tooltip_IndistinctTentacle_06.toString())
+            .addInfo(TextLocalization.Tooltip_IndistinctTentacle_07.toString())
+            .addInfo(TextLocalization.Tooltip_IndistinctTentacle_08.toString())
+            .addInfo(TextLocalization.Tooltip_IndistinctTentacle_09.toString())
+            .addInfo(TextLocalization.StructureTooComplex.toString())
+            .addInfo(TextLocalization.BLUE_PRINT_INFO.toString())
             .addSeparator()
-            .addStructureInfo(TextLocalization.Tooltip_Details)
-            .addStructureInfo(TextLocalization.Tooltip_IndistinctTentacle_2_01)
-            .addStructureInfo(TextLocalization.Tooltip_IndistinctTentacle_2_02)
-            .addStructureInfo(TextLocalization.Tooltip_IndistinctTentacle_2_03)
-            .addStructureInfo(TextLocalization.Tooltip_IndistinctTentacle_2_04)
-            .addStructureInfo(TextLocalization.Tooltip_IndistinctTentacle_2_05)
+            .addStructureInfo(TextLocalization.Tooltip_Details.toString())
+            .addStructureInfo(TextLocalization.Tooltip_IndistinctTentacle_2_01.toString())
+            .addStructureInfo(TextLocalization.Tooltip_IndistinctTentacle_2_02.toString())
+            .addStructureInfo(TextLocalization.Tooltip_IndistinctTentacle_2_03.toString())
+            .addStructureInfo(TextLocalization.Tooltip_IndistinctTentacle_2_04.toString())
+            .addStructureInfo(TextLocalization.Tooltip_IndistinctTentacle_2_05.toString())
             .addStructureInfo(EnumChatFormatting.GOLD + "-----------------------------------------")
-            .addStructureInfo(TextLocalization.Tooltip_IndistinctTentacle_2_06)
+            .addStructureInfo(TextLocalization.Tooltip_IndistinctTentacle_2_06.toString())
             .addStructureInfo(EnumChatFormatting.GOLD + "-----------------------------------------")
-            .addStructureInfo(TextLocalization.Tooltip_IndistinctTentacle_2_07)
-            .addStructureInfo(TextLocalization.Tooltip_IndistinctTentacle_2_08)
-            .addStructureInfo(TextLocalization.Tooltip_IndistinctTentacle_2_09)
+            .addStructureInfo(TextLocalization.Tooltip_IndistinctTentacle_2_07.toString())
+            .addStructureInfo(TextLocalization.Tooltip_IndistinctTentacle_2_08.toString())
+            .addStructureInfo(TextLocalization.Tooltip_IndistinctTentacle_2_09.toString())
             .addStructureInfo(EnumChatFormatting.GOLD + "-----------------------------------------")
-            .addStructureInfo(Tooltip_DoNotNeedMaintenance)
-            .addInputBus(textUseBlueprint, 2)
-            .addInputHatch(textUseBlueprint, 2)
-            .addOutputBus(textUseBlueprint, 2)
-            .addEnergyHatch(textUseBlueprint, 1)
-            .toolTipFinisher(TextLocalization.ModName);
+            .addStructureInfo(TextLocalization.Tooltip_DoNotNeedMaintenance.toString())
+            .addInputBus(TextLocalization.textUseBlueprint.toString(), 2)
+            .addInputHatch(TextLocalization.textUseBlueprint.toString(), 2)
+            .addOutputBus(TextLocalization.textUseBlueprint.toString(), 2)
+            .addEnergyHatch(TextLocalization.textUseBlueprint.toString(), 1)
+            .toolTipFinisher(TextLocalization.ModName.toString());
         return tt;
     }
 

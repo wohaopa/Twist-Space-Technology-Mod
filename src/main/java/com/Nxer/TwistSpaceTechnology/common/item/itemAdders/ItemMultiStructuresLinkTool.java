@@ -1,15 +1,13 @@
 
 package com.Nxer.TwistSpaceTechnology.common.item.itemAdders;
 
-import static com.Nxer.TwistSpaceTechnology.util.TextHandler.texter;
-
 import java.util.List;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 
 import com.Nxer.TwistSpaceTechnology.common.machine.multiStructureMachine.MultiStructureManager;
@@ -23,11 +21,11 @@ public class ItemMultiStructuresLinkTool extends Item {
     public int firstPosition = -1;
     public int secondPosition = -1;
 
-    public ItemMultiStructuresLinkTool(String aName, String aMetaName, CreativeTabs aCreativeTabs) {
+    public ItemMultiStructuresLinkTool(/* String aName, */String aMetaName, CreativeTabs aCreativeTabs) {
         super();
         this.setCreativeTab(aCreativeTabs);
         this.setUnlocalizedName(aMetaName);
-        texter(aName, this.getUnlocalizedName() + ".name");
+        // texter(aName, this.getUnlocalizedName() + ".name");
     }
 
     @Override
@@ -40,14 +38,10 @@ public class ItemMultiStructuresLinkTool extends Item {
     @SideOnly(Side.CLIENT)
     public void addInformation(final ItemStack itemStack, final EntityPlayer player, final List toolTip,
         final boolean advancedToolTips) {
-        toolTip.add(
-            texter(
-                EnumChatFormatting.LIGHT_PURPLE + "left Click to set Main machine",
-                "tooltips.MultiStructuresLinkTool.line1"));
-        toolTip.add(
-            texter(
-                EnumChatFormatting.LIGHT_PURPLE + "right Click to set Sub machine",
-                "tooltips.MultiStructuresLinkTool.line2"));
+        // #tr tooltips.MultiStructuresLinkTool.line1 {\LIGHT_PURPLE}left Click to set Main machine
+        toolTip.add(StatCollector.translateToLocal("tooltips.MultiStructuresLinkTool.line1"));
+        // #tr tooltips.MultiStructuresLinkTool.line2 {\LIGHT_PURPLE}right Click to set Sub machine
+        toolTip.add(StatCollector.translateToLocal("tooltips.MultiStructuresLinkTool.line2"));
     }
 
     public void link(EntityPlayer aPlayer) {

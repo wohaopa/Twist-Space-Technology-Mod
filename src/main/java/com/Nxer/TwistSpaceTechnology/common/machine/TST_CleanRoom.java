@@ -137,7 +137,7 @@ public class TST_CleanRoom extends GT_MetaTileEntity_MultiblockBase_EM
             .addStructureInfo("Up to 10 Machine Hulls for Item & Energy transfer through walls")
             .addStructureInfo("You can also use Diodes for more power")
             .addStructureInfo("Diodes also count towards 10 Machine Hulls count limit")
-            .toolTipFinisher(TextLocalization.ModName);
+            .toolTipFinisher(TextLocalization.ModName.toString());
         return tt;
     }
 

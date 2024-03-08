@@ -2,7 +2,6 @@ package com.Nxer.TwistSpaceTechnology.common.block.blockClass.Casings;
 
 import static com.Nxer.TwistSpaceTechnology.common.block.BasicBlocks.NuclearReactorBlock;
 import static com.Nxer.TwistSpaceTechnology.util.MetaItemStackUtils.initMetaItemStack;
-import static com.Nxer.TwistSpaceTechnology.util.TextHandler.texter;
 
 import java.util.HashSet;
 import java.util.List;
@@ -25,9 +24,9 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockNuclearReactor extends BlockBase01 {
 
-    public BlockNuclearReactor(String unlocalizedName, String localName) {
+    public BlockNuclearReactor(String unlocalizedName/* , String localName */) {
         this.setUnlocalizedName(unlocalizedName);
-        texter(localName, unlocalizedName + ".name");
+        // texter(localName, unlocalizedName + ".name");
         this.setHardness(9.0F);
         this.setResistance(5.0F);
         this.setHarvestLevel("wrench", 1);
@@ -52,9 +51,9 @@ public class BlockNuclearReactor extends BlockBase01 {
 
     public static final Set<Integer> NuclearReactorBlockSet = new HashSet<>();
 
-    public static ItemStack NuclearReactorBlockMeta(String i18nName, int meta) {
+    public static ItemStack NuclearReactorBlockMeta(/* String i18nName, */int meta) {
 
-        return initMetaItemStack(i18nName, meta, NuclearReactorBlock, NuclearReactorBlockSet);
+        return initMetaItemStack(/* i18nName, */meta, NuclearReactorBlock, NuclearReactorBlockSet);
     }
 
     @Override

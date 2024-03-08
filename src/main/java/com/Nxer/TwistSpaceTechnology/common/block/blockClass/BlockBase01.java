@@ -1,7 +1,6 @@
 package com.Nxer.TwistSpaceTechnology.common.block.blockClass;
 
 import static com.Nxer.TwistSpaceTechnology.common.block.blockClass.ItemBlockBase01.MetaBlockSet01;
-import static com.Nxer.TwistSpaceTechnology.util.TextHandler.texter;
 
 import java.util.List;
 
@@ -33,10 +32,10 @@ public class BlockBase01 extends Block {
         this.setCreativeTab(GTCMCreativeTabs.tabMetaBlock01);
     }
 
-    public BlockBase01(String unlocalizedName, String localName) {
+    public BlockBase01(String unlocalizedName/* , String localName */) {
         this();
         this.unlocalizedName = unlocalizedName;
-        texter(localName, "blockBase01." + unlocalizedName + ".name");
+        // texter(localName, "blockBase01." + unlocalizedName + ".name");
     }
 
     // endregion

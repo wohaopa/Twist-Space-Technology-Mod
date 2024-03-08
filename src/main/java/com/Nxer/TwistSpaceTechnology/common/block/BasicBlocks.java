@@ -10,19 +10,21 @@ import com.Nxer.TwistSpaceTechnology.common.block.blockClass.Casings.spaceStatio
 
 public class BasicBlocks {
 
-    public static final Block MetaBlock01 = new BlockBase01("MetaBlock01", "MetaBlock01");
-    public static final Block PhotonControllerUpgrade = new PhotonControllerUpgradeCasing(
-        "PhotonControllerUpgrades",
-        "Photon Controller Upgrade");
+    // #tr blockBase01.MetaBlock01.name MetaBlock01
+    public static final Block MetaBlock01 = new BlockBase01("MetaBlock01");
 
+    // #tr PhotonControllerUpgrades.name Photon Controller Upgrade
+    public static final Block PhotonControllerUpgrade = new PhotonControllerUpgradeCasing("PhotonControllerUpgrades");
+
+    // #tr SpaceStationStructureBlock.name Space Station Structure Block
     public static final Block spaceStationStructureBlock = new SpaceStationStructureCasing(
-        "SpaceStationStructureBlock",
-        "Space Station Structure Block");
+        "SpaceStationStructureBlock");
 
+    // #tr SpaceStationAntiGravityBlock.name Space Station Anti Gravity Block
     public static final Block SpaceStationAntiGravityBlock = new SpaceStationAntiGravityCasing(
-        "SpaceStationAntiGravityBlock",
-        "Space Station Anti Gravity Block");
+        "SpaceStationAntiGravityBlock");
     public static Block BlockStar;
 
-    public static Block NuclearReactorBlock = new BlockNuclearReactor("nuclear", "Mega Nuclear Reactor");
+    // #tr nuclear.name Mega Nuclear Reactor
+    public static Block NuclearReactorBlock = new BlockNuclearReactor("nuclear");
 }

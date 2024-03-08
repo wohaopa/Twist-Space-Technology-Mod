@@ -1,9 +1,8 @@
 package com.Nxer.TwistSpaceTechnology.client;
 
-import static com.Nxer.TwistSpaceTechnology.util.TextHandler.texter;
-
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.util.StatCollector;
 
 import com.Nxer.TwistSpaceTechnology.common.item.items.BasicItems;
 
@@ -16,7 +15,8 @@ public class GTCMCreativeTabs {
      * Creative Tab for MetaItem01
      */
     public static final CreativeTabs tabMetaItem01 = new CreativeTabs(
-        texter("TST Meta Items 1", "itemGroup.TST Meta Items 1")) {
+        // #tr temGroup.TST Meta Items 1 TST Meta Items 1
+        StatCollector.translateToLocal("temGroup.TST Meta Items 1")) {
 
         @Override
         @SideOnly(Side.CLIENT)
@@ -24,7 +24,9 @@ public class GTCMCreativeTabs {
             return BasicItems.MetaItem01;
         }
     };
-    public static final CreativeTabs tabGears = new CreativeTabs(texter("TSTGears", "itemGroup.TSTGears")) {
+    public static final CreativeTabs tabGears = new CreativeTabs(
+        // #tr temGroup.TSTGears TSTGears
+        StatCollector.translateToLocal("temGroup.TSTGears")) {
 
         @Override
         @SideOnly(Side.CLIENT)
@@ -37,7 +39,8 @@ public class GTCMCreativeTabs {
      * Creative Tab for MetaBlock01
      */
     public static final CreativeTabs tabMetaBlock01 = new CreativeTabs(
-        texter("TST Meta Blocks 1", "itemGroup.TST Meta Blocks 1")) {
+        // #tr temGroup.TST Meta Blocks 1 TST Meta Blocks 1
+        StatCollector.translateToLocal("temGroup.TST Meta Blocks 1")) {
 
         @Override
         @SideOnly(Side.CLIENT)
@@ -49,7 +52,9 @@ public class GTCMCreativeTabs {
     /**
      * Creative Tab for MetaBlock01
      */
-    public static final CreativeTabs tabGTCMGeneralTab = new CreativeTabs(texter("TST", "itemGroup.TST")) {
+    public static final CreativeTabs tabGTCMGeneralTab = new CreativeTabs(
+        // #tr temGroup.TST TST
+        StatCollector.translateToLocal("temGroup.TST")) {
 
         @Override
         @SideOnly(Side.CLIENT)
@@ -58,7 +63,8 @@ public class GTCMCreativeTabs {
         }
     };
     public static final CreativeTabs tabMultiStructures = new CreativeTabs(
-        texter("MultiStructures", "itemGroup.MultiStructures")) {
+        // #tr temGroup.MultiStructures MultiStructures
+        StatCollector.translateToLocal("temGroup.MultiStructures")) {
 
         @Override
         @SideOnly(Side.CLIENT)

@@ -373,26 +373,26 @@ public class GT_TileEntity_MiracleTop extends GTCM_MultiMachineBase<GT_TileEntit
     @Override
     protected GT_Multiblock_Tooltip_Builder createTooltip() {
         final GT_Multiblock_Tooltip_Builder tt = new GT_Multiblock_Tooltip_Builder();
-        tt.addMachineType(TextLocalization.Tooltip_MiracleTop_MachineType)
-            .addInfo(TextLocalization.Tooltip_MiracleTop_00)
-            .addInfo(TextLocalization.Tooltip_MiracleTop_01)
-            .addInfo(TextLocalization.Tooltip_MiracleTop_02)
-            .addInfo(TextLocalization.Tooltip_MiracleTop_03)
-            .addInfo(TextLocalization.Tooltip_MiracleTop_04)
-            .addInfo(TextLocalization.Tooltip_MiracleTop_05)
-            .addInfo(TextLocalization.Tooltip_MiracleTop_06)
-            .addInfo(TextLocalization.Tooltip_MiracleTop_07)
-            .addInfo(TextLocalization.StructureTooComplex)
-            .addInfo(TextLocalization.BLUE_PRINT_INFO)
+        tt.addMachineType(TextLocalization.Tooltip_MiracleTop_MachineType.toString())
+            .addInfo(TextLocalization.Tooltip_MiracleTop_00.toString())
+            .addInfo(TextLocalization.Tooltip_MiracleTop_01.toString())
+            .addInfo(TextLocalization.Tooltip_MiracleTop_02.toString())
+            .addInfo(TextLocalization.Tooltip_MiracleTop_03.toString())
+            .addInfo(TextLocalization.Tooltip_MiracleTop_04.toString())
+            .addInfo(TextLocalization.Tooltip_MiracleTop_05.toString())
+            .addInfo(TextLocalization.Tooltip_MiracleTop_06.toString())
+            .addInfo(TextLocalization.Tooltip_MiracleTop_07.toString())
+            .addInfo(TextLocalization.StructureTooComplex.toString())
+            .addInfo(TextLocalization.BLUE_PRINT_INFO.toString())
             .addSeparator()
-            .addController(TextLocalization.textFrontCenter)
-            .addInputHatch(TextLocalization.textMiracleTopHatchLocation, 2)
-            .addOutputHatch(TextLocalization.textMiracleTopHatchLocation, 2)
-            .addInputBus(TextLocalization.textMiracleTopHatchLocation, 2)
-            .addOutputBus(TextLocalization.textMiracleTopHatchLocation, 2)
-            .addMaintenanceHatch(TextLocalization.textAroundController, 1)
-            .addEnergyHatch(TextLocalization.textMiracleTopHatchLocation, 2)
-            .toolTipFinisher(TextLocalization.ModName);
+            .addController(TextLocalization.textFrontCenter.toString())
+            .addInputHatch(TextLocalization.textMiracleTopHatchLocation.toString(), 2)
+            .addOutputHatch(TextLocalization.textMiracleTopHatchLocation.toString(), 2)
+            .addInputBus(TextLocalization.textMiracleTopHatchLocation.toString(), 2)
+            .addOutputBus(TextLocalization.textMiracleTopHatchLocation.toString(), 2)
+            .addMaintenanceHatch(TextLocalization.textAroundController.toString(), 1)
+            .addEnergyHatch(TextLocalization.textMiracleTopHatchLocation.toString(), 2)
+            .toolTipFinisher(TextLocalization.ModName.toString());
         return tt;
     }
     // endregion

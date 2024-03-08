@@ -1,7 +1,5 @@
 package com.Nxer.TwistSpaceTechnology.common.machine;
 
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.textFrontBottom;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.textUseBlueprint;
 import static com.gtnewhorizon.structurelib.structure.StructureUtility.ofBlock;
 import static com.gtnewhorizon.structurelib.structure.StructureUtility.ofBlockUnlocalizedName;
 import static com.gtnewhorizon.structurelib.structure.StructureUtility.transpose;
@@ -205,21 +203,21 @@ I -> ofFrame...(Materials.Steel, ...);
     @Override
     protected GT_Multiblock_Tooltip_Builder createTooltip() {
         final GT_Multiblock_Tooltip_Builder tt = new GT_Multiblock_Tooltip_Builder();
-        tt.addMachineType(TextLocalization.Tooltip_LargeIndustrialCokingFactory_MachineType)
-            .addInfo(TextLocalization.Tooltip_LargeIndustrialCokingFactory_Controller)
-            .addInfo(TextLocalization.Tooltip_LargeIndustrialCokingFactory_01)
-            .addInfo(TextLocalization.Tooltip_LargeIndustrialCokingFactory_02)
-            .addInfo(TextLocalization.Tooltip_LargeIndustrialCokingFactory_03)
+        tt.addMachineType(TextLocalization.Tooltip_LargeIndustrialCokingFactory_MachineType.toString())
+            .addInfo(TextLocalization.Tooltip_LargeIndustrialCokingFactory_Controller.toString())
+            .addInfo(TextLocalization.Tooltip_LargeIndustrialCokingFactory_01.toString())
+            .addInfo(TextLocalization.Tooltip_LargeIndustrialCokingFactory_02.toString())
+            .addInfo(TextLocalization.Tooltip_LargeIndustrialCokingFactory_03.toString())
             .addSeparator()
-            .addInfo(TextLocalization.StructureTooComplex)
-            .addInfo(TextLocalization.BLUE_PRINT_INFO)
-            .addController(textFrontBottom)
-            .addInputHatch(textUseBlueprint, 1)
-            .addOutputHatch(textUseBlueprint, 1)
-            .addInputBus(textUseBlueprint, 1)
-            .addOutputBus(textUseBlueprint, 1)
-            .addEnergyHatch(textUseBlueprint, 1)
-            .toolTipFinisher(TextLocalization.ModName);
+            .addInfo(TextLocalization.StructureTooComplex.toString())
+            .addInfo(TextLocalization.BLUE_PRINT_INFO.toString())
+            .addController(TextLocalization.textFrontBottom.toString())
+            .addInputHatch(TextLocalization.textUseBlueprint.toString(), 1)
+            .addOutputHatch(TextLocalization.textUseBlueprint.toString(), 1)
+            .addInputBus(TextLocalization.textUseBlueprint.toString(), 1)
+            .addOutputBus(TextLocalization.textUseBlueprint.toString(), 1)
+            .addEnergyHatch(TextLocalization.textUseBlueprint.toString(), 1)
+            .toolTipFinisher(TextLocalization.ModName.toString());
         return tt;
     }
 

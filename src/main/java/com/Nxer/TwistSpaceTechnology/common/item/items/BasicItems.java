@@ -11,29 +11,25 @@ import com.Nxer.TwistSpaceTechnology.common.item.itemAdders.ItemProofOfHeroes;
 
 public final class BasicItems {
 
-    public static final Item MetaItem01 = new ItemAdder01(
-        "MetaItem01Base",
-        "MetaItem01",
-        GTCMCreativeTabs.tabMetaItem01).setTextureName("gtnhcommunitymod:MetaItem01/0");
+    // #tr MetaItem01.name MetaItem01Base
+    public static final Item MetaItem01 = new ItemAdder01("MetaItem01", GTCMCreativeTabs.tabMetaItem01)
+        .setTextureName("gtnhcommunitymod:MetaItem01/0");
 
-    public static final Item MetaItemRune = new ItemAdderRune(
-        "MetaItemRuneBase",
-        "MetaItemRune",
-        GTCMCreativeTabs.tabMetaItem01).setTextureName("gtnhcommunitymod:MetaItem01/0");
+    // #tr MetaItemRune.name MetaItemRuneBase
+    public static final Item MetaItemRune = new ItemAdderRune("MetaItemRune", GTCMCreativeTabs.tabMetaItem01)
+        .setTextureName("gtnhcommunitymod:MetaItem01/0");
 
-    public static final Item ProofOfHeroes = new ItemProofOfHeroes(
-        "英雄の証",
-        "ProofOfHeroes",
-        GTCMCreativeTabs.tabMetaItem01).setTextureName("gtnhcommunitymod:ProofOfHeroes");
+    // #tr ProofOfHeroes.name 英雄の証
+    public static final Item ProofOfHeroes = new ItemProofOfHeroes("ProofOfHeroes", GTCMCreativeTabs.tabMetaItem01)
+        .setTextureName("gtnhcommunitymod:ProofOfHeroes");
 
+    // #tr MultiStructuresLinkTool.name Multi-Structures Link Tool
     public static final Item MultiStructuresLinkTool = new ItemMultiStructuresLinkTool(
-        "Multi-Structures Link Tool",
         "MultiStructuresLinkTool",
         GTCMCreativeTabs.tabMultiStructures);
 
-    public static final Item PowerChair = new ItemPowerChair(
-        "Power Chair",
-        "PowerChair",
-        GTCMCreativeTabs.tabMetaItem01).setTextureName("gtnhcommunitymod:PowerChair");
+    // #tr PowerChair.name Power Chair
+    public static final Item PowerChair = new ItemPowerChair("PowerChair", GTCMCreativeTabs.tabMetaItem01)
+        .setTextureName("gtnhcommunitymod:PowerChair");
 
 }

@@ -445,7 +445,7 @@ public class TST_NuclearReactor extends GTCM_MultiMachineBase<TST_NuclearReactor
     @Override
     protected GT_Multiblock_Tooltip_Builder createTooltip() {
         var tt = new GT_Multiblock_Tooltip_Builder();
-        tt.toolTipFinisher(TextLocalization.ModName);
+        tt.toolTipFinisher(TextLocalization.ModName.toString());
         return tt;
     }
 

@@ -142,99 +142,111 @@ public class MachineLoader {
         IntensifyChemicalDistorter = new GT_TileEntity_IntensifyChemicalDistorter(
             19001,
             "NameIntensifyChemicalDistorter",
-            TextLocalization.NameIntensifyChemicalDistorter).getStackForm(1);
+            TextLocalization.NameIntensifyChemicalDistorter.toString()).getStackForm(1);
         GTCMItemList.IntensifyChemicalDistorter.set(IntensifyChemicalDistorter);
 
         //
         PreciseHighEnergyPhotonicQuantumMaster = new GT_TileEntity_PreciseHighEnergyPhotonicQuantumMaster(
             19002,
             "NamePreciseHighEnergyPhotonicQuantumMaster",
-            TextLocalization.NamePreciseHighEnergyPhotonicQuantumMaster).getStackForm(1);
+            TextLocalization.NamePreciseHighEnergyPhotonicQuantumMaster.toString()).getStackForm(1);
         GTCMItemList.PreciseHighEnergyPhotonicQuantumMaster.set(PreciseHighEnergyPhotonicQuantumMaster);
 
         //
         MiracleTop = new GT_TileEntity_MiracleTop(
             19003,
-            TextLocalization.NameMiracleTop,
-            TextLocalization.NameMiracleTop).getStackForm(1);
+            TextLocalization.NameMiracleTop.toString(),
+            TextLocalization.NameMiracleTop.toString()).getStackForm(1);
         GTCMItemList.MiracleTop.set(MiracleTop);
 
         //
         MagneticDrivePressureFormer = new GT_TileEntity_MagneticDrivePressureFormer(
             19004,
             "NameMagneticDrivePressureFormer",
-            TextLocalization.NameMagneticDrivePressureFormer).getStackForm(1);
+            TextLocalization.NameMagneticDrivePressureFormer.toString()).getStackForm(1);
         GTCMItemList.MagneticDrivePressureFormer.set(MagneticDrivePressureFormer);
 
         //
         PhysicalFormSwitcher = new GT_TileEntity_PhysicalFormSwitcher(
             19005,
             "NamePhysicalFormSwitcher",
-            TextLocalization.NamePhysicalFormSwitcher).getStackForm(1);
+            TextLocalization.NamePhysicalFormSwitcher.toString()).getStackForm(1);
         GTCMItemList.PhysicalFormSwitcher.set(PhysicalFormSwitcher);
 
         //
-        MagneticMixer = new GT_TileEntity_MagneticMixer(19006, "NameMagneticMixer", TextLocalization.NameMagneticMixer)
-            .getStackForm(1);
+        MagneticMixer = new GT_TileEntity_MagneticMixer(
+            19006,
+            "NameMagneticMixer",
+            TextLocalization.NameMagneticMixer.toString()).getStackForm(1);
         GTCMItemList.MagneticMixer.set(MagneticMixer);
 
         //
         MagneticDomainConstructor = new GT_TileEntity_MagneticDomainConstructor(
             19007,
             "NameMagneticDomainConstructor",
-            TextLocalization.NameMagneticDomainConstructor).getStackForm(1);
+            TextLocalization.NameMagneticDomainConstructor.toString()).getStackForm(1);
         GTCMItemList.MagneticDomainConstructor.set(MagneticDomainConstructor);
 
         //
-        Silksong = new GT_TileEntity_Silksong(19008, "NameSilksong", TextLocalization.NameSilksong).getStackForm(1);
+        Silksong = new GT_TileEntity_Silksong(19008, "NameSilksong", TextLocalization.NameSilksong.toString())
+            .getStackForm(1);
         GTCMItemList.Silksong.set(Silksong);
 
         //
-        HolySeparator = new GT_TileEntity_HolySeparator(19009, "NameHolySeparator", TextLocalization.NameHolySeparator)
-            .getStackForm(1);
+        HolySeparator = new GT_TileEntity_HolySeparator(
+            19009,
+            "NameHolySeparator",
+            TextLocalization.NameHolySeparator.toString()).getStackForm(1);
         GTCMItemList.HolySeparator.set(HolySeparator);
 
         //
-        SpaceScaler = new GT_TileEntity_SpaceScaler(19010, "NameSpaceScaler", TextLocalization.NameSpaceScaler)
-            .getStackForm(1);
+        SpaceScaler = new GT_TileEntity_SpaceScaler(
+            19010,
+            "NameSpaceScaler",
+            TextLocalization.NameSpaceScaler.toString()).getStackForm(1);
         GTCMItemList.SpaceScaler.set(SpaceScaler);
 
         //
         MoleculeDeconstructor = new GT_TileEntity_MoleculeDeconstructor(
             19011,
             "NameMoleculeDeconstructor",
-            TextLocalization.NameMoleculeDeconstructor).getStackForm(1);
+            TextLocalization.NameMoleculeDeconstructor.toString()).getStackForm(1);
         GTCMItemList.MoleculeDeconstructor.set(MoleculeDeconstructor);
 
         //
         CrystallineInfinitier = new GTCM_CrystallineInfinitier(
             19012,
             "NameCrystallineInfinitier",
-            TextLocalization.NameCrystallineInfinitier).getStackForm(1);
+            TextLocalization.NameCrystallineInfinitier.toString()).getStackForm(1);
         GTCMItemList.CrystallineInfinitier.set(CrystallineInfinitier);
 
         //
-        DSPLauncher = new TST_DSPLauncher(19013, "NameDSPLauncher", TextLocalization.NameDSPLauncher).getStackForm(1);
+        DSPLauncher = new TST_DSPLauncher(19013, "NameDSPLauncher", TextLocalization.NameDSPLauncher.toString())
+            .getStackForm(1);
         GTCMItemList.DSPLauncher.set(DSPLauncher);
 
         //
-        DSPReceiver = new TST_DSPReceiver(19014, "NameDSPReceiver", TextLocalization.NameDSPReceiver).getStackForm(1);
+        DSPReceiver = new TST_DSPReceiver(19014, "NameDSPReceiver", TextLocalization.NameDSPReceiver.toString())
+            .getStackForm(1);
         GTCMItemList.DSPReceiver.set(DSPReceiver);
 
         //
-        ArtificialStar = new TST_ArtificialStar(19015, "NameArtificialStar", TextLocalization.NameArtificialStar)
-            .getStackForm(1);
+        ArtificialStar = new TST_ArtificialStar(
+            19015,
+            "NameArtificialStar",
+            TextLocalization.NameArtificialStar.toString()).getStackForm(1);
         GTCMItemList.ArtificialStar.set(ArtificialStar);
 
         //
-        MiracleDoor = new TST_MiracleDoor(19016, "NameMiracleDoor", TextLocalization.NameMiracleDoor).getStackForm(1);
+        MiracleDoor = new TST_MiracleDoor(19016, "NameMiracleDoor", TextLocalization.NameMiracleDoor.toString())
+            .getStackForm(1);
         GTCMItemList.MiracleDoor.set(MiracleDoor);
 
         //
         OreProcessingFactory = new TST_OreProcessingFactory(
             19017,
             "NameOreProcessingFactory",
-            TextLocalization.NameOreProcessingFactory).getStackForm(1);
+            TextLocalization.NameOreProcessingFactory.toString()).getStackForm(1);
         GTCMItemList.OreProcessingFactory.set(OreProcessingFactory);
 
         // Space Station Systems
@@ -242,12 +254,12 @@ public class MachineLoader {
             megaUniversalSpaceStation = new TST_MegaUniversalSpaceStation(
                 19018,
                 "NameMegaUniversalSpaceStation",
-                TextLocalization.NameMegaUniversalSpaceStation).getStackForm(1);
+                TextLocalization.NameMegaUniversalSpaceStation.toString()).getStackForm(1);
             GTCMItemList.megaUniversalSpaceStation.set(megaUniversalSpaceStation);
             stellarMaterialSiphon = new GT_TileEntity_StellarMaterialSiphon(
                 19019,
                 "NameStellarMaterialSiphon",
-                TextLocalization.NameStellarMaterialSiphon).getStackForm(1);
+                TextLocalization.NameStellarMaterialSiphon.toString()).getStackForm(1);
             GTCMItemList.StellarMaterialSiphon.set(stellarMaterialSiphon);
         }
 
@@ -255,34 +267,36 @@ public class MachineLoader {
         CircuitConverter = new TST_CircuitConverter(
             19020,
             "NameCircuitConverter",
-            TextLocalization.NameCircuitConverter).getStackForm(1);
+            TextLocalization.NameCircuitConverter.toString()).getStackForm(1);
         GTCMItemList.CircuitConverter.set(CircuitConverter);
 
         //
         LargeIndustrialCokingFactory = new TST_LargeIndustrialCokingFactory(
             19021,
             "NameLargeIndustrialCokingFactory",
-            TextLocalization.NameLargeIndustrialCokingFactory).getStackForm(1);
+            TextLocalization.NameLargeIndustrialCokingFactory.toString()).getStackForm(1);
         GTCMItemList.LargeIndustrialCokingFactory.set(LargeIndustrialCokingFactory);
 
         //
-        ElvenWorkshop = new GTCM_ElvenWorkshop(19500, "NameElvenWorkshop", NameElvenWorkshop).getStackForm(1);
+        ElvenWorkshop = new GTCM_ElvenWorkshop(19500, "NameElvenWorkshop", NameElvenWorkshop.toString())
+            .getStackForm(1);
         GTCMItemList.ElvenWorkshop.set(ElvenWorkshop);
 
         //
         HyperSpacetimeTransformer = new GTCM_HyperSpacetimeTransformer(
             19501,
             "NameHyperSpacetimeTransformer",
-            TextLocalization.NameHyperSpacetimeTransformer).getStackForm(1);
+            TextLocalization.NameHyperSpacetimeTransformer.toString()).getStackForm(1);
         GTCMItemList.HyperSpacetimeTransformer.set(HyperSpacetimeTransformer);
         //
         MegaBrickedBlastFurnace = new GT_TileEntity_MegaBrickedBlastFurnace(
             19022,
             "NameMegaBrickedBlastFurnace",
-            TextLocalization.NameMegaBrickedBlastFurnace).getStackForm(1);
+            TextLocalization.NameMegaBrickedBlastFurnace.toString()).getStackForm(1);
         GTCMItemList.MegaBrickedBlastFurnace.set(MegaBrickedBlastFurnace);
 
-        Scavenger = new TST_Scavenger(19023, "NameScavenger", TextLocalization.NameScavenger).getStackForm(1);
+        Scavenger = new TST_Scavenger(19023, "NameScavenger", TextLocalization.NameScavenger.toString())
+            .getStackForm(1);
 
         GTCMItemList.Scavenger.set(Scavenger);
 
@@ -291,28 +305,28 @@ public class MachineLoader {
         GTCMItemList.superCleanRoom.set(superCleanRoom);
 
         //
-        BiosphereIII = new TST_BiosphereIII(19025, "nameBiosphereIII", TextLocalization.NameBiosphereIII)
+        BiosphereIII = new TST_BiosphereIII(19025, "nameBiosphereIII", TextLocalization.NameBiosphereIII.toString())
             .getStackForm(1);
         GTCMItemList.BiosphereIII.set(BiosphereIII);
 
         MegaEggGenerator = new GT_TileEntity_MegaEggGenerator(
             19026,
             "NameMegaEggGenerator",
-            TextLocalization.NameMegaEggGenerator).getStackForm(1);
+            TextLocalization.NameMegaEggGenerator.toString()).getStackForm(1);
         GTCMItemList.MegaEggGenerator.set(MegaEggGenerator);
 
         //
         AdvancedMegaOilCracker = new TST_AdvancedMegaOilCracker(
             19027,
             "NameAdvancedMegaOilCracker",
-            TextLocalization.NameAdvancedMegaOilCracker).getStackForm(1);
+            TextLocalization.NameAdvancedMegaOilCracker.toString()).getStackForm(1);
         GTCMItemList.AdvancedMegaOilCracker.set(AdvancedMegaOilCracker);
 
         //
         IndistinctTentacle = new TST_IndistinctTentacle(
             19028,
             "NameIndistinctTentacle",
-            TextLocalization.NameIndistinctTentacle).getStackForm(1);
+            TextLocalization.NameIndistinctTentacle.toString()).getStackForm(1);
         GTCMItemList.IndistinctTentacle.set(IndistinctTentacle);
         // NuclearReactor = new TST_NuclearReactor(19029, "nuclea reactor", "nuclear reactor").getStackForm(1);
         // GTCMItemList.NuclearReactor.set(IndistinctTentacle);
@@ -326,40 +340,42 @@ public class MachineLoader {
         ThermalEnergyDevourer = new TST_ThermalEnergyDevourer(
             19030,
             "NameThermalEnergyDevourer",
-            TextLocalization.NameThermalEnergyDevourer).getStackForm(1);
+            TextLocalization.NameThermalEnergyDevourer.toString()).getStackForm(1);
         GTCMItemList.ThermalEnergyDevourer.set(ThermalEnergyDevourer);
 
         //
         VacuumFilterExtractor = new TST_VacuumFilterExtractor(
             19031,
             "NameVacuumFilterExtractor",
-            TextLocalization.NameVacuumFilterExtractor).getStackForm(1);
+            TextLocalization.NameVacuumFilterExtractor.toString()).getStackForm(1);
         GTCMItemList.VacuumFilterExtractor.set(VacuumFilterExtractor);
 
         //
         LargeSteamForgeHammer = new TST_LargeSteamForgeHammer(
             19032,
             "NameLargeSteamForgeHammer",
-            TextLocalization.NameLargeSteamForgeHammer).getStackForm(1);
+            TextLocalization.NameLargeSteamForgeHammer.toString()).getStackForm(1);
         GTCMItemList.LargeSteamForgeHammer.set(LargeSteamForgeHammer);
 
         //
         LargeSteamAlloySmelter = new TST_LargeSteamAlloySmelter(
             19033,
             "NameLargeSteamAlloySmelter",
-            TextLocalization.NameLargeSteamAlloySmelter).getStackForm(1);
+            TextLocalization.NameLargeSteamAlloySmelter.toString()).getStackForm(1);
         GTCMItemList.LargeSteamAlloySmelter.set(LargeSteamAlloySmelter);
 
         //
-        EyeOfWood = new TST_EyeOfWood(19034, "NameEyeOfWood", TextLocalization.NameEyeOfWood).getStackForm(1);
+        EyeOfWood = new TST_EyeOfWood(19034, "NameEyeOfWood", TextLocalization.NameEyeOfWood.toString())
+            .getStackForm(1);
         GTCMItemList.EyeOfWood.set(EyeOfWood);
 
         //
-        BeeEngineer = new TST_BeeEngineer(19035, "NameBeeEngineer", TextLocalization.NameBeeEngineer).getStackForm(1);
+        BeeEngineer = new TST_BeeEngineer(19035, "NameBeeEngineer", TextLocalization.NameBeeEngineer.toString())
+            .getStackForm(1);
         GTCMItemList.BeeEngineer.set(BeeEngineer);
 
         //
-        MegaMacerator = new TST_MegaMacerator(19036, "NameMegaMacerator", TextLocalization.NameMegaMacerator)
+        MegaMacerator = new TST_MegaMacerator(19036, "NameMegaMacerator", TextLocalization.NameMegaMacerator.toString())
             .getStackForm(1);
         GTCMItemList.MegaMacerator.set(MegaMacerator);
 
@@ -367,7 +383,7 @@ public class MachineLoader {
         HephaestusAtelier = new TST_HephaestusAtelier(
             19037,
             "NameHephaestusAtelier",
-            TextLocalization.NameHephaestusAtelier).getStackForm(1);
+            TextLocalization.NameHephaestusAtelier.toString()).getStackForm(1);
         GTCMItemList.HephaestusAtelier.set(HephaestusAtelier);
 
         //
@@ -375,7 +391,7 @@ public class MachineLoader {
             DeployedNanoCore = new TST_DeployedNanoCore(
                 19038,
                 "NameDeployedNanoCore",
-                TextLocalization.NameDeployedNanoCore).getStackForm(1);
+                TextLocalization.NameDeployedNanoCore.toString()).getStackForm(1);
             GTCMItemList.DeployedNanoCore.set(DeployedNanoCore);
         }
 
@@ -387,7 +403,7 @@ public class MachineLoader {
         InfiniteAirHatch = new GT_MetaTileEntity_Hatch_Air(
             18999,
             "NameInfiniteAirHatch",
-            TextLocalization.NameInfiniteAirHatch,
+            TextLocalization.NameInfiniteAirHatch.toString(),
             9).getStackForm(1);
         GTCMItemList.InfiniteAirHatch.set(InfiniteAirHatch);
 
@@ -395,41 +411,44 @@ public class MachineLoader {
         InfiniteWirelessDynamoHatch = new GT_Hatch_InfiniteWirelessDynamoHatch(
             18998,
             "NameInfiniteWirelessDynamoHatch",
-            TextLocalization.NameInfiniteWirelessDynamoHatch,
+            TextLocalization.NameInfiniteWirelessDynamoHatch.toString(),
             14).getStackForm(1);
         GTCMItemList.InfiniteWirelessDynamoHatch.set(InfiniteWirelessDynamoHatch);
 
         //
-        ManaHatch = new GT_MetaTileEntity_Hatch_Mana(18979, "NameManaHatch", TextLocalization.NameManaHatch, 9)
-            .getStackForm(1);
+        ManaHatch = new GT_MetaTileEntity_Hatch_Mana(
+            18979,
+            "NameManaHatch",
+            TextLocalization.NameManaHatch.toString(),
+            9).getStackForm(1);
         GTCMItemList.ManaHatch.set(ManaHatch);
 
         // region Dual Input Buffer
         DualInputBuffer_IV = new GT_MetaTileEntity_Hatch_DualInput(
             18980,
             "NameDualInputBuffer_IV",
-            TextLocalization.NameDualInputBuffer_IV,
+            TextLocalization.NameDualInputBuffer_IV.toString(),
             5).getStackForm(1);
         GTCMItemList.DualInputBuffer_IV.set(DualInputBuffer_IV);
 
         DualInputBuffer_LuV = new GT_MetaTileEntity_Hatch_DualInput(
             18981,
             "NameDualInputBuffer_LuV",
-            TextLocalization.NameDualInputBuffer_LuV,
+            TextLocalization.NameDualInputBuffer_LuV.toString(),
             6).getStackForm(1);
         GTCMItemList.DualInputBuffer_LuV.set(DualInputBuffer_LuV);
 
         DualInputBuffer_ZPM = new GT_MetaTileEntity_Hatch_DualInput(
             18982,
             "NameDualInputBuffer_ZPM",
-            TextLocalization.NameDualInputBuffer_ZPM,
+            TextLocalization.NameDualInputBuffer_ZPM.toString(),
             7).getStackForm(1);
         GTCMItemList.DualInputBuffer_ZPM.set(DualInputBuffer_ZPM);
 
         DualInputBuffer_UV = new GT_MetaTileEntity_Hatch_DualInput(
             18983,
             "NameDualInputBuffer_UV",
-            TextLocalization.NameDualInputBuffer_UV,
+            TextLocalization.NameDualInputBuffer_UV.toString(),
             8).getStackForm(1);
         GTCMItemList.DualInputBuffer_UV.set(DualInputBuffer_UV);
 
@@ -551,7 +570,7 @@ public class MachineLoader {
         DebugUncertaintyHatch = new GT_MetaTileEntity_Hatch_UncertaintyDebug(
             18978,
             "NameDebugUncertaintyHatch",
-            TextLocalization.NameDebugUncertaintyHatch,
+            TextLocalization.NameDebugUncertaintyHatch.toString(),
             12).getStackForm(1);
         GTCMItemList.DebugUncertaintyHatch.set(DebugUncertaintyHatch);
 
@@ -559,7 +578,7 @@ public class MachineLoader {
         LaserSmartNode = new GT_MetaTileEntity_Pipe_EnergySmart(
             18960,
             "NameLaserSmartNode",
-            TextLocalization.NameLaserSmartNode).getStackForm(1);
+            TextLocalization.NameLaserSmartNode.toString()).getStackForm(1);
         GTCMItemList.LaserSmartNode.set(LaserSmartNode);
         // endregion
 

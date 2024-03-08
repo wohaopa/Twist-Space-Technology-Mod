@@ -1,7 +1,5 @@
 package com.Nxer.TwistSpaceTechnology.common.machine;
 
-import static com.Nxer.TwistSpaceTechnology.util.TextHandler.texter;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.textFrontBottom;
 import static com.gtnewhorizon.structurelib.structure.StructureUtility.isAir;
 import static com.gtnewhorizon.structurelib.structure.StructureUtility.ofBlock;
 import static com.gtnewhorizon.structurelib.structure.StructureUtility.ofChain;
@@ -29,6 +27,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.StatCollector;
 import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraftforge.fluids.FluidStack;
 
@@ -355,41 +354,41 @@ public class TST_BiosphereIII extends GTCM_MultiMachineBase<TST_BiosphereIII> {
     @Override
     protected GT_Multiblock_Tooltip_Builder createTooltip() {
         final GT_Multiblock_Tooltip_Builder tt = new GT_Multiblock_Tooltip_Builder();
-        tt.addMachineType(TextLocalization.Tooltip_BiosphereIII_MachineType)
-            .addInfo(TextLocalization.Tooltip_BiosphereIII_Controller)
-            .addInfo(TextLocalization.Tooltip_BiosphereIII_00)
-            .addInfo(TextLocalization.textScrewdriverChangeMode)
-            .addInfo(TextLocalization.BiosphereIII_Mode_00)
-            .addInfo(TextLocalization.Tooltip_BiosphereIII_Mode0_00)
-            .addInfo(TextLocalization.Tooltip_BiosphereIII_Mode0_01)
-            .addInfo(TextLocalization.Tooltip_BiosphereIII_Mode0_02)
-            .addInfo(TextLocalization.BiosphereIII_Mode_01)
-            .addInfo(TextLocalization.Tooltip_BiosphereIII_Mode1_00)
-            .addInfo(TextLocalization.Tooltip_BiosphereIII_Mode1_01)
-            .addInfo(TextLocalization.Tooltip_BiosphereIII_Mode1_02)
-            .addInfo(TextLocalization.Tooltip_BiosphereIII_Mode1_03)
-            .addInfo(TextLocalization.BiosphereIII_Mode_02)
-            .addInfo(TextLocalization.Tooltip_BiosphereIII_Mode2n3_00)
-            .addInfo(TextLocalization.Tooltip_BiosphereIII_Mode2n3_01)
-            .addInfo(TextLocalization.Tooltip_BiosphereIII_Mode2n3_02)
-            .addInfo(TextLocalization.BiosphereIII_Mode_03)
-            .addInfo(TextLocalization.Tooltip_BiosphereIII_Mode2n3_00)
-            .addInfo(TextLocalization.Tooltip_BiosphereIII_Mode2n3_01)
-            .addInfo(TextLocalization.Tooltip_BiosphereIII_Mode2n3_02)
+        tt.addMachineType(TextLocalization.Tooltip_BiosphereIII_MachineType.toString())
+            .addInfo(TextLocalization.Tooltip_BiosphereIII_Controller.toString())
+            .addInfo(TextLocalization.Tooltip_BiosphereIII_00.toString())
+            .addInfo(TextLocalization.textScrewdriverChangeMode.toString())
+            .addInfo(TextLocalization.BiosphereIII_Mode_00.toString())
+            .addInfo(TextLocalization.Tooltip_BiosphereIII_Mode0_00.toString())
+            .addInfo(TextLocalization.Tooltip_BiosphereIII_Mode0_01.toString())
+            .addInfo(TextLocalization.Tooltip_BiosphereIII_Mode0_02.toString())
+            .addInfo(TextLocalization.BiosphereIII_Mode_01.toString())
+            .addInfo(TextLocalization.Tooltip_BiosphereIII_Mode1_00.toString())
+            .addInfo(TextLocalization.Tooltip_BiosphereIII_Mode1_01.toString())
+            .addInfo(TextLocalization.Tooltip_BiosphereIII_Mode1_02.toString())
+            .addInfo(TextLocalization.Tooltip_BiosphereIII_Mode1_03.toString())
+            .addInfo(TextLocalization.BiosphereIII_Mode_02.toString())
+            .addInfo(TextLocalization.Tooltip_BiosphereIII_Mode2n3_00.toString())
+            .addInfo(TextLocalization.Tooltip_BiosphereIII_Mode2n3_01.toString())
+            .addInfo(TextLocalization.Tooltip_BiosphereIII_Mode2n3_02.toString())
+            .addInfo(TextLocalization.BiosphereIII_Mode_03.toString())
+            .addInfo(TextLocalization.Tooltip_BiosphereIII_Mode2n3_00.toString())
+            .addInfo(TextLocalization.Tooltip_BiosphereIII_Mode2n3_01.toString())
+            .addInfo(TextLocalization.Tooltip_BiosphereIII_Mode2n3_02.toString())
             .addSeparator()
-            .addInfo(TextLocalization.StructureTooComplex)
-            .addInfo(TextLocalization.BLUE_PRINT_INFO)
+            .addInfo(TextLocalization.StructureTooComplex.toString())
+            .addInfo(TextLocalization.BLUE_PRINT_INFO.toString())
             .beginStructureBlock(13, 19, 17, false)
-            .addController(textFrontBottom)
-            .addInputHatch(TextLocalization.textBiosphereIIIHatchLocation, 1)
-            .addOutputHatch(TextLocalization.textBiosphereIIIHatchLocation, 1)
-            .addInputBus(TextLocalization.textBiosphereIIIHatchLocation, 1)
-            .addOutputBus(TextLocalization.textBiosphereIIIHatchLocation, 1)
-            .addEnergyHatch(TextLocalization.textBiosphereIIIHatchLocation, 1)
-            .addMaintenanceHatch(TextLocalization.textBiosphereIIIHatchLocation, 1)
+            .addController(TextLocalization.textFrontBottom.toString())
+            .addInputHatch(TextLocalization.textBiosphereIIIHatchLocation.toString(), 1)
+            .addOutputHatch(TextLocalization.textBiosphereIIIHatchLocation.toString(), 1)
+            .addInputBus(TextLocalization.textBiosphereIIIHatchLocation.toString(), 1)
+            .addOutputBus(TextLocalization.textBiosphereIIIHatchLocation.toString(), 1)
+            .addEnergyHatch(TextLocalization.textBiosphereIIIHatchLocation.toString(), 1)
+            .addMaintenanceHatch(TextLocalization.textBiosphereIIIHatchLocation.toString(), 1)
             .addStructureInfo(
                 TextLocalization.textBiosphereIIIRadioHatch + ", " + TextLocalization.textBiosphereIIIHatchLocation)
-            .toolTipFinisher(TextLocalization.ModName);
+            .toolTipFinisher(TextLocalization.ModName.toString());
         return tt;
     }
 
@@ -454,10 +453,10 @@ public class TST_BiosphereIII extends GTCM_MultiMachineBase<TST_BiosphereIII> {
 
     private String getDisplayMode(int mode) {
         return switch (mode) {
-            case 0 -> TextLocalization.BiosphereIII_Mode_00;
-            case 1 -> TextLocalization.BiosphereIII_Mode_01;
-            case 2 -> TextLocalization.BiosphereIII_Mode_02;
-            default -> TextLocalization.BiosphereIII_Mode_03;
+            case 0 -> TextLocalization.BiosphereIII_Mode_00.toString();
+            case 1 -> TextLocalization.BiosphereIII_Mode_01.toString();
+            case 2 -> TextLocalization.BiosphereIII_Mode_02.toString();
+            default -> TextLocalization.BiosphereIII_Mode_03.toString();
         };
     }
 
@@ -471,7 +470,8 @@ public class TST_BiosphereIII extends GTCM_MultiMachineBase<TST_BiosphereIII> {
         String[] origin = super.getInfoData();
         String[] ret = new String[origin.length + 3];
         System.arraycopy(origin, 0, ret, 0, origin.length);
-        ret[origin.length] = EnumChatFormatting.AQUA + texter("Glass Tier: ", "MachineInfoData.GlassTier")
+        // #tr MachineInfoData.GlassTier Glass Tier:
+        ret[origin.length] = EnumChatFormatting.AQUA + StatCollector.translateToLocal("MachineInfoData.GlassTier")
             + ":"
             + EnumChatFormatting.GOLD
             + this.mGlassTier;

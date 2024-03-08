@@ -234,18 +234,18 @@ public class GTCM_TestMultiMachine
         final GT_Multiblock_Tooltip_Builder tt = new GT_Multiblock_Tooltip_Builder();
         tt.addMachineType("test")
             .addSeparator()
-            .addInfo(TextLocalization.StructureTooComplex)
-            .addInfo(TextLocalization.BLUE_PRINT_INFO)
+            .addInfo(TextLocalization.StructureTooComplex.toString())
+            .addInfo(TextLocalization.BLUE_PRINT_INFO.toString())
             .beginStructureBlock(11, 13, 11, false)
-            .addController(TextLocalization.textFrontBottom)
-            .addCasingInfoRange(TextLocalization.textCasing, 8, 26, false)
-            .addInputHatch(TextLocalization.textAnyCasing, 1)
-            .addOutputHatch(TextLocalization.textAnyCasing, 1)
-            .addInputBus(TextLocalization.textAnyCasing, 2)
-            .addOutputBus(TextLocalization.textAnyCasing, 2)
-            .addMaintenanceHatch(TextLocalization.textAnyCasing, 2)
-            .addEnergyHatch(TextLocalization.textAnyCasing, 3)
-            .toolTipFinisher(TextLocalization.ModName);
+            .addController(TextLocalization.textFrontBottom.toString())
+            .addCasingInfoRange(TextLocalization.textCasing.toString(), 8, 26, false)
+            .addInputHatch(TextLocalization.textAnyCasing.toString(), 1)
+            .addOutputHatch(TextLocalization.textAnyCasing.toString(), 1)
+            .addInputBus(TextLocalization.textAnyCasing.toString(), 2)
+            .addOutputBus(TextLocalization.textAnyCasing.toString(), 2)
+            .addMaintenanceHatch(TextLocalization.textAnyCasing.toString(), 2)
+            .addEnergyHatch(TextLocalization.textAnyCasing.toString(), 3)
+            .toolTipFinisher(TextLocalization.ModName.toString());
         return tt;
     }
 

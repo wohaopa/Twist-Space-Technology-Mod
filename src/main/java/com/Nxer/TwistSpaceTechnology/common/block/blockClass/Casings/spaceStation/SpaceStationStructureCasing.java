@@ -3,7 +3,6 @@ package com.Nxer.TwistSpaceTechnology.common.block.blockClass.Casings.spaceStati
 import static com.Nxer.TwistSpaceTechnology.common.block.BasicBlocks.spaceStationStructureBlock;
 import static com.Nxer.TwistSpaceTechnology.common.block.blockClass.BlockStaticDataClientOnly.iconsSpaceStationStructureCasingMap;
 import static com.Nxer.TwistSpaceTechnology.util.MetaItemStackUtils.initMetaItemStack;
-import static com.Nxer.TwistSpaceTechnology.util.TextHandler.texter;
 
 import java.util.HashSet;
 import java.util.List;
@@ -35,10 +34,10 @@ public class SpaceStationStructureCasing extends BlockBase01 {
         GregTech_API.registerMachineBlock(this, -1);
     }
 
-    public SpaceStationStructureCasing(String unlocalizedName, String localName) {
+    public SpaceStationStructureCasing(String unlocalizedName/* , String localName */) {
         this();
         this.unlocalizedName = unlocalizedName;
-        texter(localName, unlocalizedName + ".name");
+        // texter(localName, unlocalizedName + ".name");
     }
 
     public static Set<Integer> SpaceStationStructureCasingCasingSet = new HashSet<>();
@@ -53,15 +52,15 @@ public class SpaceStationStructureCasing extends BlockBase01 {
     // -----------------------
     // region Meta Generator
 
-    public static ItemStack SpaceStationStructureCasingMeta(String i18nName, int meta) {
+    public static ItemStack SpaceStationStructureCasingMeta(/* String i18nName, */int meta) {
 
-        return initMetaItemStack(i18nName, meta, spaceStationStructureBlock, SpaceStationStructureCasingCasingSet);
+        return initMetaItemStack(/* i18nName, */meta, spaceStationStructureBlock, SpaceStationStructureCasingCasingSet);
     }
 
     public static ItemStack SpaceStationStructureCasingMeta(String i18nName, int meta, String[] tooltips) {
         // Handle the tooltips
         SpaceStationStructureCasingTooltipsArray[meta] = tooltips;
-        return SpaceStationStructureCasingMeta(i18nName, meta);
+        return SpaceStationStructureCasingMeta(/* i18nName, */meta);
     }
 
     // endregion

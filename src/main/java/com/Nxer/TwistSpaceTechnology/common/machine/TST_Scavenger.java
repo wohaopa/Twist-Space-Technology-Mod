@@ -226,24 +226,24 @@ public class TST_Scavenger extends GTCM_MultiMachineBase<TST_Scavenger> {
     @Override
     protected GT_Multiblock_Tooltip_Builder createTooltip() {
         final GT_Multiblock_Tooltip_Builder tt = new GT_Multiblock_Tooltip_Builder();
-        tt.addMachineType(TextLocalization.Tooltip_Scavenger_MachineType)
-            .addInfo(TextLocalization.Tooltip_Scavenger_Controller)
-            .addInfo(TextLocalization.Tooltip_Scavenger_01)
-            .addInfo(TextLocalization.Tooltip_Scavenger_02)
-            .addInfo(TextLocalization.Tooltip_Scavenger_03)
-            .addInfo(TextLocalization.Tooltip_Scavenger_04)
+        tt.addMachineType(TextLocalization.Tooltip_Scavenger_MachineType.toString())
+            .addInfo(TextLocalization.Tooltip_Scavenger_Controller.toString())
+            .addInfo(TextLocalization.Tooltip_Scavenger_01.toString())
+            .addInfo(TextLocalization.Tooltip_Scavenger_02.toString())
+            .addInfo(TextLocalization.Tooltip_Scavenger_03.toString())
+            .addInfo(TextLocalization.Tooltip_Scavenger_04.toString())
             .addSeparator()
-            .addInfo(StructureTooComplex)
-            .addInfo(BLUE_PRINT_INFO)
-            .addController(textFrontBottom)
-            .addInputHatch(textUseBlueprint, 1)
-            .addOutputHatch(textUseBlueprint, 2)
-            .addInputBus(textUseBlueprint, 1)
-            .addOutputBus(textUseBlueprint, 2)
-            .addEnergyHatch(textUseBlueprint, 2)
-            .addStructureInfo(Text_SeparatingLine)
-            .addStructureInfo(Tooltip_DoNotNeedMaintenance)
-            .toolTipFinisher(ModName);
+            .addInfo(StructureTooComplex.toString())
+            .addInfo(BLUE_PRINT_INFO.toString())
+            .addController(textFrontBottom.toString())
+            .addInputHatch(textUseBlueprint.toString(), 1)
+            .addOutputHatch(textUseBlueprint.toString(), 2)
+            .addInputBus(textUseBlueprint.toString(), 1)
+            .addOutputBus(textUseBlueprint.toString(), 2)
+            .addEnergyHatch(textUseBlueprint.toString(), 2)
+            .addStructureInfo(Text_SeparatingLine.toString())
+            .addStructureInfo(Tooltip_DoNotNeedMaintenance.toString())
+            .toolTipFinisher(ModName.toString());
         return tt;
     }
 

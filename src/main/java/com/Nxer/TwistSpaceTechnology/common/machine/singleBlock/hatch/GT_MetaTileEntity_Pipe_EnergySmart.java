@@ -1,6 +1,5 @@
 package com.Nxer.TwistSpaceTechnology.common.machine.singleBlock.hatch;
 
-import static com.Nxer.TwistSpaceTechnology.util.TextHandler.texter;
 import static com.github.technus.tectech.thing.metaTileEntity.Textures.OVERLAYS_ENERGY_IN_LASER_TT;
 import static gregtech.api.enums.Dyes.MACHINE_METAL;
 
@@ -11,7 +10,7 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.StatCollector;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import com.Nxer.TwistSpaceTechnology.util.TextLocalization;
@@ -77,14 +76,13 @@ public class GT_MetaTileEntity_Pipe_EnergySmart extends GT_MetaTileEntity_Tiered
     @Override
     public String[] getDescription() {
         return new String[] { CommonValues.TEC_MARK_EM,
-            texter("Reflect after precise calculation.", "LaserSmartNode.getDescription.01"),
-            texter(
-                EnumChatFormatting.AQUA + "Connects devices in different directions.",
-                "LaserSmartNode.getDescription.02"),
-            texter(
-                EnumChatFormatting.AQUA + "Input energy from the front and output from other sides.",
-                "LaserSmartNode.getDescription.03"),
-            TextLocalization.ModNameDesc };
+            // #tr LaserSmartNode.getDescription.01 Reflect after precise calculation.
+            StatCollector.translateToLocal("LaserSmartNode.getDescription.01"),
+            // #tr LaserSmartNode.getDescription.02 {\AQUA}Connects devices in different directions.
+            StatCollector.translateToLocal("LaserSmartNode.getDescription.02"),
+            // #tr LaserSmartNode.getDescription.03 {\AQUA}Input energy from the front and output from other sides.
+            StatCollector.translateToLocal("LaserSmartNode.getDescription.03"),
+            TextLocalization.ModNameDesc.toString() };
     }
 
     @Override

@@ -1,6 +1,5 @@
 package com.Nxer.TwistSpaceTechnology.common.machine.singleBlock.hatch;
 
-import static com.Nxer.TwistSpaceTechnology.util.TextHandler.texter;
 import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.ModNameDesc;
 import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.authorName_Nxer;
 import static gregtech.common.misc.WirelessNetworkManager.addEUToGlobalEnergyMap;
@@ -9,6 +8,7 @@ import static gregtech.common.misc.WirelessNetworkManager.strongCheckOrAddUser;
 import java.util.UUID;
 
 import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.StatCollector;
 
 import gregtech.api.enums.Textures;
 import gregtech.api.interfaces.ITexture;
@@ -92,8 +92,9 @@ public class GT_Hatch_InfiniteWirelessDynamoHatch extends GT_MetaTileEntity_Wire
         return new String[] { EnumChatFormatting.GRAY + "Stores energy globally in a network, up to 2^(2^31) EU.",
             EnumChatFormatting.GRAY + "Does not connect to wires. This block accepts EU into the network.",
             EnumChatFormatting.WHITE
-                + texter("Infinite output voltage limit.", "Description.InfiniteWirelessDynamoHatch.1"),
-            ModNameDesc, authorName_Nxer };
+                // #tr Description.InfiniteWirelessDynamoHatch.1 Infinite output voltage limit.
+                + StatCollector.translateToLocal("Description.InfiniteWirelessDynamoHatch.1"),
+            ModNameDesc.toString(), authorName_Nxer };
     }
 
     @Override

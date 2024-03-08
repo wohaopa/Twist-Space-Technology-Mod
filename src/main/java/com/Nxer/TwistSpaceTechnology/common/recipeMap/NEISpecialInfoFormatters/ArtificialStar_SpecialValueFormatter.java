@@ -1,9 +1,9 @@
 package com.Nxer.TwistSpaceTechnology.common.recipeMap.NEISpecialInfoFormatters;
 
-import static com.Nxer.TwistSpaceTechnology.util.TextHandler.texter;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import net.minecraft.util.StatCollector;
 
 import gregtech.nei.RecipeDisplayInfo;
 import gregtech.nei.formatter.INEISpecialInfoFormatter;
@@ -15,8 +15,9 @@ public class ArtificialStar_SpecialValueFormatter implements INEISpecialInfoForm
     @Override
     public List<String> format(RecipeDisplayInfo recipeInfo) {
         List<String> msgs = new ArrayList<>();
+        // #tr NEI.ArtificialStarGeneratingRecipes.specialValue.pre Generate :
         msgs.add(
-            texter("Generate : ", "NEI.ArtificialStarGeneratingRecipes.specialValue.pre")
+            StatCollector.translateToLocal("NEI.ArtificialStarGeneratingRecipes.specialValue.pre")
                 + recipeInfo.recipe.mSpecialValue
                 + " × 2,147,483,647 EU");
         return msgs;

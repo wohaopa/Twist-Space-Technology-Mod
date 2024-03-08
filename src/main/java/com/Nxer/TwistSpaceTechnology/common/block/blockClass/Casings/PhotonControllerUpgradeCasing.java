@@ -4,7 +4,6 @@ import static com.Nxer.TwistSpaceTechnology.common.block.BasicBlocks.PhotonContr
 import static com.Nxer.TwistSpaceTechnology.common.block.blockClass.BlockStaticDataClientOnly.iconsBlockPhotonControllerUpgradeMap;
 import static com.Nxer.TwistSpaceTechnology.config.Config.PhotonControllerUpgradeCasingSpeedIncrement;
 import static com.Nxer.TwistSpaceTechnology.util.MetaItemStackUtils.initMetaItemStack;
-import static com.Nxer.TwistSpaceTechnology.util.TextHandler.texter;
 
 import java.util.HashSet;
 import java.util.List;
@@ -38,10 +37,10 @@ public class PhotonControllerUpgradeCasing extends BlockBase01 {
         GregTech_API.registerMachineBlock(this, -1);
     }
 
-    public PhotonControllerUpgradeCasing(String unlocalizedName, String localName) {
+    public PhotonControllerUpgradeCasing(String unlocalizedName/* , String localName */) {
         this();
         this.unlocalizedName = unlocalizedName;
-        texter(localName, unlocalizedName + ".name");
+        // texter(localName, unlocalizedName + ".name");
     }
 
     // endregion
@@ -71,15 +70,15 @@ public class PhotonControllerUpgradeCasing extends BlockBase01 {
     // -----------------------
     // region Meta Generator
 
-    public static ItemStack photonControllerUpgradeCasingMeta(String i18nName, int meta) {
+    public static ItemStack photonControllerUpgradeCasingMeta(/* String i18nName, */int meta) {
 
-        return initMetaItemStack(i18nName, meta, PhotonControllerUpgrade, PhotonControllerUpgradeCasingSet);
+        return initMetaItemStack(/* i18nName, */meta, PhotonControllerUpgrade, PhotonControllerUpgradeCasingSet);
     }
 
-    public static ItemStack photonControllerUpgradeCasingMeta(String i18nName, int meta, String[] tooltips) {
+    public static ItemStack photonControllerUpgradeCasingMeta(/* String i18nName, */int meta, String[] tooltips) {
         // Handle the tooltips
         PhCUpgradeCasingTooltipsArray[meta] = tooltips;
-        return photonControllerUpgradeCasingMeta(i18nName, meta);
+        return photonControllerUpgradeCasingMeta(/* i18nName, */meta);
     }
 
     // endregion

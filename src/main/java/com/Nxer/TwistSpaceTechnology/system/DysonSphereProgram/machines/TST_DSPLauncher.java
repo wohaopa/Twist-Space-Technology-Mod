@@ -9,32 +9,6 @@ import static com.Nxer.TwistSpaceTechnology.system.DysonSphereProgram.logic.DSP_
 import static com.Nxer.TwistSpaceTechnology.system.DysonSphereProgram.logic.DSP_Values.EUTOfLaunchingSolarSail;
 import static com.Nxer.TwistSpaceTechnology.system.DysonSphereProgram.logic.DSP_Values.ticksOfLaunchingNode;
 import static com.Nxer.TwistSpaceTechnology.system.DysonSphereProgram.logic.DSP_Values.ticksOfLaunchingSolarSail;
-import static com.Nxer.TwistSpaceTechnology.util.TextHandler.texter;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.DSPName;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_DSPInfo_00;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_DSPInfo_01;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_DSPInfo_02;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_DSPInfo_03;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_DSPInfo_04;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_DSPInfo_05;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_DSPInfo_06;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_DSPInfo_launch_01;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_DSPInfo_launch_02;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_DSPLauncher_00;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_DSPLauncher_01;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_DSPLauncher_02;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_DSPLauncher_03;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_DSPLauncher_04;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_DSPLauncher_05;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_DSPLauncher_06;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_DSPLauncher_2_01;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_DSPLauncher_2_02;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_DSPLauncher_2_03;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_DSPLauncher_2_04;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_DSPLauncher_MachineType;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_Details;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_DoNotNeedMaintenance;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.textUseBlueprint;
 import static com.Nxer.TwistSpaceTechnology.util.Utils.metaItemEqual;
 import static com.github.technus.tectech.thing.casing.TT_Container_Casings.sBlockCasingsTT;
 import static com.gtnewhorizon.structurelib.structure.StructureUtility.ofBlock;
@@ -57,6 +31,7 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.StatCollector;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import com.Nxer.TwistSpaceTechnology.common.machine.multiMachineClasses.GTCM_MultiMachineBase;
@@ -148,13 +123,13 @@ public class TST_DSPLauncher extends GTCM_MultiMachineBase<TST_DSPLauncher>
         System.arraycopy(origin, 0, ret, 0, origin.length);
         ret[origin.length] = EnumChatFormatting.GOLD + "Owner Name: " + EnumChatFormatting.RESET + ownerName;
         ret[origin.length + 1] = EnumChatFormatting.GOLD + "UUID: " + EnumChatFormatting.RESET + ownerUUID;
-        ret[origin.length + 2] = EnumChatFormatting.GOLD + texter("Dyson Sphere Data: ", "DSPDataCell.getInfoData")
+        // #tr DSPDataCell.getInfoData Dyson Sphere Data:
+        ret[origin.length + 2] = EnumChatFormatting.GOLD + StatCollector.translateToLocal("DSPDataCell.getInfoData")
             + EnumChatFormatting.RESET
             + dspDataCell;
-        ret[origin.length + 3] = EnumChatFormatting.GOLD + texter("Overload time: ", "TST_DSPLauncher.getInfoData.01")
-            + EnumChatFormatting.RESET
-            + (overloadTime / 20)
-            + " s";
+        // #tr TST_DSPLauncher.getInfoData.01 Overload time:
+        ret[origin.length + 3] = EnumChatFormatting.GOLD + StatCollector
+            .translateToLocal("TST_DSPLauncher.getInfoData.01") + EnumChatFormatting.RESET + (overloadTime / 20) + " s";
 
         return ret;
     }
@@ -471,39 +446,39 @@ I -> ofFrame...(NaquadahAlloy);
     @Override
     protected GT_Multiblock_Tooltip_Builder createTooltip() {
         final GT_Multiblock_Tooltip_Builder tt = new GT_Multiblock_Tooltip_Builder();
-        tt.addMachineType(Tooltip_DSPLauncher_MachineType)
-            .addInfo(Tooltip_DSPLauncher_00)
-            .addInfo(Tooltip_DSPLauncher_01)
-            .addInfo(Tooltip_DSPLauncher_02)
-            .addInfo(Tooltip_DSPLauncher_03)
-            .addInfo(Tooltip_DSPLauncher_04)
-            .addInfo(Tooltip_DSPLauncher_05)
-            .addInfo(Tooltip_DSPLauncher_06)
-            .addInfo(TextLocalization.StructureTooComplex)
-            .addInfo(TextLocalization.BLUE_PRINT_INFO)
+        tt.addMachineType(TextLocalization.Tooltip_DSPLauncher_MachineType.toString())
+            .addInfo(TextLocalization.Tooltip_DSPLauncher_00.toString())
+            .addInfo(TextLocalization.Tooltip_DSPLauncher_01.toString())
+            .addInfo(TextLocalization.Tooltip_DSPLauncher_02.toString())
+            .addInfo(TextLocalization.Tooltip_DSPLauncher_03.toString())
+            .addInfo(TextLocalization.Tooltip_DSPLauncher_04.toString())
+            .addInfo(TextLocalization.Tooltip_DSPLauncher_05.toString())
+            .addInfo(TextLocalization.Tooltip_DSPLauncher_06.toString())
+            .addInfo(TextLocalization.StructureTooComplex.toString())
+            .addInfo(TextLocalization.BLUE_PRINT_INFO.toString())
             .addSeparator()
-            .addStructureInfo(Tooltip_Details)
-            .addStructureInfo(Tooltip_DSPLauncher_2_01)
-            .addStructureInfo(Tooltip_DSPLauncher_2_02)
-            .addStructureInfo(Tooltip_DSPLauncher_2_03)
-            .addStructureInfo(Tooltip_DSPLauncher_2_04)
+            .addStructureInfo(TextLocalization.Tooltip_Details.toString())
+            .addStructureInfo(TextLocalization.Tooltip_DSPLauncher_2_01.toString())
+            .addStructureInfo(TextLocalization.Tooltip_DSPLauncher_2_02.toString())
+            .addStructureInfo(TextLocalization.Tooltip_DSPLauncher_2_03.toString())
+            .addStructureInfo(TextLocalization.Tooltip_DSPLauncher_2_04.toString())
             .addStructureInfo(EnumChatFormatting.GOLD + "-----------------------------------------")
-            .addStructureInfo(DSPName + ":")
-            .addStructureInfo(Tooltip_DSPInfo_launch_01)
-            .addStructureInfo(Tooltip_DSPInfo_launch_02)
-            .addStructureInfo(Tooltip_DSPInfo_00)
-            .addStructureInfo(Tooltip_DSPInfo_01)
-            .addStructureInfo(Tooltip_DSPInfo_02)
-            .addStructureInfo(Tooltip_DSPInfo_03)
-            .addStructureInfo(Tooltip_DSPInfo_04)
-            .addStructureInfo(Tooltip_DSPInfo_05)
-            .addStructureInfo(Tooltip_DSPInfo_06)
+            .addStructureInfo(TextLocalization.DSPName + ":")
+            .addStructureInfo(TextLocalization.Tooltip_DSPInfo_launch_01.toString())
+            .addStructureInfo(TextLocalization.Tooltip_DSPInfo_launch_02.toString())
+            .addStructureInfo(TextLocalization.Tooltip_DSPInfo_00.toString())
+            .addStructureInfo(TextLocalization.Tooltip_DSPInfo_01.toString())
+            .addStructureInfo(TextLocalization.Tooltip_DSPInfo_02.toString())
+            .addStructureInfo(TextLocalization.Tooltip_DSPInfo_03.toString())
+            .addStructureInfo(TextLocalization.Tooltip_DSPInfo_04.toString())
+            .addStructureInfo(TextLocalization.Tooltip_DSPInfo_05.toString())
+            .addStructureInfo(TextLocalization.Tooltip_DSPInfo_06.toString())
             .addStructureInfo(EnumChatFormatting.GOLD + "-----------------------------------------")
-            .addStructureInfo(Tooltip_DoNotNeedMaintenance)
-            .addInputBus(textUseBlueprint, 1)
-            .addOutputBus(textUseBlueprint, 1)
-            .addEnergyHatch(textUseBlueprint, 1)
-            .toolTipFinisher(TextLocalization.ModName);
+            .addStructureInfo(TextLocalization.Tooltip_DoNotNeedMaintenance.toString())
+            .addInputBus(TextLocalization.textUseBlueprint.toString(), 1)
+            .addOutputBus(TextLocalization.textUseBlueprint.toString(), 1)
+            .addEnergyHatch(TextLocalization.textUseBlueprint.toString(), 1)
+            .toolTipFinisher(TextLocalization.ModName.toString());
         return tt;
     }
 

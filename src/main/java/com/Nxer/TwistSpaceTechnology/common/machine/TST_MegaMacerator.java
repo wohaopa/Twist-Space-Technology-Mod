@@ -397,24 +397,24 @@ public class TST_MegaMacerator extends GTCM_MultiMachineBase<TST_MegaMacerator> 
     @Override
     protected GT_Multiblock_Tooltip_Builder createTooltip() {
         final GT_Multiblock_Tooltip_Builder tt = new GT_Multiblock_Tooltip_Builder();
-        tt.addMachineType(TextLocalization.Tooltip_MegaMacerator_MachineType)
-            .addInfo(TextLocalization.Tooltip_MegaMacerator_Controller)
-            .addInfo(TextLocalization.Tooltip_MegaMacerator_01)
-            .addInfo(TextLocalization.Tooltip_MegaMacerator_02)
-            .addInfo(TextLocalization.Tooltip_MegaMacerator_03)
-            .addInfo(TextLocalization.Tooltip_MegaMacerator_04)
-            .addInfo(TextLocalization.Tooltip_MegaMacerator_05)
-            .addInfo(TextLocalization.Tooltip_MegaMacerator_06)
+        tt.addMachineType(TextLocalization.Tooltip_MegaMacerator_MachineType.toString())
+            .addInfo(TextLocalization.Tooltip_MegaMacerator_Controller.toString())
+            .addInfo(TextLocalization.Tooltip_MegaMacerator_01.toString())
+            .addInfo(TextLocalization.Tooltip_MegaMacerator_02.toString())
+            .addInfo(TextLocalization.Tooltip_MegaMacerator_03.toString())
+            .addInfo(TextLocalization.Tooltip_MegaMacerator_04.toString())
+            .addInfo(TextLocalization.Tooltip_MegaMacerator_05.toString())
+            .addInfo(TextLocalization.Tooltip_MegaMacerator_06.toString())
             .addSeparator()
-            .addInfo(StructureTooComplex)
-            .addInfo(BLUE_PRINT_INFO)
-            .addController(textFrontBottom)
-            .addInputBus(textUseBlueprint, 2)
-            .addOutputBus(textUseBlueprint, 2)
-            .addMaintenanceHatch(textUseBlueprint, 2)
-            .addEnergyHatch(textUseBlueprint, 1)
-            .addStructureInfo(Text_SeparatingLine)
-            .toolTipFinisher(ModName);
+            .addInfo(StructureTooComplex.toString())
+            .addInfo(BLUE_PRINT_INFO.toString())
+            .addController(textFrontBottom.toString())
+            .addInputBus(textUseBlueprint.toString(), 2)
+            .addOutputBus(textUseBlueprint.toString(), 2)
+            .addMaintenanceHatch(textUseBlueprint.toString(), 2)
+            .addEnergyHatch(textUseBlueprint.toString(), 1)
+            .addStructureInfo(Text_SeparatingLine.toString())
+            .toolTipFinisher(ModName.toString());
         return tt;
     }
 

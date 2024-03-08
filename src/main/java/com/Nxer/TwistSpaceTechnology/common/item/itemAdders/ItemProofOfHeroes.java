@@ -1,6 +1,5 @@
 package com.Nxer.TwistSpaceTechnology.common.item.itemAdders;
 
-import static com.Nxer.TwistSpaceTechnology.util.TextHandler.texter;
 import static net.minecraft.client.gui.GuiScreen.isShiftKeyDown;
 
 import java.util.List;
@@ -9,9 +8,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumChatFormatting;
-
-import com.Nxer.TwistSpaceTechnology.util.TextHandler;
+import net.minecraft.util.StatCollector;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -20,11 +17,11 @@ public class ItemProofOfHeroes extends Item {
 
     public String unlocalizedName;
 
-    public ItemProofOfHeroes(String aName, String aMetaName, CreativeTabs aCreativeTabs) {
+    public ItemProofOfHeroes(/* String aName, */String aMetaName, CreativeTabs aCreativeTabs) {
         super();
         this.setCreativeTab(aCreativeTabs);
         this.unlocalizedName = aMetaName;
-        TextHandler.texter(aName, this.unlocalizedName + ".name");
+        // TextHandler.texter(aName, this.unlocalizedName + ".name");
     }
 
     @Override
@@ -54,16 +51,12 @@ public class ItemProofOfHeroes extends Item {
     public void addInformation(final ItemStack itemStack, final EntityPlayer player, final List toolTip,
         final boolean advancedToolTips) {
         if (isShiftKeyDown()) {
-            toolTip.add(
-                texter(
-                    EnumChatFormatting.LIGHT_PURPLE
-                        + "The physical culmination of your journey, capable to rend gods asunder.",
-                    "tooltips.ProofOfHeroes.line2"));
+            // #tr tooltips.ProofOfHeroes.line2 {\LIGHT_PURPLE}The physical culmination of your journey, capable to rend
+            // gods asunder.
+            toolTip.add(StatCollector.translateToLocal("tooltips.ProofOfHeroes.line2"));
         } else {
-            toolTip.add(
-                texter(
-                    "The physical culmination of your journey, capable to rend gods asunder.",
-                    "tooltips.ProofOfHeroes.line1"));
+            // #tr tooltips.ProofOfHeroes.line1 The physical culmination of your journey, capable to rend gods asunder.
+            toolTip.add(StatCollector.translateToLocal("tooltips.ProofOfHeroes.line1"));
         }
     }
 }

@@ -1,10 +1,9 @@
 package com.Nxer.TwistSpaceTechnology.command;
 
-import static com.Nxer.TwistSpaceTechnology.util.TextHandler.texter;
-
 import net.minecraft.command.ICommandSender;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.StatCollector;
 
 import com.Nxer.TwistSpaceTechnology.system.DysonSphereProgram.logic.DSP_DataCell;
 import com.Nxer.TwistSpaceTechnology.system.DysonSphereProgram.logic.DSP_Galaxy;
@@ -119,17 +118,18 @@ public class TST_CommandMethods implements IDSP_IO {
     }
 
     public void sendFormatError(ICommandSender sender) {
+        // #tr TST_Command.InputFormatError Input format error, please check your inputs.
         sender.addChatMessage(
             new ChatComponentText(
-                EnumChatFormatting.RED
-                    + texter("Input format error, please check your inputs.", "TST_Command.InputFormatError")));
+                EnumChatFormatting.RED + StatCollector.translateToLocal("TST_Command.InputFormatError")));
     }
 
     public void printHelp(ICommandSender sender) {
+        // #tr TST_Command.printHelp.00 Twist Space Technology Mod : Dyson Sphere System Controller
         sender.addChatMessage(
             new ChatComponentText(
                 EnumChatFormatting.GOLD + " --- "
-                    + texter("Twist Space Technology Mod : Dyson Sphere System Controller", "TST_Command.printHelp.00")
+                    + StatCollector.translateToLocal("TST_Command.printHelp.00")
                     + " --- "));
         sender.addChatMessage(
             new ChatComponentText(

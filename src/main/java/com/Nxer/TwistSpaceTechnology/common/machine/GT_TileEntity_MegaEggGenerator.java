@@ -369,27 +369,27 @@ public class GT_TileEntity_MegaEggGenerator extends GT_MetaTileEntity_Multiblock
     @Override
     protected GT_Multiblock_Tooltip_Builder createTooltip() {
         final GT_Multiblock_Tooltip_Builder tt = new GT_Multiblock_Tooltip_Builder();
-        tt.addMachineType(TextLocalization.Tooltip_MegaEggGenerator_MachineType)
-            .addInfo(TextLocalization.Tooltip_MegaEggGenerator_Controller)
-            .addInfo(TextLocalization.Tooltip_MegaEggGenerator_00)
-            .addInfo(TextLocalization.Tooltip_MegaEggGenerator_01)
-            .addInfo(TextLocalization.Tooltip_MegaEggGenerator_02)
-            .addInfo(TextLocalization.Tooltip_MegaEggGenerator_03)
-            .addInfo(TextLocalization.Tooltip_MegaEggGenerator_04)
-            .addInfo(TextLocalization.Tooltip_MegaEggGenerator_05)
-            .addInfo(TextLocalization.Tooltip_MegaEggGenerator_06)
-            .addInfo(TextLocalization.Tooltip_MegaEggGenerator_07)
-            .addInfo(TextLocalization.Tooltip_MegaEggGenerator_08)
+        tt.addMachineType(TextLocalization.Tooltip_MegaEggGenerator_MachineType.toString())
+            .addInfo(TextLocalization.Tooltip_MegaEggGenerator_Controller.toString())
+            .addInfo(TextLocalization.Tooltip_MegaEggGenerator_00.toString())
+            .addInfo(TextLocalization.Tooltip_MegaEggGenerator_01.toString())
+            .addInfo(TextLocalization.Tooltip_MegaEggGenerator_02.toString())
+            .addInfo(TextLocalization.Tooltip_MegaEggGenerator_03.toString())
+            .addInfo(TextLocalization.Tooltip_MegaEggGenerator_04.toString())
+            .addInfo(TextLocalization.Tooltip_MegaEggGenerator_05.toString())
+            .addInfo(TextLocalization.Tooltip_MegaEggGenerator_06.toString())
+            .addInfo(TextLocalization.Tooltip_MegaEggGenerator_07.toString())
+            .addInfo(TextLocalization.Tooltip_MegaEggGenerator_08.toString())
             .addSeparator()
-            .addInfo(TextLocalization.StructureTooComplex)
-            .addInfo(TextLocalization.BLUE_PRINT_INFO)
+            .addInfo(TextLocalization.StructureTooComplex.toString())
+            .addInfo(TextLocalization.BLUE_PRINT_INFO.toString())
             .addOtherStructurePart(
-                TextLocalization.Tooltip_MegaEggGenerator_D,
-                TextLocalization.Tooltip_MegaEggGenerator_C,
+                TextLocalization.Tooltip_MegaEggGenerator_D.toString(),
+                TextLocalization.Tooltip_MegaEggGenerator_C.toString(),
                 1)
-            .addStructureInfo(TextLocalization.Tooltip_MegaEggGenerator_L)
-            .addStructureInfo(TextLocalization.Tooltip_MegaEggGenerator_M)
-            .toolTipFinisher(TextLocalization.ModName);
+            .addStructureInfo(TextLocalization.Tooltip_MegaEggGenerator_L.toString())
+            .addStructureInfo(TextLocalization.Tooltip_MegaEggGenerator_M.toString())
+            .toolTipFinisher(TextLocalization.ModName.toString());
         return tt;
     }
 

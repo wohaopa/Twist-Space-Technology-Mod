@@ -6,7 +6,6 @@ import static com.Nxer.TwistSpaceTechnology.common.machine.ValueEnum.multiplierO
 import static com.Nxer.TwistSpaceTechnology.common.machine.ValueEnum.multiplierOfMiracleDoorEUCostEBFMode;
 import static com.Nxer.TwistSpaceTechnology.common.machine.ValueEnum.ticksOfMiracleDoorProcessingTimeABSMode;
 import static com.Nxer.TwistSpaceTechnology.common.machine.ValueEnum.ticksOfMiracleDoorProcessingTimeEBFMode;
-import static com.Nxer.TwistSpaceTechnology.util.TextHandler.texter;
 import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Text_SeparatingLine;
 import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_Details;
 import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_DoNotNeedEnergyHatch;
@@ -117,7 +116,8 @@ public class TST_MiracleDoor extends GTCM_MultiMachineBase<TST_MiracleDoor> impl
         super.getWailaBody(itemStack, currentTip, accessor, config);
         final NBTTagCompound tag = accessor.getNBTData();
         currentTip.add(
-            EnumChatFormatting.AQUA + texter("Current EU cost", "Waila.TST_MiracleDoor.1")
+            // #tr Waila.TST_MiracleDoor.1 Current EU cost
+            EnumChatFormatting.AQUA + StatCollector.translateToLocal("Waila.TST_MiracleDoor.1")
                 + EnumChatFormatting.RESET
                 + ": "
                 + EnumChatFormatting.GOLD
@@ -126,7 +126,8 @@ public class TST_MiracleDoor extends GTCM_MultiMachineBase<TST_MiracleDoor> impl
                 + " EU");
         if (tag.getBoolean("isActive")) {
             currentTip.add(
-                EnumChatFormatting.AQUA + texter("Current Overclock Parameter", "Waila.TST_MiracleDoor.2")
+                // #tr Waila.TST_MiracleDoor.2 Current Overclock Parameter
+                EnumChatFormatting.AQUA + StatCollector.translateToLocal("Waila.TST_MiracleDoor.2")
                     + EnumChatFormatting.RESET
                     + ": "
                     + EnumChatFormatting.GOLD
@@ -500,30 +501,30 @@ L -> ofBlock...(gt.blockcasingsTT, 12, ...); // io
     @Override
     protected GT_Multiblock_Tooltip_Builder createTooltip() {
         final GT_Multiblock_Tooltip_Builder tt = new GT_Multiblock_Tooltip_Builder();
-        tt.addMachineType(Tooltip_MiracleDoor_MachineType)
-            .addInfo(Tooltip_MiracleDoor_Controller)
-            .addInfo(Tooltip_MiracleDoor_00)
-            .addInfo(Tooltip_MiracleDoor_01)
-            .addInfo(Tooltip_MiracleDoor_02)
-            .addInfo(Tooltip_MiracleDoor_03)
-            .addInfo(Tooltip_MiracleDoor_04)
-            .addInfo(Tooltip_MiracleDoor_05)
-            .addInfo(Tooltip_MiracleDoor_06)
-            .addInfo(Tooltip_MiracleDoor_07)
-            .addInfo(Tooltip_MiracleDoor_08)
+        tt.addMachineType(Tooltip_MiracleDoor_MachineType.toString())
+            .addInfo(Tooltip_MiracleDoor_Controller.toString())
+            .addInfo(Tooltip_MiracleDoor_00.toString())
+            .addInfo(Tooltip_MiracleDoor_01.toString())
+            .addInfo(Tooltip_MiracleDoor_02.toString())
+            .addInfo(Tooltip_MiracleDoor_03.toString())
+            .addInfo(Tooltip_MiracleDoor_04.toString())
+            .addInfo(Tooltip_MiracleDoor_05.toString())
+            .addInfo(Tooltip_MiracleDoor_06.toString())
+            .addInfo(Tooltip_MiracleDoor_07.toString())
+            .addInfo(Tooltip_MiracleDoor_08.toString())
             .addSeparator()
-            .addInfo(TextLocalization.StructureTooComplex)
-            .addInfo(TextLocalization.BLUE_PRINT_INFO)
-            .addStructureInfo(Tooltip_Details)
-            .addStructureInfo(Tooltip_MiracleDoor_2_01)
-            .addStructureInfo(Tooltip_MiracleDoor_2_02)
-            .addStructureInfo(Tooltip_MiracleDoor_2_03)
-            .addStructureInfo(Tooltip_MiracleDoor_2_04)
-            .addStructureInfo(Tooltip_MiracleDoor_2_05)
-            .addStructureInfo(Text_SeparatingLine)
-            .addStructureInfo(Tooltip_DoNotNeedMaintenance)
-            .addStructureInfo(Tooltip_DoNotNeedEnergyHatch)
-            .toolTipFinisher(TextLocalization.ModName);
+            .addInfo(TextLocalization.StructureTooComplex.toString())
+            .addInfo(TextLocalization.BLUE_PRINT_INFO.toString())
+            .addStructureInfo(Tooltip_Details.toString())
+            .addStructureInfo(Tooltip_MiracleDoor_2_01.toString())
+            .addStructureInfo(Tooltip_MiracleDoor_2_02.toString())
+            .addStructureInfo(Tooltip_MiracleDoor_2_03.toString())
+            .addStructureInfo(Tooltip_MiracleDoor_2_04.toString())
+            .addStructureInfo(Tooltip_MiracleDoor_2_05.toString())
+            .addStructureInfo(Text_SeparatingLine.toString())
+            .addStructureInfo(Tooltip_DoNotNeedMaintenance.toString())
+            .addStructureInfo(Tooltip_DoNotNeedEnergyHatch.toString())
+            .toolTipFinisher(TextLocalization.ModName.toString());
         return tt;
     }
 

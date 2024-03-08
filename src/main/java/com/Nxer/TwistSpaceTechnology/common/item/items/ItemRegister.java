@@ -3,16 +3,14 @@ package com.Nxer.TwistSpaceTechnology.common.item.items;
 import static com.Nxer.TwistSpaceTechnology.common.item.itemAdders.ItemAdder01.initItem01;
 import static com.Nxer.TwistSpaceTechnology.common.item.itemAdders.ItemAdderRune.initItemRune;
 import static com.Nxer.TwistSpaceTechnology.common.item.items.BasicItems.MultiStructuresLinkTool;
-import static com.Nxer.TwistSpaceTechnology.util.TextHandler.texter;
 import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.DSPName;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.StatCollector;
 
 import com.Nxer.TwistSpaceTechnology.common.GTCMItemList;
 import com.Nxer.TwistSpaceTechnology.config.Config;
-import com.Nxer.TwistSpaceTechnology.util.TextHandler;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -30,165 +28,368 @@ public class ItemRegister {
 
     // spotless:off
     public static void registryItemContainers() {
-        GTCMItemList.TestItem0.set(initItem01("Test Item 0", 0, new String[]{texter("A test item, no use.", "tooltips.TestItem0.line1")}));
-        GTCMItemList.SpaceWarper.set(initItem01("Space Warper", 1, new String[]{texter(EnumChatFormatting.DARK_BLUE + "Power of gravitation !", "tooltips.SpaceWarper.line1")}));
-        GTCMItemList.OpticalSOC.set(initItem01("Gravitational Constraint Optical Quantum Crystal", 2, new String[]{texter("These Photons have their own mind.", "tooltips.OpticalSOC.line1")}));
-        GTCMItemList.MoldSingularity.set(initItem01("Mold(Singularity)", 3, new String[]{texter("Mold for making Singularity", "tooltips.MoldSingularity.line1")}));
-        GTCMItemList.ParticleTrapTimeSpaceShield.set(initItem01("Particle Trap - SpaceTime Shield", 4, new String[]{texter("Constrain the operator(the photon) to a miniature spacetime.", "tooltips.ParticleTrapTimeSpaceShield.line1")}));
-        GTCMItemList.LapotronShard.set(initItem01("Lapotron Shard", 5, new String[]{texter("Even though it's just a shard, the energy fluctuations inside are also visible to the naked eye.", "tooltips.LapotronShard.line1")}));
-        GTCMItemList.PerfectLapotronCrystal.set(initItem01("Perfect Lapotron Crystal", 6, new String[]{texter("Immaculate !", "tooltips.PerfectLapotronCrystal.line1")}));
-        GTCMItemList.EnergyCrystalShard.set(initItem01("Energy Crystal Shard", 7, new String[]{texter("A red crystal shard, doesn't look like anything special.", "tooltips.EnergyCrystalShard.line1")}));
-        GTCMItemList.PerfectEnergyCrystal.set(initItem01("Perfect Energy Crystal", 8, new String[]{texter("As it grew in size, it displayed incredible traits on energy control.", "tooltips.PerfectEnergyCrystal.line1")}));
-        GTCMItemList.SolarSail.set(initItem01("Solar Sail", 9, new String[]{texter("Collect and concentrate light energy.", "tooltips.SolarSail.line1"), DSPName}));
-        GTCMItemList.DysonSphereFrameComponent.set(initItem01("Dyson Sphere Frame Component", 10, new String[]{texter("Stellar gravity can't destroy these structures, even black hole.", "tooltips.DysonSphereFrameComponent.line1"), DSPName}));
-        GTCMItemList.SmallLaunchVehicle.set(initItem01("Small Launch Vehicle", 11, new String[]{texter("Subtle and sophisticated.", "tooltips.SmallLaunchVehicle.line1"), DSPName}));
-        GTCMItemList.EmptySmallLaunchVehicle.set(initItem01("Empty Small Launch Vehicle", 12, new String[]{texter("Subtle and sophisticated but Empty.", "tooltips.EmptySmallLaunchVehicle.line1"), DSPName}));
-        GTCMItemList.CriticalPhoton.set(initItem01("Critical Photon", 13, new String[]{texter("The future has arrived.", "tooltips.CriticalPhoton.line1"), DSPName}));
-        GTCMItemList.Antimatter.set(initItem01("Antimatter", 14, new String[]{texter("The Other Side of Matter.", "tooltips.Antimatter.line1"), DSPName}));
-        GTCMItemList.AnnihilationConstrainer.set(initItem01("Annihilation Constrainer", 15, new String[]{texter("Encourage indirect operation.", "tooltips.AnnihilationConstrainer.line1"), DSPName}));
-        GTCMItemList.AntimatterFuelRod.set(initItem01("Antimatter Fuel Rod", 16, new String[]{texter("More...", "tooltips.AntimatterFuelRod.line1"), DSPName}));
-        GTCMItemList.StellarConstructionFrameMaterial.set(initItem01("Stellar Construction Frame Material", 17, new String[]{texter("Perfect and expensive.", "tooltips.StellarConstructionFrameMaterial.line1"), DSPName}));
-        GTCMItemList.GravitationalLens.set(initItem01("Gravitational Lens", 18, new String[]{texter("Its twisted and powerful gravitational field is shielded in a container.", "tooltips.GravitationalLens.line1"), texter("It is usually utilized to work and alter spatial structures, ", "tooltips.GravitationalLens.line2"), texter(" but that doesn't stop some people from taking it and focusing sunlight to light fires for fun.", "tooltips.GravitationalLens.line3"), DSPName}));
-        GTCMItemList.PurpleMagnoliaPetal.set(initItem01("Purple Magnolia Petal", 19, new String[]{ TextHandler.texter("Petals falling from Alfheim...", "tooltips.PurpleMagnoliaPetal.line1")}));
-        GTCMItemList.PurpleMagnoliaSapling.set(initItem01("Purple Magnolia Sapling", 20, new String[]{ TextHandler.texter("Not plantable. Need to be on ic2 crop sticks.", "tooltips.PurpleMagnoliaSapling.line1")}));
-        GTCMItemList.VoidPollen.set(initItem01("Void Pollen", 21, new String[]{ TextHandler.texter("Pollen yet to be arisen.", "tooltips.VoidPollen.line1")}));
-        GTCMItemList.PrimitiveMansSpaceTimeDistortionDevice.set(initItem01("Primitive Man's SpaceTime Distortion Device", 22, new String[]{ TextHandler.texter("Anyway...", "tooltips.PrimitiveMansSpaceTimeDistortionDevice.line1")}));
+        // #tr MetaItem01.0.name Test Item 0
+        GTCMItemList.TestItem0.set(initItem01(0, new String[]{
+			// #tr tooltips.TestItem0.line1 A test item, no use.
+			StatCollector.translateToLocal("tooltips.TestItem0.line1")}));
+        // #tr MetaItem01.1.name Space Warper
+        GTCMItemList.SpaceWarper.set(initItem01(1, new String[]{
+            // #tr {\DARK_BLUE}Power of gravitation !
+            StatCollector.translateToLocal("tooltips.SpaceWarper.line1")}));
+        // #tr MetaItem01.2.name Gravitational Constraint Optical Quantum Crystal
+        GTCMItemList.OpticalSOC.set(initItem01(2, new String[]{
+			// #tr tooltips.OpticalSOC.line1 These Photons have their own mind.
+			StatCollector.translateToLocal("tooltips.OpticalSOC.line1")}));
+        // #tr MetaItem01.3.name Mold(Singularity)
+        GTCMItemList.MoldSingularity.set(initItem01(3, new String[]{
+			// #tr tooltips.MoldSingularity.line1 Mold for making Singularity
+			StatCollector.translateToLocal("tooltips.MoldSingularity.line1")}));
+        // #tr MetaItem01.4.name Particle Trap - SpaceTime Shield
+        GTCMItemList.ParticleTrapTimeSpaceShield.set(initItem01(4, new String[]{
+			// #tr tooltips.ParticleTrapTimeSpaceShield.line1 Constrain the operator(the photon) to a miniature spacetime.
+			StatCollector.translateToLocal("tooltips.ParticleTrapTimeSpaceShield.line1")}));
+        // #tr MetaItem01.5.name Lapotron Shard
+        GTCMItemList.LapotronShard.set(initItem01(5, new String[]{
+			// #tr tooltips.LapotronShard.line1 Even though it's just a shard, the energy fluctuations inside are also visible to the naked eye.
+			StatCollector.translateToLocal("tooltips.LapotronShard.line1")}));
+        // #tr MetaItem01.6.name Perfect Lapotron Crystal
+        GTCMItemList.PerfectLapotronCrystal.set(initItem01(6, new String[]{
+			// #tr tooltips.PerfectLapotronCrystal.line1 Immaculate !
+			StatCollector.translateToLocal("tooltips.PerfectLapotronCrystal.line1")}));
+        // #tr MetaItem01.7.name Energy Crystal Shard
+        GTCMItemList.EnergyCrystalShard.set(initItem01(7, new String[]{
+			// #tr tooltips.EnergyCrystalShard.line1 A red crystal shard, doesn't look like anything special.
+			StatCollector.translateToLocal("tooltips.EnergyCrystalShard.line1")}));
+        // #tr MetaItem01.8.name Perfect Energy Crystal
+        GTCMItemList.PerfectEnergyCrystal.set(initItem01(8, new String[]{
+			// #tr tooltips.PerfectEnergyCrystal.line1 As it grew in size, it displayed incredible traits on energy control.
+			StatCollector.translateToLocal("tooltips.PerfectEnergyCrystal.line1")}));
+        // #tr MetaItem01.9.name Solar Sail
+        GTCMItemList.SolarSail.set(initItem01(9, new String[]{
+			// #tr tooltips.SolarSail.line1 Collect and concentrate light energy.
+			StatCollector.translateToLocal("tooltips.SolarSail.line1"), DSPName.toString()}));
+        // #tr MetaItem01.10.name Dyson Sphere Frame Component
+        GTCMItemList.DysonSphereFrameComponent.set(initItem01(10, new String[]{
+			// #tr tooltips.DysonSphereFrameComponent.line1 Stellar gravity can't destroy these structures, even black hole.
+			StatCollector.translateToLocal("tooltips.DysonSphereFrameComponent.line1"), DSPName.toString()}));
+        // #tr MetaItem01.11.name Small Launch Vehicle
+        GTCMItemList.SmallLaunchVehicle.set(initItem01(11, new String[]{
+			// #tr tooltips.SmallLaunchVehicle.line1 Subtle and sophisticated.
+			StatCollector.translateToLocal("tooltips.SmallLaunchVehicle.line1"), DSPName.toString()}));
+        // #tr MetaItem01.12.name Empty Small Launch Vehicle
+        GTCMItemList.EmptySmallLaunchVehicle.set(initItem01(12, new String[]{
+			// #tr tooltips.EmptySmallLaunchVehicle.line1 Subtle and sophisticated but Empty.
+			StatCollector.translateToLocal("tooltips.EmptySmallLaunchVehicle.line1"), DSPName.toString()}));
+        // #tr MetaItem01.13.name Critical Photon
+        GTCMItemList.CriticalPhoton.set(initItem01(13, new String[]{
+			// #tr tooltips.CriticalPhoton.line1 The future has arrived.
+			StatCollector.translateToLocal("tooltips.CriticalPhoton.line1"), DSPName.toString()}));
+        // #tr MetaItem01.14.name Antimatter
+        GTCMItemList.Antimatter.set(initItem01(14, new String[]{
+			// #tr tooltips.Antimatter.line1 The Other Side of Matter.
+			StatCollector.translateToLocal("tooltips.Antimatter.line1"), DSPName.toString()}));
+        // #tr MetaItem01.15.name Annihilation Constrainer
+        GTCMItemList.AnnihilationConstrainer.set(initItem01(15, new String[]{
+			// #tr tooltips.AnnihilationConstrainer.line1 Encourage indirect operation.
+			StatCollector.translateToLocal("tooltips.AnnihilationConstrainer.line1"), DSPName.toString()}));
+        // #tr MetaItem01.16.name Antimatter Fuel Rod
+        GTCMItemList.AntimatterFuelRod.set(initItem01(16, new String[]{
+			// #tr tooltips.AntimatterFuelRod.line1 More...
+			StatCollector.translateToLocal("tooltips.AntimatterFuelRod.line1"), DSPName.toString()}));
+        // #tr MetaItem01.17.name Stellar Construction Frame Material
+        GTCMItemList.StellarConstructionFrameMaterial.set(initItem01(17, new String[]{
+			// #tr tooltips.StellarConstructionFrameMaterial.line1 Perfect and expensive.
+			StatCollector.translateToLocal("tooltips.StellarConstructionFrameMaterial.line1"), DSPName.toString()}));
+        // #tr MetaItem01.18.name Gravitational Lens
+        GTCMItemList.GravitationalLens.set(initItem01(18, new String[]{
+			// #tr tooltips.GravitationalLens.line3 Its twisted and powerful gravitational field is shielded in a container.", "tooltips.GravitationalLens.line1"), texter("It is usually utilized to work and alter spatial structures, ", "tooltips.GravitationalLens.line2"), texter(" but that doesn't stop some people from taking it and focusing sunlight to light fires for fun.
+			StatCollector.translateToLocal("tooltips.GravitationalLens.line3"), DSPName.toString()}));
+        // #tr MetaItem01.19.name Purple Magnolia Petal
+        GTCMItemList.PurpleMagnoliaPetal.set(initItem01(19, new String[]{
+			// #tr tooltips.PurpleMagnoliaPetal.line1 Petals falling from Alfheim...
+			StatCollector.translateToLocal("tooltips.PurpleMagnoliaPetal.line1")}));
+        // #tr MetaItem01.20.name Purple Magnolia Sapling
+        GTCMItemList.PurpleMagnoliaSapling.set(initItem01(20, new String[]{
+			// #tr tooltips.PurpleMagnoliaSapling.line1 Not plantable. Need to be on ic2 crop sticks.
+			StatCollector.translateToLocal("tooltips.PurpleMagnoliaSapling.line1")}));
+        // #tr MetaItem01.21.name Void Pollen
+        GTCMItemList.VoidPollen.set(initItem01(21, new String[]{
+			// #tr tooltips.VoidPollen.line1 Pollen yet to be arisen.
+			StatCollector.translateToLocal("tooltips.VoidPollen.line1")}));
+        // #tr MetaItem01.22.name Primitive Man's SpaceTime Distortion Device
+        GTCMItemList.PrimitiveMansSpaceTimeDistortionDevice.set(initItem01(22, new String[]{
+			// #tr tooltips.PrimitiveMansSpaceTimeDistortionDevice.line1 Anyway...
+			StatCollector.translateToLocal("tooltips.PrimitiveMansSpaceTimeDistortionDevice.line1")}));
 
         if(Config.activateMegaSpaceStation) {
-            GTCMItemList.HighDimensionalExtend.set(initItem01("High-dimensional extend", 176));
-            GTCMItemList.HighDimensionalCircuitDoard.set(initItem01("High-dimensional circuit board", 177));
-            GTCMItemList.HighDimensionalCapacitor.set(initItem01("High-dimensional capacitor", 178));
-            GTCMItemList.HighDimensionalInterface.set(initItem01("High-dimensional interface", 179));
-            GTCMItemList.HighDimensionalDiode.set(initItem01("High-dimensional SMD diode", 180));
-            GTCMItemList.HighDimensionalResistor.set(initItem01("High-dimensional Resistor", 181));
-            GTCMItemList.HighDimensionalTransistor.set(initItem01("High-dimensional Transistor", 182));
+            // #tr MetaItem01.176.name High-dimensional extend
+            GTCMItemList.HighDimensionalExtend.set(initItem01( 176));
+            // #tr MetaItem01.177.name High-dimensional circuit board
+            GTCMItemList.HighDimensionalCircuitDoard.set(initItem01(177));
+            // #tr MetaItem01.178.name High-dimensional capacitor
+            GTCMItemList.HighDimensionalCapacitor.set(initItem01(178));
+            // #tr MetaItem01.179.name High-dimensional interface
+            GTCMItemList.HighDimensionalInterface.set(initItem01(179));
+            // #tr MetaItem01.180.name High-dimensional SMD diode
+            GTCMItemList.HighDimensionalDiode.set(initItem01(180));
+            // #tr MetaItem01.181.name High-dimensional Resistor
+            GTCMItemList.HighDimensionalResistor.set(initItem01(181));
+            // #tr MetaItem01.182.name High-dimensional Transistor
+            GTCMItemList.HighDimensionalTransistor.set(initItem01(182));
 
-            GTCMItemList.CosmicCircuitBoard.set(initItem01("Cosmic Circuit Board", 300));
-            GTCMItemList.IntelligentImitationNeutronStarCore.set(initItem01("Intelligent imitation neutron star core", 301));
-            GTCMItemList.EventHorizonNanoSwarm.set(initItem01("Event Horizon Nano Swarm", 302));
-            GTCMItemList.MicroDimensionOutput.set(initItem01("Micro dimension output", 303));
-            GTCMItemList.EntropyReductionMaterialNanoswarm.set(initItem01("Entropy reduction material nanoswarm", 304));
-            GTCMItemList.TranscendentCircuitBoard.set(initItem01("Transcendent Circuit Board", 305));
-            GTCMItemList.NarrativeLayerOverwritingDevice.set(initItem01("Narrative layer overwriting device", 306));
-            GTCMItemList.HyperspaceNarrativeLayerAdaptiveSpecialSRA.set(initItem01("Hyperspace Narrative Layer Adaptive Special SRA", 307));
-            GTCMItemList.RealSingularityNanoSwarm.set(initItem01("Real Singularity Nano Swarm", 308));
-            GTCMItemList.ParadoxEngine.set(initItem01("paradox engine", 309));
-            GTCMItemList.QuasarSoc.set(initItem01("quasar soc", 310));
-            GTCMItemList.MiniatureGalaxy.set(initItem01("miniature galaxy", 311));
-            GTCMItemList.Self_adaptiveAI1.set(initItem01("self-adaptive AI Ⅰ", 312));
-            GTCMItemList.Self_adaptiveAI2.set(initItem01("self-adaptive AI Ⅱ", 313));
-            GTCMItemList.Self_adaptiveAI3.set(initItem01("self-adaptive AI Ⅲ", 314));
-            GTCMItemList.Self_adaptiveAI4.set(initItem01("self-adaptive AI Ⅳ", 315));
-            GTCMItemList.Self_adaptiveAI5.set(initItem01("self-adaptive AI Ⅴ", 316));
-            GTCMItemList.CoreOfT800.set(initItem01("core of T800", 317));
-            GTCMItemList.ExoticCircuitBoard.set(initItem01("Exotic Circuit Board", 318));
-            GTCMItemList.spaceStationConstructingMaterialMax.set(initItem01("very good item", 319));
-            GTCMItemList.LightQuantumMatrix.set(initItem01("Light Quantum Matrix", 320));
-            //GTCMItemList.StarCore.set(initItem01("Star Core", 321));
-            GTCMItemList.CasimirQuantumFiber.set(initItem01("Casimir Quantum Fiber", 322));
-            GTCMItemList.SuperstringStructure.set(initItem01("Superstring structure", 323));
-            GTCMItemList.DynamicParadoxBody.set(initItem01("Dynamic Paradox Body", 324));
-            GTCMItemList.VoidPrism.set(initItem01("Void Prism", 325));
-            GTCMItemList.PulsarCore.set(initItem01("Pulsar core", 326));
-            GTCMItemList.StarCrystalI.set(initItem01("Star Crystal I", 327));
-            GTCMItemList.SuperDimensionalRing.set(initItem01("Super Dimensional Ring", 328));
-            GTCMItemList.HyperdimensionalExpansion.set(initItem01("Hyperdimensional expansion", 329));
-            GTCMItemList.OpticalLayer.set(initItem01("optical layer", 330));
-            GTCMItemList.MagneticSpinI.set(initItem01("Magnetic Spin I", 331));
-            GTCMItemList.Staraxis.set(initItem01("star axis", 332));
-            GTCMItemList.BoltzmannBrain.set(initItem01("Boltzmann Brain", 333));
-            GTCMItemList.RemnantsOfTheBigBang.set(initItem01("Remnants of the Big Bang", 334));
-            GTCMItemList.StrangeFilm.set(initItem01("Strange Film", 335));
-            GTCMItemList.PulseManganese.set(initItem01("Pulse Manganese", 336));
-            GTCMItemList.SuperdimensionalWeb.set(initItem01("Superdimensional Web", 337));
-            GTCMItemList.PinoanStructure.set(initItem01("Pinoan Structure", 338));
-            GTCMItemList.QuantumChain.set(initItem01("Quantum Chain", 339));
-            GTCMItemList.StarBelt.set(initItem01("Star Belt", 340));
-            GTCMItemList.Nanoflow.set(initItem01("Nanoflow", 341));
-            GTCMItemList.Space_TimeLayer.set(initItem01("Space-time layer", 342));
-            GTCMItemList.SuperconductingRing.set(initItem01("Superconducting ring", 343));
-            GTCMItemList.QuantizedSuperstringStructure.set(initItem01("Quantized Superstring Structure", 344));
-            GTCMItemList.ThezeroPointOfVacuumCanManifestObjects.set(initItem01("The zero point of vacuum can manifest objects", 345));
-            GTCMItemList.StarCore.set(initItem01("Star Core", 346));
-            GTCMItemList.QuasarRemnant.set(initItem01("quasar remnant", 347));
-            GTCMItemList.InfiniteDivineMachine.set(initItem01("Infinite Divine Machine", 348));
-            GTCMItemList.OriginalSoup.set(initItem01("Original Soup", 349));
-            GTCMItemList.GravityBelt.set(initItem01("Gravity Belt", 350));
-            GTCMItemList.anti_GravityEngine.set(initItem01("anti-gravity engine", 351));
-            GTCMItemList.CondensedDarkMatterPolymer.set(initItem01("Condensed Dark Matter Polymer", 352));
-            GTCMItemList.LowDensityDarkMatterPolymer.set(initItem01("Low Density Dark Matter Polymer", 353));
-            GTCMItemList.InfiniteRecursion.set(initItem01("infinite recursion", 354));
-            GTCMItemList.SuperdimensionalSpiral.set(initItem01("Superdimensional Spiral", 355));
-            GTCMItemList.InfiniteDivineMachineI.set(initItem01("Infinite Divine Machine I", 356));
-            GTCMItemList.NuclearaxisFluctuation.set(initItem01("nuclear axis fluctuation", 357));
-            GTCMItemList.StrangeFluctuations.set(initItem01("Strange fluctuations", 358));
-            GTCMItemList.PulseCopper.set(initItem01("Pulse Copper", 359));
-            GTCMItemList.DarkMatterCrystallization.set(initItem01("Dark Matter Crystallization", 360));
-            GTCMItemList.QuantumCore.set(initItem01("Quantum Core", 361));
-            GTCMItemList.PhotonFlow.set(initItem01("Photon flow", 362));
-            GTCMItemList.NuclearBelt.set(initItem01("nuclear belt", 363));
-            GTCMItemList.LifeGuide.set(initItem01("Life Guide", 364));
-            GTCMItemList.QuantizedSuperstringStructureI.set(initItem01("Quantized Superstring Structure I", 365));
-            GTCMItemList.EmptyHeart.set(initItem01("empty heart", 366));
-            GTCMItemList.StarCoreBelt.set(initItem01("Star Core Belt", 367));
-            GTCMItemList.Space_TimeSpiral.set(initItem01("Space-time Spiral", 368));
-            GTCMItemList.MagneticSpinIV.set(initItem01("Magnetic Spin IV", 369));
-            GTCMItemList.NuclearFluctuation.set(initItem01("Nuclear Fluctuation", 370));
-            GTCMItemList.CelestialResonanceCrystal.set(initItem01("Celestial Resonance Crystal", 371));
-            GTCMItemList.LowDensityDarkMatterPolymerI.set(initItem01("Low Density Dark Matter Polymer I", 372));
-            GTCMItemList.QuantumCore.set(initItem01("Quantum Core", 373));
-            GTCMItemList.SuperdimensionalLife.set(initItem01("Superdimensional life", 374));
-            GTCMItemList.GravityFluctuation.set(initItem01("Gravity Fluctuation", 375));
-            GTCMItemList.LightSpiral.set(initItem01("Light Spiral", 376));
-            GTCMItemList.NuclearaxisBelt.set(initItem01("nuclear axis belt", 377));
-            GTCMItemList.SuperconductingNetwork.set(initItem01("Superconducting Network", 378));
-            GTCMItemList.Nanolife.set(initItem01("Nanolife", 379));
-            GTCMItemList.CoreOfAncientCreation.set(initItem01("Core of Ancient Creation", 380));
-            GTCMItemList.QuantumHeart.set(initItem01("Quantum Heart", 381));
-            GTCMItemList.FluctuatingLife.set(initItem01("fluctuating life", 382));
-            GTCMItemList.PioneerRemains.set(initItem01("Pioneer Remains", 383));
-            GTCMItemList.LifeIsEmpty.set(initItem01("Life is empty", 384));
-            GTCMItemList.SuperstringStructureV.set(initItem01("Superstring structure V", 385));
-            GTCMItemList.SuperdimensionalFluctuations.set(initItem01("Superdimensional fluctuations", 386));
-            GTCMItemList.CreationsFromTheOuterUniverse.set(initItem01("Creations from the Outer Universe", 387));
-            GTCMItemList.MagneticVortex.set(initItem01("Magnetic Vortex", 388));
-            GTCMItemList.Space_TimeCore.set(initItem01("Space-time core", 389));
-            GTCMItemList.SubspaceHeart.set(initItem01("Subspace Heart", 390));
-            GTCMItemList.CosmicExpansionEffectFluctuations.set(initItem01("cosmic expansion effect fluctuations", 391));
-            GTCMItemList.StarCrystalIV.set(initItem01("Star Crystal IV", 392));
-            GTCMItemList.InfiniteRecursiveNet.set(initItem01("Infinite Recursive Net", 393));
-            GTCMItemList.SuperconductingLifeWaves.set(initItem01("Superconducting Life Waves", 394));
-            GTCMItemList.GravitationalHeart.set(initItem01("gravitational heart", 395));
-            GTCMItemList.CelestialResonanceCrystalSpiral.set(initItem01("Celestial Resonance Crystal Spiral", 396));
-            GTCMItemList.NuclearaxisCore.set(initItem01("nuclear axis core", 397));
-            GTCMItemList.VoidFluctuation.set(initItem01("Void Fluctuation", 398));
-            GTCMItemList.AncientCreationFluctuation.set(initItem01("Ancient Creation Fluctuation", 399));
-            GTCMItemList.InfiniteRecursiveHeart.set(initItem01("Infinite recursive heart", 400));
-            //GTCMItemList.AlienStarCore.set(initItem01("Alien Star Core", 401));
-            GTCMItemList.SpiralSpiral.set(initItem01("spiral spiral", 402));
-            GTCMItemList.MagneticSpinLife.set(initItem01("Magnetic Spin Life", 403));
-            GTCMItemList.LightWaves.set(initItem01("Light Waves", 404));
-            GTCMItemList.NuclearSpiral.set(initItem01("nuclear spiral", 405));
-            GTCMItemList.CosmicExpansionEffectCore.set(initItem01("Cosmic expansion effect core", 406));
-            GTCMItemList.GravityLife.set(initItem01("Gravity Life", 407));
-            GTCMItemList.CelestialResonanceCrystalNetwork.set(initItem01("Celestial Resonance Crystal Network", 408));
-            GTCMItemList.LifeInTimeandSpace.set(initItem01("Life in Time and Space", 409));
-            GTCMItemList.CoreAxisLifeHeart.set(initItem01("Core Axis Life Heart", 410));
-            GTCMItemList.AlienStarCore.set(initItem01("Alien Star Core", 411));
-            GTCMItemList.NanoLifeHeart.set(initItem01("Nano Life Heart", 412));
-            GTCMItemList.AncientCreationLife.set(initItem01("Ancient Creation Life", 413));
-            GTCMItemList.InfiniteRecursiveKernel.set(initItem01("infinite recursive kernel", 414));
-            GTCMItemList.SuperconductingLifeZone.set(initItem01("Superconducting Life Zone", 415));
-            GTCMItemList.GravityLifeFluctuation.set(initItem01("Gravity Life Fluctuation", 416));
-            GTCMItemList.PioneerRemainsLifeCore.set(initItem01("Pioneer Remains Life Core", 417));
-            GTCMItemList.SubspaceFluctuation.set(initItem01("Subspace Fluctuation", 418));
-            GTCMItemList.Space_TimeLifeCore.set(initItem01("Space-time life core", 419));
+            // #tr MetaItem01.300.name Cosmic Circuit Board
+			GTCMItemList.CosmicCircuitBoard.set(initItem01(300));
+            // #tr MetaItem01.302.name Event Horizon Nano Swarm
+			GTCMItemList.EventHorizonNanoSwarm.set(initItem01(302));
+            // #tr MetaItem01.303.name Micro dimension output
+			GTCMItemList.MicroDimensionOutput.set(initItem01(303));
+            // #tr MetaItem01.304.name Entropy reduction material nanoswarm
+			GTCMItemList.EntropyReductionMaterialNanoswarm.set(initItem01(304));
+            // #tr MetaItem01.306.name Narrative layer overwriting device
+			GTCMItemList.NarrativeLayerOverwritingDevice.set(initItem01(306));
+            // #tr MetaItem01.307.name Hyperspace Narrative Layer Adaptive Special SRA
+			GTCMItemList.HyperspaceNarrativeLayerAdaptiveSpecialSRA.set(initItem01(307));
+            // #tr MetaItem01.308.name Real Singularity Nano Swarm
+			GTCMItemList.RealSingularityNanoSwarm.set(initItem01(308));
+            // #tr MetaItem01.309.name paradox engine
+			GTCMItemList.ParadoxEngine.set(initItem01(309));
+            // #tr MetaItem01.310.name quasar soc
+			GTCMItemList.QuasarSoc.set(initItem01(310));
+            // #tr MetaItem01.311.name miniature galaxy
+			GTCMItemList.MiniatureGalaxy.set(initItem01(311));
+            // #tr MetaItem01.312.name self-adaptive AI Ⅰ
+			GTCMItemList.Self_adaptiveAI1.set(initItem01(312));
+            // #tr MetaItem01.313.name self-adaptive AI Ⅱ
+			GTCMItemList.Self_adaptiveAI2.set(initItem01(313));
+            // #tr MetaItem01.314.name self-adaptive AI Ⅲ
+			GTCMItemList.Self_adaptiveAI3.set(initItem01(314));
+            // #tr MetaItem01.315.name self-adaptive AI Ⅳ
+			GTCMItemList.Self_adaptiveAI4.set(initItem01(315));
+            // #tr MetaItem01.316.name self-adaptive AI Ⅴ
+			GTCMItemList.Self_adaptiveAI5.set(initItem01(316));
+            // #tr MetaItem01.317.name core of T800
+			GTCMItemList.CoreOfT800.set(initItem01(317));
+            // #tr MetaItem01.318.name Exotic Circuit Board
+			GTCMItemList.ExoticCircuitBoard.set(initItem01(318));
+            // #tr MetaItem01.319.name very good item
+			GTCMItemList.spaceStationConstructingMaterialMax.set(initItem01(319));
+            // #tr MetaItem01.320.name Light Quantum Matrix
+			GTCMItemList.LightQuantumMatrix.set(initItem01(320));
+            //// #tr MetaItem01.321.name Star Core
+			GTCMItemList.StarCore.set(initItem01(321));
+            // #tr MetaItem01.322.name Casimir Quantum Fiber
+			GTCMItemList.CasimirQuantumFiber.set(initItem01(322));
+            // #tr MetaItem01.323.name Superstring structure
+			GTCMItemList.SuperstringStructure.set(initItem01(323));
+            // #tr MetaItem01.324.name Dynamic Paradox Body
+			GTCMItemList.DynamicParadoxBody.set(initItem01(324));
+            // #tr MetaItem01.325.name Void Prism
+			GTCMItemList.VoidPrism.set(initItem01(325));
+            // #tr MetaItem01.326.name Pulsar core
+			GTCMItemList.PulsarCore.set(initItem01(326));
+            // #tr MetaItem01.327.name Star Crystal I
+			GTCMItemList.StarCrystalI.set(initItem01(327));
+            // #tr MetaItem01.328.name Super Dimensional Ring
+			GTCMItemList.SuperDimensionalRing.set(initItem01(328));
+            // #tr MetaItem01.329.name Hyperdimensional expansion
+			GTCMItemList.HyperdimensionalExpansion.set(initItem01(329));
+            // #tr MetaItem01.330.name optical layer
+			GTCMItemList.OpticalLayer.set(initItem01(330));
+            // #tr MetaItem01.331.name Magnetic Spin I
+			GTCMItemList.MagneticSpinI.set(initItem01(331));
+            // #tr MetaItem01.332.name star axis
+			GTCMItemList.Staraxis.set(initItem01(332));
+            // #tr MetaItem01.333.name Boltzmann Brain
+			GTCMItemList.BoltzmannBrain.set(initItem01(333));
+            // #tr MetaItem01.334.name Remnants of the Big Bang
+			GTCMItemList.RemnantsOfTheBigBang.set(initItem01(334));
+            // #tr MetaItem01.335.name Strange Film
+			GTCMItemList.StrangeFilm.set(initItem01(335));
+            // #tr MetaItem01.336.name Pulse Manganese
+			GTCMItemList.PulseManganese.set(initItem01(336));
+            // #tr MetaItem01.337.name Superdimensional Web
+			GTCMItemList.SuperdimensionalWeb.set(initItem01(337));
+            // #tr MetaItem01.338.name Pinoan Structure
+			GTCMItemList.PinoanStructure.set(initItem01(338));
+            // #tr MetaItem01.339.name Quantum Chain
+			GTCMItemList.QuantumChain.set(initItem01(339));
+            // #tr MetaItem01.340.name Star Belt
+			GTCMItemList.StarBelt.set(initItem01(340));
+            // #tr MetaItem01.341.name Nanoflow
+			GTCMItemList.Nanoflow.set(initItem01(341));
+            // #tr MetaItem01.342.name Space-time layer
+			GTCMItemList.Space_TimeLayer.set(initItem01(342));
+            // #tr MetaItem01.343.name Superconducting ring
+			GTCMItemList.SuperconductingRing.set(initItem01(343));
+            // #tr MetaItem01.344.name Quantized Superstring Structure
+			GTCMItemList.QuantizedSuperstringStructure.set(initItem01(344));
+            // #tr MetaItem01.345.name The zero point of vacuum can manifest objects
+			GTCMItemList.ThezeroPointOfVacuumCanManifestObjects.set(initItem01(345));
+            // #tr MetaItem01.346.name Star Core
+			GTCMItemList.StarCore.set(initItem01(346));
+            // #tr MetaItem01.347.name quasar remnant
+			GTCMItemList.QuasarRemnant.set(initItem01(347));
+            // #tr MetaItem01.348.name Infinite Divine Machine
+			GTCMItemList.InfiniteDivineMachine.set(initItem01(348));
+            // #tr MetaItem01.349.name Original Soup
+			GTCMItemList.OriginalSoup.set(initItem01(349));
+            // #tr MetaItem01.350.name Gravity Belt
+			GTCMItemList.GravityBelt.set(initItem01(350));
+            // #tr MetaItem01.351.name anti-gravity engine
+			GTCMItemList.anti_GravityEngine.set(initItem01(351));
+            // #tr MetaItem01.352.name Condensed Dark Matter Polymer
+			GTCMItemList.CondensedDarkMatterPolymer.set(initItem01(352));
+            // #tr MetaItem01.353.name Low Density Dark Matter Polymer
+			GTCMItemList.LowDensityDarkMatterPolymer.set(initItem01(353));
+            // #tr MetaItem01.354.name infinite recursion
+			GTCMItemList.InfiniteRecursion.set(initItem01(354));
+            // #tr MetaItem01.355.name Superdimensional Spiral
+			GTCMItemList.SuperdimensionalSpiral.set(initItem01(355));
+            // #tr MetaItem01.356.name Infinite Divine Machine I
+			GTCMItemList.InfiniteDivineMachineI.set(initItem01(356));
+            // #tr MetaItem01.357.name nuclear axis fluctuation
+			GTCMItemList.NuclearaxisFluctuation.set(initItem01(357));
+            // #tr MetaItem01.358.name Strange fluctuations
+			GTCMItemList.StrangeFluctuations.set(initItem01(358));
+            // #tr MetaItem01.359.name Pulse Copper
+			GTCMItemList.PulseCopper.set(initItem01(359));
+            // #tr MetaItem01.360.name Dark Matter Crystallization
+			GTCMItemList.DarkMatterCrystallization.set(initItem01(360));
+            // #tr MetaItem01.361.name Quantum Core
+			GTCMItemList.QuantumCore.set(initItem01(361));
+            // #tr MetaItem01.362.name Photon flow
+			GTCMItemList.PhotonFlow.set(initItem01(362));
+            // #tr MetaItem01.363.name nuclear belt
+			GTCMItemList.NuclearBelt.set(initItem01(363));
+            // #tr MetaItem01.364.name Life Guide
+			GTCMItemList.LifeGuide.set(initItem01(364));
+            // #tr MetaItem01.365.name Quantized Superstring Structure I
+			GTCMItemList.QuantizedSuperstringStructureI.set(initItem01(365));
+            // #tr MetaItem01.366.name empty heart
+			GTCMItemList.EmptyHeart.set(initItem01(366));
+            // #tr MetaItem01.367.name Star Core Belt
+			GTCMItemList.StarCoreBelt.set(initItem01(367));
+            // #tr MetaItem01.368.name Space-time Spiral
+			GTCMItemList.Space_TimeSpiral.set(initItem01(368));
+            // #tr MetaItem01.369.name Magnetic Spin IV
+			GTCMItemList.MagneticSpinIV.set(initItem01(369));
+            // #tr MetaItem01.370.name Nuclear Fluctuation
+			GTCMItemList.NuclearFluctuation.set(initItem01(370));
+            // #tr MetaItem01.371.name Celestial Resonance Crystal
+			GTCMItemList.CelestialResonanceCrystal.set(initItem01(371));
+            // #tr MetaItem01.372.name Low Density Dark Matter Polymer I
+			GTCMItemList.LowDensityDarkMatterPolymerI.set(initItem01(372));
+            // #tr MetaItem01.373.name Quantum Core
+			GTCMItemList.QuantumCore.set(initItem01(373));
+            // #tr MetaItem01.374.name Superdimensional life
+			GTCMItemList.SuperdimensionalLife.set(initItem01(374));
+            // #tr MetaItem01.375.name Gravity Fluctuation
+			GTCMItemList.GravityFluctuation.set(initItem01(375));
+            // #tr MetaItem01.376.name Light Spiral
+			GTCMItemList.LightSpiral.set(initItem01(376));
+            // #tr MetaItem01.377.name nuclear axis belt
+			GTCMItemList.NuclearaxisBelt.set(initItem01(377));
+            // #tr MetaItem01.378.name Superconducting Network
+			GTCMItemList.SuperconductingNetwork.set(initItem01(378));
+            // #tr MetaItem01.379.name Nanolife
+			GTCMItemList.Nanolife.set(initItem01(379));
+            // #tr MetaItem01.380.name Core of Ancient Creation
+			GTCMItemList.CoreOfAncientCreation.set(initItem01(380));
+            // #tr MetaItem01.381.name Quantum Heart
+			GTCMItemList.QuantumHeart.set(initItem01(381));
+            // #tr MetaItem01.382.name fluctuating life
+			GTCMItemList.FluctuatingLife.set(initItem01(382));
+            // #tr MetaItem01.383.name Pioneer Remains
+			GTCMItemList.PioneerRemains.set(initItem01(383));
+            // #tr MetaItem01.384.name Life is empty
+			GTCMItemList.LifeIsEmpty.set(initItem01(384));
+            // #tr MetaItem01.385.name Superstring structure V
+			GTCMItemList.SuperstringStructureV.set(initItem01(385));
+            // #tr MetaItem01.386.name Superdimensional fluctuations
+			GTCMItemList.SuperdimensionalFluctuations.set(initItem01(386));
+            // #tr MetaItem01.387.name Creations from the Outer Universe
+			GTCMItemList.CreationsFromTheOuterUniverse.set(initItem01(387));
+            // #tr MetaItem01.388.name Magnetic Vortex
+			GTCMItemList.MagneticVortex.set(initItem01(388));
+            // #tr MetaItem01.389.name Space-time core
+			GTCMItemList.Space_TimeCore.set(initItem01(389));
+            // #tr MetaItem01.390.name Subspace Heart
+			GTCMItemList.SubspaceHeart.set(initItem01(390));
+            // #tr MetaItem01.391.name cosmic expansion effect fluctuations
+			GTCMItemList.CosmicExpansionEffectFluctuations.set(initItem01(391));
+            // #tr MetaItem01.392.name Star Crystal IV
+			GTCMItemList.StarCrystalIV.set(initItem01(392));
+            // #tr MetaItem01.393.name Infinite Recursive Net
+			GTCMItemList.InfiniteRecursiveNet.set(initItem01(393));
+            // #tr MetaItem01.394.name Superconducting Life Waves
+			GTCMItemList.SuperconductingLifeWaves.set(initItem01(394));
+            // #tr MetaItem01.395.name gravitational heart
+			GTCMItemList.GravitationalHeart.set(initItem01(395));
+            // #tr MetaItem01.396.name Celestial Resonance Crystal Spiral
+			GTCMItemList.CelestialResonanceCrystalSpiral.set(initItem01(396));
+            // #tr MetaItem01.397.name nuclear axis core
+			GTCMItemList.NuclearaxisCore.set(initItem01(397));
+            // #tr MetaItem01.398.name Void Fluctuation
+			GTCMItemList.VoidFluctuation.set(initItem01(398));
+            // #tr MetaItem01.399.name Ancient Creation Fluctuation
+			GTCMItemList.AncientCreationFluctuation.set(initItem01(399));
+            // #tr MetaItem01.400.name Infinite recursive heart
+			GTCMItemList.InfiniteRecursiveHeart.set(initItem01(400));
+            // #tr MetaItem01.401.name Alien Star Core
+			GTCMItemList.AlienStarCore.set(initItem01(401));
+            // #tr MetaItem01.402.name spiral spiral
+			GTCMItemList.SpiralSpiral.set(initItem01(402));
+            // #tr MetaItem01.403.name Magnetic Spin Life
+			GTCMItemList.MagneticSpinLife.set(initItem01(403));
+            // #tr MetaItem01.404.name Light Waves
+			GTCMItemList.LightWaves.set(initItem01(404));
+            // #tr MetaItem01.405.name nuclear spiral
+			GTCMItemList.NuclearSpiral.set(initItem01(405));
+            // #tr MetaItem01.406.name Cosmic expansion effect core
+			GTCMItemList.CosmicExpansionEffectCore.set(initItem01(406));
+            // #tr MetaItem01.407.name Gravity Life
+			GTCMItemList.GravityLife.set(initItem01(407));
+            // #tr MetaItem01.408.name Celestial Resonance Crystal Network
+			GTCMItemList.CelestialResonanceCrystalNetwork.set(initItem01(408));
+            // #tr MetaItem01.409.name Life in Time and Space
+			GTCMItemList.LifeInTimeandSpace.set(initItem01(409));
+            // #tr MetaItem01.410.name Core Axis Life Heart
+			GTCMItemList.CoreAxisLifeHeart.set(initItem01(410));
+            // #tr MetaItem01.411.name Alien Star Core
+			GTCMItemList.AlienStarCore.set(initItem01(411));
+            // #tr MetaItem01.412.name Nano Life Heart
+			GTCMItemList.NanoLifeHeart.set(initItem01(412));
+            // #tr MetaItem01.413.name Ancient Creation Life
+			GTCMItemList.AncientCreationLife.set(initItem01(413));
+            // #tr MetaItem01.414.name infinite recursive kernel
+			GTCMItemList.InfiniteRecursiveKernel.set(initItem01(414));
+            // #tr MetaItem01.415.name Superconducting Life Zone
+			GTCMItemList.SuperconductingLifeZone.set(initItem01(415));
+            // #tr MetaItem01.416.name Gravity Life Fluctuation
+			GTCMItemList.GravityLifeFluctuation.set(initItem01(416));
+            // #tr MetaItem01.417.name Pioneer Remains Life Core
+			GTCMItemList.PioneerRemainsLifeCore.set(initItem01(417));
+            // #tr MetaItem01.418.name Subspace Fluctuation
+			GTCMItemList.SubspaceFluctuation.set(initItem01(418));
+            // #tr MetaItem01.419.name Space-time life core
+			GTCMItemList.Space_TimeLifeCore.set(initItem01(419));
         }
-
-        GTCMItemList.Rune_of_Vigilance.set(initItemRune("Rune of Vigilance", 0, new String[]{ TextHandler.texter("Vigilance.", "tooltips.Rune_of_Vigilance.line1")}));
-        GTCMItemList.Rune_of_Erelong.set(initItemRune("Rune of Erelong", 1, new String[]{ TextHandler.texter("Erelong.", "tooltips.Rune_of_Erelong.line1")}));
-        GTCMItemList.Rune_of_Ether.set(initItemRune("Rune of Ether", 2, new String[]{ TextHandler.texter("Ether.", "tooltips.Rune_of_Ether.line1")}));
-        GTCMItemList.Rune_of_Perdition.set(initItemRune("Rune of Perdition", 3, new String[]{ TextHandler.texter("Perdition.", "tooltips.Rune_of_Perdition.line1")}));
+        // #tr MetaItemRune.0.name Rune of Vigilance
+        GTCMItemList.Rune_of_Vigilance.set(initItemRune(0, new String[]{
+            // #tr tooltips.Rune_of_Vigilance.line1 Vigilance.
+            StatCollector.translateToLocal( "tooltips.Rune_of_Vigilance.line1")}));
+        // #tr MetaItemRune.1.name Rune of Erelong
+        GTCMItemList.Rune_of_Erelong.set(initItemRune(1, new String[]{
+            // #tr tooltips.Rune_of_Erelong.line1 Erelong.
+            StatCollector.translateToLocal( "tooltips.Rune_of_Erelong.line1")}));
+        // #tr MetaItemRune.2.name Rune of Ether
+        GTCMItemList.Rune_of_Ether.set(initItemRune(2, new String[]{
+            // #tr tooltips.Rune_of_Ether.line1 Ether.
+            StatCollector.translateToLocal("tooltips.Rune_of_Ether.line1")}));
+        // #tr MetaItemRune.3.name Rune of Perdition
+        GTCMItemList.Rune_of_Perdition.set(initItemRune(3, new String[]{
+            // #tr tooltips.Rune_of_Perdition.line1 Perdition.
+            StatCollector.translateToLocal("tooltips.Rune_of_Perdition.line1")}));
 
         GTCMItemList.ProofOfHeroes.set(new ItemStack(BasicItems.ProofOfHeroes, 1));
         GTCMItemList.PowerChair.set(new ItemStack(BasicItems.PowerChair, 1));

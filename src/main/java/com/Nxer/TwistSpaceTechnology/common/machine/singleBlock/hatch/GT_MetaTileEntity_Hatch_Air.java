@@ -1,11 +1,11 @@
 package com.Nxer.TwistSpaceTechnology.common.machine.singleBlock.hatch;
 
 import static com.Nxer.TwistSpaceTechnology.common.machine.ValueEnum.ticksOfInfiniteAirHatchFillFull;
-import static com.Nxer.TwistSpaceTechnology.util.TextHandler.texter;
 import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.FluidCapacity;
 import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.HatchTier;
 import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.ModNameDesc;
 
+import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 import net.minecraftforge.fluids.Fluid;
 
@@ -44,15 +44,17 @@ public class GT_MetaTileEntity_Hatch_Air extends GT_MetaTileEntity_Hatch_FluidGe
         System.arraycopy(mDescriptionArray, 0, desc, 0, mDescriptionArray.length);
         System.arraycopy(hatchTierString, 0, desc, mDescriptionArray.length, 1);
         System.arraycopy(aCustomTips, 0, desc, mDescriptionArray.length + 1, aCustomTips.length);
-        desc[mDescriptionArray.length + aCustomTips.length] = ModNameDesc;
+        desc[mDescriptionArray.length + aCustomTips.length] = ModNameDesc.toString();
         return desc;
     }
 
     @Override
     public String[] getCustomTooltip() {
         String[] aTooltip = new String[3];
-        aTooltip[0] = texter("Infinite air supply hatch", "GT_MetaTileEntity_Hatch_Air.Tooltip0");
-        aTooltip[1] = texter("Fills to max capacity every second", "GT_MetaTileEntity_Hatch_Air.Tooltip1");
+        // #tr GT_MetaTileEntity_Hatch_Air.Tooltip0 Infinite air supply hatch
+        aTooltip[0] = StatCollector.translateToLocal("GT_MetaTileEntity_Hatch_Air.Tooltip0");
+        // #tr GT_MetaTileEntity_Hatch_Air.Tooltip1 Fills to max capacity every second
+        aTooltip[1] = StatCollector.translateToLocal("GT_MetaTileEntity_Hatch_Air.Tooltip1");
         return aTooltip;
     }
 

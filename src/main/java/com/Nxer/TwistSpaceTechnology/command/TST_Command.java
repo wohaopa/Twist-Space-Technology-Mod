@@ -2,7 +2,6 @@ package com.Nxer.TwistSpaceTechnology.command;
 
 import static com.Nxer.TwistSpaceTechnology.system.DysonSphereProgram.logic.DSP_DataStorageMaps.DSP_TeamName;
 import static com.Nxer.TwistSpaceTechnology.system.DysonSphereProgram.logic.DSP_DataStorageMaps.DysonSpheres;
-import static com.Nxer.TwistSpaceTechnology.util.TextHandler.texter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -14,6 +13,7 @@ import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.StatCollector;
 
 import com.Nxer.TwistSpaceTechnology.system.DysonSphereProgram.logic.DSP_DataCell;
 import com.Nxer.TwistSpaceTechnology.system.DysonSphereProgram.logic.DSP_Galaxy;
@@ -56,7 +56,8 @@ public final class TST_Command extends CommandBase implements IDSP_IO {
                     // spotless:off
                     sender.addChatMessage(
                         new ChatComponentText(
-                            EnumChatFormatting.RED + texter("Invalid command.", "TST_Command.InvalidCommand")));
+                            // #tr TST_Command.InvalidCommand Invalid command.
+                            EnumChatFormatting.RED + StatCollector.translateToLocal("TST_Command.InvalidCommand")));
                     sender.addChatMessage(
                         new ChatComponentText(
                             "↓ Use this to join " + EnumChatFormatting.AQUA + "User1" + EnumChatFormatting.RESET + " to " + EnumChatFormatting.AQUA + "User2" + EnumChatFormatting.RESET + " team ↓"));
@@ -72,7 +73,8 @@ public final class TST_Command extends CommandBase implements IDSP_IO {
                 if (waitJoinID.isEmpty() || toJoinID.isEmpty()) {
                     sender.addChatMessage(
                         new ChatComponentText(
-                            EnumChatFormatting.RED + texter("Invalid command.", "TST_Command.InvalidCommand")));
+                            // #tr TST_Command.InvalidCommand Invalid command.
+                            EnumChatFormatting.RED + StatCollector.translateToLocal("TST_Command.InvalidCommand")));
                     break;
                 }
                 joinUserTeam(waitJoinID, toJoinID);
@@ -187,7 +189,8 @@ public final class TST_Command extends CommandBase implements IDSP_IO {
                     // spotless:off
                     sender.addChatMessage(
                         new ChatComponentText(
-                            EnumChatFormatting.RED + texter("Invalid command.", "TST_Command.InvalidCommand")));
+                            // #tr TST_Command.InvalidCommand Invalid command.
+                            EnumChatFormatting.RED + StatCollector.translateToLocal("TST_Command.InvalidCommand")));
                     sender.addChatMessage(
                         new ChatComponentText(
                             "↓ Use this to set Dyson Sphere Solar Sail " + EnumChatFormatting.GREEN + "amount" + EnumChatFormatting.RESET + " of you or your " + EnumChatFormatting.AQUA + "team" + EnumChatFormatting.RESET + " in current galaxy or in " +EnumChatFormatting.AQUA + " dimension's galaxy " +EnumChatFormatting.RESET+ "↓"));
@@ -208,9 +211,8 @@ public final class TST_Command extends CommandBase implements IDSP_IO {
                 } catch (NumberFormatException e) {
                     sender.addChatMessage(
                         new ChatComponentText(
-                            EnumChatFormatting.RED + texter(
-                                "Input format error, please check your inputs.",
-                                "TST_Command.InputFormatError")));
+                            // #tr TST_Command.InputFormatError Input format error, please check your inputs.
+                            EnumChatFormatting.RED + StatCollector.translateToLocal("TST_Command.InputFormatError")));
                     break;
                 }
 
@@ -231,9 +233,10 @@ public final class TST_Command extends CommandBase implements IDSP_IO {
                     } catch (NumberFormatException e) {
                         sender.addChatMessage(
                             new ChatComponentText(
-                                EnumChatFormatting.RED + texter(
-                                    "Input format error, please check your inputs.",
-                                    "TST_Command.InputFormatError")));
+
+                                // #tr TST_Command.InputFormatError Input format error, please check your inputs.
+                                EnumChatFormatting.RED
+                                    + StatCollector.translateToLocal("TST_Command.InputFormatError")));
                         break;
                     }
                 } else {
@@ -243,9 +246,9 @@ public final class TST_Command extends CommandBase implements IDSP_IO {
                     } catch (NumberFormatException e) {
                         sender.addChatMessage(
                             new ChatComponentText(
-                                EnumChatFormatting.RED + texter(
-                                    "Input format error, please check your inputs.",
-                                    "TST_Command.InputFormatError")));
+                                // #tr TST_Command.InputFormatError Input format error, please check your inputs.
+                                EnumChatFormatting.RED
+                                    + StatCollector.translateToLocal("TST_Command.InputFormatError")));
                         break;
                     }
                 }
@@ -289,7 +292,8 @@ public final class TST_Command extends CommandBase implements IDSP_IO {
             default -> {
                 sender.addChatMessage(
                     new ChatComponentText(
-                        EnumChatFormatting.RED + texter("Invalid command.", "TST_Command.InvalidCommand")));
+                        // #tr TST_Command.InvalidCommand Invalid command.
+                        EnumChatFormatting.RED + StatCollector.translateToLocal("TST_Command.InvalidCommand")));
             }
         }
 

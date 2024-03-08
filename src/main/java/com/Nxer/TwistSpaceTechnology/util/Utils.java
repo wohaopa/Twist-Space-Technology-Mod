@@ -1,7 +1,5 @@
 package com.Nxer.TwistSpaceTechnology.util;
 
-import static com.Nxer.TwistSpaceTechnology.TwistSpaceTechnology.isInDevMode;
-
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -134,13 +132,13 @@ public final class Utils {
 
     // region Generals
 
-    public static void debugLogInfo(String... strings) {
-        if (isInDevMode) {
-            for (String msg : strings) {
-                TwistSpaceTechnology.LOG.info(msg);
-            }
-        }
-    }
+    // public static void debugLogInfo(String... strings) {
+    // if (isInDevMode) {
+    // for (String msg : strings) {
+    // TwistSpaceTechnology.LOG.info(msg);
+    // }
+    // }
+    // }
 
     public static int safeInt(long number, int margin) {
         return number > Integer.MAX_VALUE - margin ? Integer.MAX_VALUE - margin : (int) number;

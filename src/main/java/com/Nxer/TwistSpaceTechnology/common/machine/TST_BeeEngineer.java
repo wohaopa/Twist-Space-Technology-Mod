@@ -217,22 +217,22 @@ public class TST_BeeEngineer extends GTCM_MultiMachineBase<TST_BeeEngineer> {
     @Override
     protected GT_Multiblock_Tooltip_Builder createTooltip() {
         final GT_Multiblock_Tooltip_Builder tt = new GT_Multiblock_Tooltip_Builder();
-        tt.addMachineType(TextLocalization.Tooltip_BeeEngineer_Type)
-            .addInfo(TextLocalization.Tooltip_BeeEngineer_Controller)
-            .addInfo(TextLocalization.Tooltip_BeeEngineer_01)
-            .addInfo(TextLocalization.Tooltip_BeeEngineer_02)
-            .addInfo(TextLocalization.Tooltip_BeeEngineer_03)
-            .addInfo(TextLocalization.Tooltip_BeeEngineer_04)
-            .addInfo(TextLocalization.Tooltip_BeeEngineer_05)
-            .addInfo(TextLocalization.Tooltip_BeeEngineer_06)
-            .addInfo(TextLocalization.Tooltip_BeeEngineer_07)
+        tt.addMachineType(TextLocalization.Tooltip_BeeEngineer_Type.toString())
+            .addInfo(TextLocalization.Tooltip_BeeEngineer_Controller.toString())
+            .addInfo(TextLocalization.Tooltip_BeeEngineer_01.toString())
+            .addInfo(TextLocalization.Tooltip_BeeEngineer_02.toString())
+            .addInfo(TextLocalization.Tooltip_BeeEngineer_03.toString())
+            .addInfo(TextLocalization.Tooltip_BeeEngineer_04.toString())
+            .addInfo(TextLocalization.Tooltip_BeeEngineer_05.toString())
+            .addInfo(TextLocalization.Tooltip_BeeEngineer_06.toString())
+            .addInfo(TextLocalization.Tooltip_BeeEngineer_07.toString())
             .addSeparator()
-            .addInfo(TextLocalization.StructureTooComplex)
-            .addInfo(TextLocalization.BLUE_PRINT_INFO)
-            .addInputBus(TextLocalization.BLUE_PRINT_INFO)
-            .addInputHatch(TextLocalization.BLUE_PRINT_INFO)
-            .addOutputBus(TextLocalization.BLUE_PRINT_INFO)
-            .toolTipFinisher(TextLocalization.ModName);
+            .addInfo(TextLocalization.StructureTooComplex.toString())
+            .addInfo(TextLocalization.BLUE_PRINT_INFO.toString())
+            .addInputBus(TextLocalization.BLUE_PRINT_INFO.toString())
+            .addInputHatch(TextLocalization.BLUE_PRINT_INFO.toString())
+            .addOutputBus(TextLocalization.BLUE_PRINT_INFO.toString())
+            .toolTipFinisher(TextLocalization.ModName.toString());
         return tt;
     }
 

@@ -1,6 +1,5 @@
 package com.Nxer.TwistSpaceTechnology.common.machine.singleBlock.hatch;
 
-import static com.Nxer.TwistSpaceTechnology.util.TextHandler.texter;
 import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.FluidCapacity;
 import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.HatchTier;
 import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.ModNameDesc;
@@ -60,19 +59,20 @@ public class GT_MetaTileEntity_Hatch_Mana extends GT_MetaTileEntity_Hatch_FluidG
         System.arraycopy(mDescriptionArray, 0, desc, 0, mDescriptionArray.length);
         System.arraycopy(hatchTierString, 0, desc, mDescriptionArray.length, 1);
         System.arraycopy(aCustomTips, 0, desc, mDescriptionArray.length + 1, aCustomTips.length);
-        desc[mDescriptionArray.length + aCustomTips.length] = ModNameDesc;
+        desc[mDescriptionArray.length + aCustomTips.length] = ModNameDesc.toString();
         return desc;
     }
 
     @Override
     public String[] getCustomTooltip() {
         String[] aTooltip = new String[5];
-        aTooltip[0] = texter("Mana transform hatch", "GT_MetaTileEntity_Hatch_Mana.Tooltip0");
-        aTooltip[1] = texter(
-            "Transform mana up to 10000 mana or 1000L every second",
-            "GT_MetaTileEntity_Hatch_Mana.Tooltip1");
-        aTooltip[2] = texter("Need to facing at a mana pool to work.", "GT_MetaTileEntity_Hatch_Mana.Tooltip2");
-        aTooltip[3] = TextLocalization.textScrewdriverChangeMode;
+        // #tr GT_MetaTileEntity_Hatch_Mana.Tooltip0 Mana transform hatch
+        aTooltip[0] = StatCollector.translateToLocal("GT_MetaTileEntity_Hatch_Mana.Tooltip0");
+        // #tr GT_MetaTileEntity_Hatch_Mana.Tooltip1 Transform mana up to 10000 mana or 1000L every second
+        aTooltip[1] = StatCollector.translateToLocal("GT_MetaTileEntity_Hatch_Mana.Tooltip1");
+        // #tr GT_MetaTileEntity_Hatch_Mana.Tooltip2 Need to facing at a mana pool to work.
+        aTooltip[2] = StatCollector.translateToLocal("GT_MetaTileEntity_Hatch_Mana.Tooltip2");
+        aTooltip[3] = TextLocalization.textScrewdriverChangeMode.toString();
         return aTooltip;
     }
 

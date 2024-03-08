@@ -131,17 +131,17 @@ public class TST_LargeSteamAlloySmelter extends GregtechMeta_SteamMultiBase<TST_
     @Override
     protected GT_Multiblock_Tooltip_Builder createTooltip() {
         final GT_Multiblock_Tooltip_Builder tt = new GT_Multiblock_Tooltip_Builder();
-        tt.addMachineType(TextLocalization.Tooltip_LargeSteamAlloySmelter_MachineType)
-            .addInfo(TextLocalization.Tooltip_LargeSteamAlloySmelter_Controller)
-            .addInfo(TextLocalization.Tooltip_LargeSteamAlloySmelter_01)
-            .addInfo(TextLocalization.StructureTooComplex)
-            .addInfo(TextLocalization.BLUE_PRINT_INFO)
+        tt.addMachineType(TextLocalization.Tooltip_LargeSteamAlloySmelter_MachineType.toString())
+            .addInfo(TextLocalization.Tooltip_LargeSteamAlloySmelter_Controller.toString())
+            .addInfo(TextLocalization.Tooltip_LargeSteamAlloySmelter_01.toString())
+            .addInfo(TextLocalization.StructureTooComplex.toString())
+            .addInfo(TextLocalization.BLUE_PRINT_INFO.toString())
             .addSeparator()
             .beginStructureBlock(5, 3, 3, false)
-            .addController(TextLocalization.textFrontCenter)
-            .addInputBus(TextLocalization.textAnyCasing, 2)
-            .addOutputBus(TextLocalization.textAnyCasing, 2)
-            .toolTipFinisher(TextLocalization.ModName);
+            .addController(TextLocalization.textFrontCenter.toString())
+            .addInputBus(TextLocalization.textAnyCasing.toString(), 2)
+            .addOutputBus(TextLocalization.textAnyCasing.toString(), 2)
+            .toolTipFinisher(TextLocalization.ModName.toString());
         return tt;
     }
 

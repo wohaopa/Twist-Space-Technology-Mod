@@ -175,17 +175,17 @@ public class TST_CircuitConverter extends GTCM_MultiMachineBase<TST_CircuitConve
     @Override
     protected GT_Multiblock_Tooltip_Builder createTooltip() {
         final GT_Multiblock_Tooltip_Builder tt = new GT_Multiblock_Tooltip_Builder();
-        tt.addMachineType(Tooltip_CircuitConverter_MachineType)
-            .addInfo(Tooltip_CircuitConverter_Controller)
-            .addInfo(Tooltip_CircuitConverter_01)
+        tt.addMachineType(Tooltip_CircuitConverter_MachineType.toString())
+            .addInfo(Tooltip_CircuitConverter_Controller.toString())
+            .addInfo(Tooltip_CircuitConverter_01.toString())
             .addSeparator()
-            .addInfo(TextLocalization.BLUE_PRINT_INFO)
-            .addStructureInfo(Tooltip_CircuitConverter_2_01)
-            .addStructureInfo(Tooltip_DoNotNeedMaintenance)
-            .addStructureInfo(Tooltip_DoNotNeedEnergyHatch)
-            .addInputBus(textAnyCasing, 1)
-            .addOutputBus(textAnyCasing, 1)
-            .toolTipFinisher(TextLocalization.ModName);
+            .addInfo(TextLocalization.BLUE_PRINT_INFO.toString())
+            .addStructureInfo(Tooltip_CircuitConverter_2_01.toString())
+            .addStructureInfo(Tooltip_DoNotNeedMaintenance.toString())
+            .addStructureInfo(Tooltip_DoNotNeedEnergyHatch.toString())
+            .addInputBus(textAnyCasing.toString(), 1)
+            .addOutputBus(textAnyCasing.toString(), 1)
+            .toolTipFinisher(TextLocalization.ModName.toString());
         return tt;
     }
 

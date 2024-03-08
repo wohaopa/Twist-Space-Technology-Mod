@@ -260,27 +260,27 @@ public class TST_MegaUniversalSpaceStation extends GT_TileEntity_MultiStructureM
     @Override
     protected GT_Multiblock_Tooltip_Builder createTooltip() {
         final GT_Multiblock_Tooltip_Builder tt = new GT_Multiblock_Tooltip_Builder();
-        tt.addMachineType(TextLocalization.Tooltip_MegaUniversalSpaceStation_MachineType)
-            .addInfo(TextLocalization.Tooltip_MegaUniversalSpaceStation_00)
-            .addInfo(TextLocalization.Tooltip_MegaUniversalSpaceStation_01)
-            .addInfo(TextLocalization.Tooltip_MegaUniversalSpaceStation_02)
-            .addInfo(TextLocalization.Tooltip_MegaUniversalSpaceStation_03)
-            .addInfo(TextLocalization.Tooltip_MegaUniversalSpaceStation_04)
-            .addInfo(TextLocalization.Tooltip_MegaUniversalSpaceStation_05)
-            .addInfo(TextLocalization.Tooltip_MegaUniversalSpaceStation_06)
-            .addInfo(TextLocalization.Tooltip_GlassTierLimitEnergyHatchTier)
-            .addInfo(TextLocalization.textScrewdriverChangeMode)
+        tt.addMachineType(TextLocalization.Tooltip_MegaUniversalSpaceStation_MachineType.toString())
+            .addInfo(TextLocalization.Tooltip_MegaUniversalSpaceStation_00.toString())
+            .addInfo(TextLocalization.Tooltip_MegaUniversalSpaceStation_01.toString())
+            .addInfo(TextLocalization.Tooltip_MegaUniversalSpaceStation_02.toString())
+            .addInfo(TextLocalization.Tooltip_MegaUniversalSpaceStation_03.toString())
+            .addInfo(TextLocalization.Tooltip_MegaUniversalSpaceStation_04.toString())
+            .addInfo(TextLocalization.Tooltip_MegaUniversalSpaceStation_05.toString())
+            .addInfo(TextLocalization.Tooltip_MegaUniversalSpaceStation_06.toString())
+            .addInfo(TextLocalization.Tooltip_GlassTierLimitEnergyHatchTier.toString())
+            .addInfo(TextLocalization.textScrewdriverChangeMode.toString())
             .addSeparator()
-            .addInfo(TextLocalization.StructureTooComplex)
-            .addInfo(TextLocalization.BLUE_PRINT_INFO)
+            .addInfo(TextLocalization.StructureTooComplex.toString())
+            .addInfo(TextLocalization.BLUE_PRINT_INFO.toString())
             .beginStructureBlock(448, 256, 431, false)
-            .addInputHatch(TextLocalization.textUseBlueprint, 2)
-            .addOutputHatch(TextLocalization.textUseBlueprint, 2)
-            .addInputBus(TextLocalization.textUseBlueprint, 2)
-            .addOutputBus(TextLocalization.textUseBlueprint, 2)
-            .addMaintenanceHatch(TextLocalization.textUseBlueprint, 1)
-            .addEnergyHatch(TextLocalization.textUseBlueprint, 1)
-            .toolTipFinisher(TextLocalization.ModName);
+            .addInputHatch(TextLocalization.textUseBlueprint.toString(), 2)
+            .addOutputHatch(TextLocalization.textUseBlueprint.toString(), 2)
+            .addInputBus(TextLocalization.textUseBlueprint.toString(), 2)
+            .addOutputBus(TextLocalization.textUseBlueprint.toString(), 2)
+            .addMaintenanceHatch(TextLocalization.textUseBlueprint.toString(), 1)
+            .addEnergyHatch(TextLocalization.textUseBlueprint.toString(), 1)
+            .toolTipFinisher(TextLocalization.ModName.toString());
         return tt;
     }
 

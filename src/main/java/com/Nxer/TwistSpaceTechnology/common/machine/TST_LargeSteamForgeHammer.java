@@ -112,17 +112,17 @@ public class TST_LargeSteamForgeHammer extends GregtechMeta_SteamMultiBase<TST_L
     @Override
     protected GT_Multiblock_Tooltip_Builder createTooltip() {
         final GT_Multiblock_Tooltip_Builder tt = new GT_Multiblock_Tooltip_Builder();
-        tt.addMachineType(TextLocalization.Tooltip_LargeSteamForgeHammer_MachineType)
-            .addInfo(TextLocalization.Tooltip_LargeSteamForgeHammer_Controller)
-            .addInfo(TextLocalization.Tooltip_LargeSteamForgeHammer_01)
-            .addInfo(TextLocalization.StructureTooComplex)
-            .addInfo(TextLocalization.BLUE_PRINT_INFO)
+        tt.addMachineType(TextLocalization.Tooltip_LargeSteamForgeHammer_MachineType.toString())
+            .addInfo(TextLocalization.Tooltip_LargeSteamForgeHammer_Controller.toString())
+            .addInfo(TextLocalization.Tooltip_LargeSteamForgeHammer_01.toString())
+            .addInfo(TextLocalization.StructureTooComplex.toString())
+            .addInfo(TextLocalization.BLUE_PRINT_INFO.toString())
             .addSeparator()
             .beginStructureBlock(3, 3, 3, true)
-            .addController(TextLocalization.textFrontCenter)
-            .addInputBus(TextLocalization.textAnyCasing, 2)
-            .addOutputBus(TextLocalization.textAnyCasing, 2)
-            .toolTipFinisher(TextLocalization.ModName);
+            .addController(TextLocalization.textFrontCenter.toString())
+            .addInputBus(TextLocalization.textAnyCasing.toString(), 2)
+            .addOutputBus(TextLocalization.textAnyCasing.toString(), 2)
+            .toolTipFinisher(TextLocalization.ModName.toString());
         return tt;
     }
 

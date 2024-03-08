@@ -100,7 +100,7 @@ public class GT_MetaTileEntity_Hatch_DualInput extends GT_MetaTileEntity_Hatch_I
             ITEM_SLOT_AMOUNT,
             new String[] { "Advanced input for Multiblocks", "Capacity: " + getCapacityPerTank(aTier) + " L",
                 "Can hold " + getSlots(aTier) + " types of item and " + getFluidSlotsAmount(aTier) + " types of fluid ",
-                "Automatically separate inputs", ModNameDesc });
+                "Automatically separate inputs", ModNameDesc.toString() });
         mStoredFluid = new FluidStack[getFluidSlotsAmount(aTier)];
         fluidTanks = new FluidStackTank[getFluidSlotsAmount(aTier)];
         mCapacityPer = getCapacityPerTank(aTier);

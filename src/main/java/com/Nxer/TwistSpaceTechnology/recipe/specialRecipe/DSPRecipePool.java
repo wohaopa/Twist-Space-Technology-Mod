@@ -21,7 +21,6 @@ import static com.Nxer.TwistSpaceTechnology.system.DysonSphereProgram.logic.DSP_
 import static com.Nxer.TwistSpaceTechnology.system.DysonSphereProgram.logic.DSP_Values.EUTOfLaunchingSolarSail;
 import static com.Nxer.TwistSpaceTechnology.system.DysonSphereProgram.logic.DSP_Values.ticksOfLaunchingNode;
 import static com.Nxer.TwistSpaceTechnology.system.DysonSphereProgram.logic.DSP_Values.ticksOfLaunchingSolarSail;
-import static com.Nxer.TwistSpaceTechnology.util.TextHandler.texter;
 import static com.Nxer.TwistSpaceTechnology.util.Utils.copyAmount;
 import static com.github.technus.tectech.thing.CustomItemList.eM_Coil;
 import static com.github.technus.tectech.thing.CustomItemList.eM_Containment;
@@ -48,6 +47,7 @@ import static gtPlusPlus.core.material.ELEMENT.STANDALONE.HYPOGEN;
 import static gtPlusPlus.xmod.gregtech.api.enums.GregtechItemList.Laser_Lens_Special;
 
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.StatCollector;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
@@ -243,11 +243,12 @@ public class DSPRecipePool implements IRecipePool {
 
         GT_Values.RA.stdBuilder()
             .itemInputs(SmallLaunchVehicle.get(1))
-
+            // #tr NEI.EmptySmallLaunchVehicleRecipe.0 99%% Return an Empty Small Launch Vehicle.
             .itemOutputs(
                 SmallLaunchVehicle.get(1)
                     .setStackDisplayName(
-                        texter("99%% Return an Empty Small Launch Vehicle.", "NEI.EmptySmallLaunchVehicleRecipe.0")))
+
+                        StatCollector.translateToLocal("NEI.EmptySmallLaunchVehicleRecipe.0")))
 
             .eut(EUTOfLaunchingNode)
             .duration(ticksOfLaunchingNode)
@@ -277,8 +278,8 @@ public class DSPRecipePool implements IRecipePool {
         // spotless:off
         GT_Values.RA.stdBuilder()
             .itemInputs(AntimatterFuelRod.get(1))
-
-            .itemOutputs(StellarConstructionFrameMaterial.get(3).setStackDisplayName(texter("Chance to recover some raw materials. Probability is affected by module tier.","NEI.AntimatterFuelRodGeneratingRecipe.01")))
+            // #tr NEI.AntimatterFuelRodGeneratingRecipe.01 Chance to recover some raw materials. Probability is affected by module tier.
+            .itemOutputs(StellarConstructionFrameMaterial.get(3).setStackDisplayName(StatCollector.translateToLocal("NEI.AntimatterFuelRodGeneratingRecipe.01")))
 
             .specialValue((int) (EUEveryAntimatterFuelRod / Integer.MAX_VALUE))
             .eut(0)

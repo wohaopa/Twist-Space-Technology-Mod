@@ -1,7 +1,5 @@
 package com.Nxer.TwistSpaceTechnology.util;
 
-import static com.Nxer.TwistSpaceTechnology.util.TextHandler.texter;
-
 import java.util.Map;
 import java.util.Set;
 
@@ -14,10 +12,11 @@ import com.Nxer.TwistSpaceTechnology.TwistSpaceTechnology;
 public class MetaItemStackUtils {
 
     // generate item stack when init
-    public static ItemStack initMetaItemStack(String i18nName, int Meta, Item basicItem, Set<Integer> aContainerSet) {
+    public static ItemStack initMetaItemStack(/* String i18nName, */int Meta, Item basicItem,
+        Set<Integer> aContainerSet) {
 
         // Handle the Name
-        texter(i18nName, basicItem.getUnlocalizedName() + "." + Meta + ".name");
+        // texter(i18nName, basicItem.getUnlocalizedName() + "." + Meta + ".name");
         // Hold the list of Meta-generated Items
         aContainerSet.add(Meta);
 
@@ -25,8 +24,9 @@ public class MetaItemStackUtils {
     }
 
     // generate itemBlock stack when init
-    public static ItemStack initMetaItemStack(String i18nName, int Meta, Block baseBlock, Set<Integer> aContainerSet) {
-        texter(i18nName, baseBlock.getUnlocalizedName() + "." + Meta + ".name");
+    public static ItemStack initMetaItemStack(/* String i18nName, */int Meta, Block baseBlock,
+        Set<Integer> aContainerSet) {
+        // texter(i18nName, baseBlock.getUnlocalizedName() + "." + Meta + ".name");
         aContainerSet.add(Meta);
         return new ItemStack(baseBlock, 1, Meta);
     }

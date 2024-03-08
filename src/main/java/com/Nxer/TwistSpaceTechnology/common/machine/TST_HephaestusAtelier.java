@@ -5,7 +5,6 @@ import static com.Nxer.TwistSpaceTechnology.common.machine.ValueEnum.ConsumeEuPe
 import static com.Nxer.TwistSpaceTechnology.common.machine.ValueEnum.ConsumeEutPerParallel_HephaestusAtelier;
 import static com.Nxer.TwistSpaceTechnology.common.machine.ValueEnum.DurationPerProcessing_T2Coil_Wireless_HephaestusAtelier;
 import static com.Nxer.TwistSpaceTechnology.common.machine.ValueEnum.DurationPerProcessing_T3Coil_Wireless_HephaestusAtelier;
-import static com.Nxer.TwistSpaceTechnology.util.TextHandler.texter;
 import static com.Nxer.TwistSpaceTechnology.util.Utils.NEGATIVE_ONE;
 import static com.github.technus.tectech.thing.casing.TT_Container_Casings.sBlockCasingsTT;
 import static com.gtnewhorizon.structurelib.structure.StructureUtility.ofBlock;
@@ -30,6 +29,7 @@ import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.StatCollector;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import org.apache.commons.lang3.tuple.Pair;
@@ -107,7 +107,8 @@ public class TST_HephaestusAtelier extends GTCM_MultiMachineBase<TST_HephaestusA
             ret = new String[origin.length + 2];
             System.arraycopy(origin, 0, ret, 0, origin.length);
             ret[origin.length - 1] = EnumChatFormatting.AQUA
-                + texter("Coil Tier", "HephaestusAtelier.getInfoData.Coil_Tier")
+                // #tr HephaestusAtelier.getInfoData.Coil_Tier Coil Tier
+                + StatCollector.translateToLocal("HephaestusAtelier.getInfoData.Coil_Tier")
                 + ": "
                 + EnumChatFormatting.RESET
                 + coilTier;
@@ -118,7 +119,8 @@ public class TST_HephaestusAtelier extends GTCM_MultiMachineBase<TST_HephaestusA
             ret = new String[origin.length + 1];
             System.arraycopy(origin, 0, ret, 0, origin.length);
             ret[origin.length] = EnumChatFormatting.AQUA
-                + texter("Coil Tier", "HephaestusAtelier.getInfoData.Coil_Tier")
+                // #tr HephaestusAtelier.getInfoData.Coil_Tier Coil Tier
+                + StatCollector.translateToLocal("HephaestusAtelier.getInfoData.Coil_Tier")
                 + ": "
                 + EnumChatFormatting.RESET
                 + coilTier;
@@ -399,34 +401,34 @@ public class TST_HephaestusAtelier extends GTCM_MultiMachineBase<TST_HephaestusA
     @Override
     protected GT_Multiblock_Tooltip_Builder createTooltip() {
         final GT_Multiblock_Tooltip_Builder tt = new GT_Multiblock_Tooltip_Builder();
-        tt.addMachineType(TextLocalization.Tooltip_HephaestusAtelier_MachineType)
-            .addInfo(TextLocalization.Tooltip_HephaestusAtelier_Controller)
-            .addInfo(TextLocalization.Tooltip_HephaestusAtelier_01)
-            .addInfo(TextLocalization.Tooltip_HephaestusAtelier_02)
-            .addInfo(TextLocalization.Tooltip_HephaestusAtelier_03)
-            .addInfo(TextLocalization.Tooltip_HephaestusAtelier_04)
-            .addInfo(TextLocalization.Tooltip_HephaestusAtelier_05)
-            .addInfo(TextLocalization.Tooltip_HephaestusAtelier_06)
-            .addInfo(TextLocalization.Tooltip_HephaestusAtelier_07)
-            .addInfo(TextLocalization.Tooltip_HephaestusAtelier_08)
-            .addInfo(TextLocalization.Tooltip_HephaestusAtelier_09)
-            .addInfo(TextLocalization.Tooltip_HephaestusAtelier_10)
-            .addInfo(TextLocalization.Tooltip_HephaestusAtelier_11)
-            .addInfo(TextLocalization.Tooltip_HephaestusAtelier_12)
-            .addInfo(TextLocalization.Tooltip_HephaestusAtelier_13)
-            .addInfo(TextLocalization.Tooltip_HephaestusAtelier_14)
-            .addInfo(TextLocalization.Tooltip_HephaestusAtelier_15)
+        tt.addMachineType(TextLocalization.Tooltip_HephaestusAtelier_MachineType.toString())
+            .addInfo(TextLocalization.Tooltip_HephaestusAtelier_Controller.toString())
+            .addInfo(TextLocalization.Tooltip_HephaestusAtelier_01.toString())
+            .addInfo(TextLocalization.Tooltip_HephaestusAtelier_02.toString())
+            .addInfo(TextLocalization.Tooltip_HephaestusAtelier_03.toString())
+            .addInfo(TextLocalization.Tooltip_HephaestusAtelier_04.toString())
+            .addInfo(TextLocalization.Tooltip_HephaestusAtelier_05.toString())
+            .addInfo(TextLocalization.Tooltip_HephaestusAtelier_06.toString())
+            .addInfo(TextLocalization.Tooltip_HephaestusAtelier_07.toString())
+            .addInfo(TextLocalization.Tooltip_HephaestusAtelier_08.toString())
+            .addInfo(TextLocalization.Tooltip_HephaestusAtelier_09.toString())
+            .addInfo(TextLocalization.Tooltip_HephaestusAtelier_10.toString())
+            .addInfo(TextLocalization.Tooltip_HephaestusAtelier_11.toString())
+            .addInfo(TextLocalization.Tooltip_HephaestusAtelier_12.toString())
+            .addInfo(TextLocalization.Tooltip_HephaestusAtelier_13.toString())
+            .addInfo(TextLocalization.Tooltip_HephaestusAtelier_14.toString())
+            .addInfo(TextLocalization.Tooltip_HephaestusAtelier_15.toString())
             .addSeparator()
-            .addInfo(TextLocalization.StructureTooComplex)
-            .addInfo(TextLocalization.BLUE_PRINT_INFO)
-            .addStructureInfo(TextLocalization.Tooltip_HephaestusAtelier_2_01)
-            .addStructureInfo(TextLocalization.Tooltip_DoNotNeedMaintenance)
+            .addInfo(TextLocalization.StructureTooComplex.toString())
+            .addInfo(TextLocalization.BLUE_PRINT_INFO.toString())
+            .addStructureInfo(TextLocalization.Tooltip_HephaestusAtelier_2_01.toString())
+            .addStructureInfo(TextLocalization.Tooltip_DoNotNeedMaintenance.toString())
             .beginStructureBlock(33, 11, 33, false)
-            .addController(TextLocalization.textFrontCenter)
-            .addInputBus(TextLocalization.textAnyCasing, 1)
-            .addOutputBus(TextLocalization.textAnyCasing, 1)
-            .addEnergyHatch(TextLocalization.textAnyCasing, 1)
-            .toolTipFinisher(TextLocalization.ModName);
+            .addController(TextLocalization.textFrontCenter.toString())
+            .addInputBus(TextLocalization.textAnyCasing.toString(), 1)
+            .addOutputBus(TextLocalization.textAnyCasing.toString(), 1)
+            .addEnergyHatch(TextLocalization.textAnyCasing.toString(), 1)
+            .toolTipFinisher(TextLocalization.ModName.toString());
         return tt;
     }
 

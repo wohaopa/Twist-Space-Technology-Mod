@@ -50,8 +50,8 @@ public class ItemAdderRune extends ItemAdder_Basic implements IItemHasCooldown {
     /**
      * Create the basic item MetaItemRune.
      */
-    public ItemAdderRune(String aName, String aMetaName, CreativeTabs aCreativeTabs) {
-        super(aName, aMetaName, aCreativeTabs);
+    public ItemAdderRune(/* String aName, */String aMetaName, CreativeTabs aCreativeTabs) {
+        super(/* aName, */aMetaName, aCreativeTabs);
         this.unlocalizedName = aMetaName;
         this.maxStackSize = 1;
     }
@@ -64,19 +64,19 @@ public class ItemAdderRune extends ItemAdder_Basic implements IItemHasCooldown {
      * @param aMeta The MetaValue of your creating item.
      * @return Return the Item with ItemStack form you create.
      */
-    public static ItemStack initItemRune(String aName, int aMeta) {
+    public static ItemStack initItemRune(/* String aName, */int aMeta) {
 
-        return MetaItemStackUtils.initMetaItemStack(aName, aMeta, BasicItems.MetaItemRune, Meta01Set);
+        return MetaItemStackUtils.initMetaItemStack(/* aName, */aMeta, BasicItems.MetaItemRune, Meta01Set);
 
     }
 
-    public static ItemStack initItemRune(String aName, int aMeta, String[] tooltips) {
+    public static ItemStack initItemRune(/* String aName, */int aMeta, String[] tooltips) {
 
         if (tooltips != null) {
             MetaItemStackUtils.metaItemStackTooltipsAdd(MetaItemTooltipsMapRune, aMeta, tooltips);
         }
 
-        return initItemRune(aName, aMeta);
+        return initItemRune(/* aName, */aMeta);
 
     }
 

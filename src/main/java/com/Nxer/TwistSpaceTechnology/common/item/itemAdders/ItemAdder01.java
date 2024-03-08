@@ -43,8 +43,8 @@ public class ItemAdder01 extends ItemAdder_Basic {
     /**
      * Create the basic item MetaItem01.
      */
-    public ItemAdder01(String aName, String aMetaName, CreativeTabs aCreativeTabs) {
-        super(aName, aMetaName, aCreativeTabs);
+    public ItemAdder01(/* String aName, */String aMetaName, CreativeTabs aCreativeTabs) {
+        super(/* aName, */aMetaName, aCreativeTabs);
         this.unlocalizedName = aMetaName;
     }
 
@@ -56,19 +56,19 @@ public class ItemAdder01 extends ItemAdder_Basic {
      * @param aMeta The MetaValue of your creating item.
      * @return Return the Item with ItemStack form you create.
      */
-    public static ItemStack initItem01(String aName, int aMeta) {
+    public static ItemStack initItem01(/* String aName, */int aMeta) {
 
-        return MetaItemStackUtils.initMetaItemStack(aName, aMeta, BasicItems.MetaItem01, Meta01Set);
+        return MetaItemStackUtils.initMetaItemStack(/* aName, */aMeta, BasicItems.MetaItem01, Meta01Set);
 
     }
 
-    public static ItemStack initItem01(String aName, int aMeta, String[] tooltips) {
+    public static ItemStack initItem01(/* String aName, */int aMeta, String[] tooltips) {
 
         if (tooltips != null) {
             MetaItemStackUtils.metaItemStackTooltipsAdd(MetaItemTooltipsMap01, aMeta, tooltips);
         }
 
-        return initItem01(aName, aMeta);
+        return initItem01(/* aName, */aMeta);
 
     }
 

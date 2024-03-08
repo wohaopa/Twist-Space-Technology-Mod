@@ -1259,7 +1259,7 @@ public class TST_Computer extends GT_MetaTileEntity_MultiblockBase_EM implements
                 2) // Parametrizer: (optional) Any Computer Casing on first or last slice
             .addEnergyHatch(translateToLocal("tt.keyword.Structure.AnyComputerCasingFirstOrLastSlice"), 1) // Energy
             .addMaintenanceHatch(translateToLocal("tt.keyword.Structure.AnyComputerCasingFirstOrLastSlice"), 1) // Maintenance
-            .toolTipFinisher(TextLocalization.ModName);
+            .toolTipFinisher(TextLocalization.ModName.toString());
         return tt;
     }
 

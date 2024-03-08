@@ -7,7 +7,6 @@ import static com.Nxer.TwistSpaceTechnology.system.DysonSphereProgram.logic.DSP_
 import static com.Nxer.TwistSpaceTechnology.system.DysonSphereProgram.logic.DSP_Values.EUEveryAntimatterFuelRod;
 import static com.Nxer.TwistSpaceTechnology.system.DysonSphereProgram.logic.DSP_Values.EnableRenderDefaultArtificialStar;
 import static com.Nxer.TwistSpaceTechnology.system.DysonSphereProgram.logic.DSP_Values.secondsOfArtificialStarProgressCycleTime;
-import static com.Nxer.TwistSpaceTechnology.util.TextHandler.texter;
 import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.DSPName;
 import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_ArtificialStar_00;
 import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_ArtificialStar_01;
@@ -141,7 +140,9 @@ public class TST_ArtificialStar extends GTCM_MultiMachineBase<TST_ArtificialStar
         final NBTTagCompound tag = accessor.getNBTData();
         if (tag.getBoolean("isActive")) {
             currentTip.add(
-                EnumChatFormatting.AQUA + texter("Current Generating : ", "Waila.TST_ArtificialStar.1")
+                EnumChatFormatting.AQUA
+                    // #tr Waila.TST_ArtificialStar.1 Current Generating :
+                    + StatCollector.translateToLocal("Waila.TST_ArtificialStar.1")
                     + EnumChatFormatting.GOLD
                     + tag.getLong("currentOutputEU")
                     + EnumChatFormatting.RED
@@ -175,12 +176,24 @@ public class TST_ArtificialStar extends GTCM_MultiMachineBase<TST_ArtificialStar
         String[] origin = super.getInfoData();
         String[] ret = new String[origin.length + 6];
         System.arraycopy(origin, 0, ret, 0, origin.length);
-        ret[origin.length] = EnumChatFormatting.GOLD+texter("Reward for continuous operation","TST_ArtificialStar.getInfoData.00")+EnumChatFormatting.RESET+": "+EnumChatFormatting.GREEN+(rewardContinuous+100)+"%";
-        ret[origin.length + 1] = EnumChatFormatting.GOLD+texter("Generating Multiplier","TST_ArtificialStar.getInfoData.01")+EnumChatFormatting.RESET+": "+EnumChatFormatting.GREEN+outputMultiplier;
-        ret[origin.length + 2] = EnumChatFormatting.GOLD+texter("Dimension Field Tier","TST_ArtificialStar.getInfoData.02")+EnumChatFormatting.RESET+": "+EnumChatFormatting.YELLOW+tierDimensionField;
-        ret[origin.length + 3] = EnumChatFormatting.GOLD+texter("Time Field Tier","TST_ArtificialStar.getInfoData.03")+EnumChatFormatting.RESET+": "+EnumChatFormatting.YELLOW+tierTimeField;
-        ret[origin.length + 4] = EnumChatFormatting.GOLD+texter("Stabilisation Field Tier","TST_ArtificialStar.getInfoData.04")+EnumChatFormatting.RESET+": "+EnumChatFormatting.YELLOW+tierStabilisationField;
-        ret[origin.length + 5] = EnumChatFormatting.GOLD+texter("Recover material chance","TST_ArtificialStar.getInfoData.05")+EnumChatFormatting.RESET+": "+EnumChatFormatting.AQUA+recoveryChance+EnumChatFormatting.RESET+"/"+EnumChatFormatting.AQUA+"1000";
+        ret[origin.length] = EnumChatFormatting.GOLD
+            // #tr TST_ArtificialStar.getInfoData.00 Reward for continuous operation
+			+ StatCollector.translateToLocal("TST_ArtificialStar.getInfoData.00")+EnumChatFormatting.RESET+": "+EnumChatFormatting.GREEN+(rewardContinuous+100)+"%";
+        ret[origin.length + 1] = EnumChatFormatting.GOLD
+            // #tr TST_ArtificialStar.getInfoData.01 Generating Multiplier
+			+ StatCollector.translateToLocal("TST_ArtificialStar.getInfoData.01")+EnumChatFormatting.RESET+": "+EnumChatFormatting.GREEN+outputMultiplier;
+        ret[origin.length + 2] = EnumChatFormatting.GOLD
+            // #tr TST_ArtificialStar.getInfoData.02 Dimension Field Tier
+			+ StatCollector.translateToLocal("TST_ArtificialStar.getInfoData.02")+EnumChatFormatting.RESET+": "+EnumChatFormatting.YELLOW+tierDimensionField;
+        ret[origin.length + 3] = EnumChatFormatting.GOLD
+            // #tr TST_ArtificialStar.getInfoData.03 Time Field Tier
+			+ StatCollector.translateToLocal("TST_ArtificialStar.getInfoData.03")+EnumChatFormatting.RESET+": "+EnumChatFormatting.YELLOW+tierTimeField;
+        ret[origin.length + 4] = EnumChatFormatting.GOLD
+            // #tr TST_ArtificialStar.getInfoData.04 Stabilisation Field Tier
+			+ StatCollector.translateToLocal("TST_ArtificialStar.getInfoData.04")+EnumChatFormatting.RESET+": "+EnumChatFormatting.YELLOW+tierStabilisationField;
+        ret[origin.length + 5] = EnumChatFormatting.GOLD
+            // #tr TST_ArtificialStar.getInfoData.05 Recover material chance
+			+ StatCollector.translateToLocal("TST_ArtificialStar.getInfoData.05")+EnumChatFormatting.RESET+": "+EnumChatFormatting.AQUA+recoveryChance+EnumChatFormatting.RESET+"/"+EnumChatFormatting.AQUA+"1000";
         return ret;
        // spotless:on
     }
@@ -523,42 +536,42 @@ L -> ofBlock...(gt.blockcasingsTT, 12, ...); // Hatch
     @Override
     protected GT_Multiblock_Tooltip_Builder createTooltip() {
         final GT_Multiblock_Tooltip_Builder tt = new GT_Multiblock_Tooltip_Builder();
-        tt.addMachineType(Tooltip_ArtificialStar_MachineType)
-            .addInfo(Tooltip_ArtificialStar_Controller)
-            .addInfo(Tooltip_ArtificialStar_00)
-            .addInfo(Tooltip_ArtificialStar_01)
-            .addInfo(Tooltip_ArtificialStar_02)
-            .addInfo(Tooltip_ArtificialStar_03)
-            .addInfo(Tooltip_ArtificialStar_04)
-            .addInfo(Tooltip_ArtificialStar_05)
-            .addInfo(Tooltip_ArtificialStar_06)
-            .addInfo(Tooltip_ArtificialStar_07)
-            .addInfo(Tooltip_ArtificialStar_08)
-            .addInfo(TextLocalization.StructureTooComplex)
-            .addInfo(TextLocalization.BLUE_PRINT_INFO)
+        tt.addMachineType(Tooltip_ArtificialStar_MachineType.toString())
+            .addInfo(Tooltip_ArtificialStar_Controller.toString())
+            .addInfo(Tooltip_ArtificialStar_00.toString())
+            .addInfo(Tooltip_ArtificialStar_01.toString())
+            .addInfo(Tooltip_ArtificialStar_02.toString())
+            .addInfo(Tooltip_ArtificialStar_03.toString())
+            .addInfo(Tooltip_ArtificialStar_04.toString())
+            .addInfo(Tooltip_ArtificialStar_05.toString())
+            .addInfo(Tooltip_ArtificialStar_06.toString())
+            .addInfo(Tooltip_ArtificialStar_07.toString())
+            .addInfo(Tooltip_ArtificialStar_08.toString())
+            .addInfo(TextLocalization.StructureTooComplex.toString())
+            .addInfo(TextLocalization.BLUE_PRINT_INFO.toString())
             .addSeparator()
-            .addStructureInfo(Tooltip_Details)
-            .addStructureInfo(Tooltip_ArtificialStar_02_01)
-            .addStructureInfo(Tooltip_ArtificialStar_02_02)
-            .addStructureInfo(Tooltip_ArtificialStar_02_03)
-            .addStructureInfo(Tooltip_ArtificialStar_02_04)
-            .addStructureInfo(Tooltip_ArtificialStar_02_05)
-            .addStructureInfo(Tooltip_ArtificialStar_02_06)
+            .addStructureInfo(Tooltip_Details.toString())
+            .addStructureInfo(Tooltip_ArtificialStar_02_01.toString())
+            .addStructureInfo(Tooltip_ArtificialStar_02_02.toString())
+            .addStructureInfo(Tooltip_ArtificialStar_02_03.toString())
+            .addStructureInfo(Tooltip_ArtificialStar_02_04.toString())
+            .addStructureInfo(Tooltip_ArtificialStar_02_05.toString())
+            .addStructureInfo(Tooltip_ArtificialStar_02_06.toString())
           .addStructureInfo(EnumChatFormatting.GOLD+"-----------------------------------------")
           .addStructureInfo(DSPName + ":")
-          .addStructureInfo(Tooltip_DSPInfo_launch_01)
-          .addStructureInfo(Tooltip_DSPInfo_launch_02)
-          .addStructureInfo(Tooltip_DSPInfo_00)
-          .addStructureInfo(Tooltip_DSPInfo_01)
-          .addStructureInfo(Tooltip_DSPInfo_02)
-          .addStructureInfo(Tooltip_DSPInfo_03)
-          .addStructureInfo(Tooltip_DSPInfo_04)
-          .addStructureInfo(Tooltip_DSPInfo_05)
-          .addStructureInfo(Tooltip_DSPInfo_06)
+          .addStructureInfo(Tooltip_DSPInfo_launch_01.toString())
+          .addStructureInfo(Tooltip_DSPInfo_launch_02.toString())
+          .addStructureInfo(Tooltip_DSPInfo_00.toString())
+          .addStructureInfo(Tooltip_DSPInfo_01.toString())
+          .addStructureInfo(Tooltip_DSPInfo_02.toString())
+          .addStructureInfo(Tooltip_DSPInfo_03.toString())
+          .addStructureInfo(Tooltip_DSPInfo_04.toString())
+          .addStructureInfo(Tooltip_DSPInfo_05.toString())
+          .addStructureInfo(Tooltip_DSPInfo_06.toString())
           .addStructureInfo(EnumChatFormatting.GOLD+"-----------------------------------------")
-            .addStructureInfo(Tooltip_DoNotNeedMaintenance)
-            .addInputBus(textUseBlueprint, 1)
-            .addOutputBus(textUseBlueprint, 1)
+            .addStructureInfo(Tooltip_DoNotNeedMaintenance.toString())
+            .addInputBus(textUseBlueprint.toString(), 1)
+            .addOutputBus(textUseBlueprint.toString(), 1)
             .toolTipFinisher(TextLocalization.ModName);
         return tt;
     }

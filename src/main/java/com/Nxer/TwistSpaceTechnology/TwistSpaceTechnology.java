@@ -11,12 +11,10 @@ import org.apache.logging.log4j.Logger;
 import com.Nxer.TwistSpaceTechnology.combat.items.ItemRegister;
 import com.Nxer.TwistSpaceTechnology.common.crop.CropLoader;
 import com.Nxer.TwistSpaceTechnology.config.Config;
-import com.Nxer.TwistSpaceTechnology.devTools.PathHelper;
 import com.Nxer.TwistSpaceTechnology.loader.MachineLoader;
 import com.Nxer.TwistSpaceTechnology.loader.MaterialLoader;
 import com.Nxer.TwistSpaceTechnology.loader.RecipeLoader;
 import com.Nxer.TwistSpaceTechnology.nei.NEIHandler;
-import com.Nxer.TwistSpaceTechnology.util.TextHandler;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
@@ -40,27 +38,6 @@ import gregtech.api.util.GT_Recipe;
     acceptedMinecraftVersions = "[1.7.10]")
 public class TwistSpaceTechnology {
 
-    /**
-     * <li>The signal of whether in Development Mode.
-     * <li>Keep care to set 'false' when dev complete.
-     */
-    public static final boolean isInDevMode = false;
-
-    /**
-     * The absolute Path of your workspace/resources folder.
-     * It will be replaced by {@link PathHelper#initResourceAbsolutePath}.
-     * If it not work correctly, please operate it manually and disable
-     * the{@link PathHelper#initResourceAbsolutePath}.
-     */
-    public static String DevResource = "";
-    /**
-     * <p>
-     * Set false when auto generation get problems and set DevResource manually.
-     * <p>
-     * Mind to reset these changes when dev complete.
-     */
-    public static final boolean useAutoGeneratingDevResourcePath = true;
-
     public static final String MODID = Tags.MODID;
     public static final String MOD_ID = Tags.MODID;
     public static final String MOD_NAME = Tags.MODNAME;
@@ -83,12 +60,6 @@ public class TwistSpaceTechnology {
     // GameRegistry." (Remove if not needed)
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        // process path
-        if (isInDevMode && useAutoGeneratingDevResourcePath) {
-            DevResource = PathHelper.initResourceAbsolutePath();
-        }
-        TextHandler.initLangMap(isInDevMode);
-
         proxy.preInit(event);
         MaterialLoader.load();// Load MaterialPool
         if (Config.activateCombatStats) {
@@ -115,7 +86,7 @@ public class TwistSpaceTechnology {
         proxy.postInit(event);
         RecipeLoader.loadRecipesPostInit();// To init GTCM Recipemap
 
-        TextHandler.serializeLangMap(isInDevMode);
+        // TextHandler.serializeLangMap(isInDevMode);
 
         CropLoader.register();
         CropLoader.registerBaseSeed();

@@ -398,27 +398,27 @@ public class GT_TileEntity_SpaceScaler extends GTCM_MultiMachineBase<GT_TileEnti
     @Override
     protected GT_Multiblock_Tooltip_Builder createTooltip() {
         final GT_Multiblock_Tooltip_Builder tt = new GT_Multiblock_Tooltip_Builder();
-        tt.addMachineType(TextLocalization.Tooltip_SpaceScaler_MachineType)
-            .addInfo(TextLocalization.Tooltip_SpaceScaler_00)
-            .addInfo(TextLocalization.Tooltip_SpaceScaler_01)
-            .addInfo(TextLocalization.Tooltip_SpaceScaler_02)
-            .addInfo(TextLocalization.Tooltip_SpaceScaler_03)
-            .addInfo(TextLocalization.Tooltip_SpaceScaler_04)
-            .addInfo(TextLocalization.Tooltip_SpaceScaler_05)
-            .addInfo(TextLocalization.Tooltip_SpaceScaler_06)
-            .addInfo(TextLocalization.Tooltip_SpaceScaler_07)
-            .addInfo(TextLocalization.textScrewdriverChangeMode)
+        tt.addMachineType(TextLocalization.Tooltip_SpaceScaler_MachineType.toString())
+            .addInfo(TextLocalization.Tooltip_SpaceScaler_00.toString())
+            .addInfo(TextLocalization.Tooltip_SpaceScaler_01.toString())
+            .addInfo(TextLocalization.Tooltip_SpaceScaler_02.toString())
+            .addInfo(TextLocalization.Tooltip_SpaceScaler_03.toString())
+            .addInfo(TextLocalization.Tooltip_SpaceScaler_04.toString())
+            .addInfo(TextLocalization.Tooltip_SpaceScaler_05.toString())
+            .addInfo(TextLocalization.Tooltip_SpaceScaler_06.toString())
+            .addInfo(TextLocalization.Tooltip_SpaceScaler_07.toString())
+            .addInfo(TextLocalization.textScrewdriverChangeMode.toString())
             .addSeparator()
-            .addInfo(TextLocalization.StructureTooComplex)
-            .addInfo(TextLocalization.BLUE_PRINT_INFO)
+            .addInfo(TextLocalization.StructureTooComplex.toString())
+            .addInfo(TextLocalization.BLUE_PRINT_INFO.toString())
             .beginStructureBlock(31, 31, 32, false)
-            .addInputHatch(TextLocalization.textUseBlueprint, 1)
-            .addOutputHatch(TextLocalization.textUseBlueprint, 1)
-            .addInputBus(TextLocalization.textUseBlueprint, 1)
-            .addOutputBus(TextLocalization.textUseBlueprint, 1)
-            .addMaintenanceHatch(TextLocalization.textUseBlueprint, 1)
-            .addEnergyHatch(TextLocalization.textUseBlueprint, 2)
-            .toolTipFinisher(TextLocalization.ModName);
+            .addInputHatch(TextLocalization.textUseBlueprint.toString(), 1)
+            .addOutputHatch(TextLocalization.textUseBlueprint.toString(), 1)
+            .addInputBus(TextLocalization.textUseBlueprint.toString(), 1)
+            .addOutputBus(TextLocalization.textUseBlueprint.toString(), 1)
+            .addMaintenanceHatch(TextLocalization.textUseBlueprint.toString(), 1)
+            .addEnergyHatch(TextLocalization.textUseBlueprint.toString(), 2)
+            .toolTipFinisher(TextLocalization.ModName.toString());
         return tt;
     }
 

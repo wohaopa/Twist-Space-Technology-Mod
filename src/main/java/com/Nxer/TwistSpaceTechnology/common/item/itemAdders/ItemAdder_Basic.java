@@ -8,8 +8,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-import com.Nxer.TwistSpaceTechnology.util.TextHandler;
-
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -19,13 +17,13 @@ public class ItemAdder_Basic extends Item {
 
     private String unlocalizedName;
 
-    public ItemAdder_Basic(String Name, String MetaName, CreativeTabs aCreativeTabs/* , String aIconPath */) {
+    public ItemAdder_Basic(/* String Name, */String MetaName, CreativeTabs aCreativeTabs/* , String aIconPath */) {
         super();
         this.setHasSubtypes(true);
         this.setMaxDamage(0);
         this.setCreativeTab(aCreativeTabs);
         this.unlocalizedName = MetaName;
-        TextHandler.texter(Name, this.unlocalizedName + ".name");
+        // TextHandler.texter(Name, this.unlocalizedName + ".name");
 
     }
 

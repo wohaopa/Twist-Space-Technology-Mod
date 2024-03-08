@@ -584,26 +584,26 @@ public class GT_TileEntity_MegaBrickedBlastFurnace extends GTCM_MultiMachineBase
     @Override
     protected GT_Multiblock_Tooltip_Builder createTooltip() {
         final GT_Multiblock_Tooltip_Builder tt = new GT_Multiblock_Tooltip_Builder();
-        tt.addMachineType(TextLocalization.Tooltip_MegaBrickedBlastFurnace_MachineType)
-            .addInfo(TextLocalization.Tooltip_MegaBrickedBlastFurnace_Controller)
-            .addInfo(TextLocalization.Tooltip_MegaBrickedBlastFurnace_00)
-            .addInfo(TextLocalization.Tooltip_MegaBrickedBlastFurnace_01)
-            .addInfo(TextLocalization.Tooltip_MegaBrickedBlastFurnace_02)
-            .addInfo(TextLocalization.Tooltip_MegaBrickedBlastFurnace_03)
-            .addInfo(TextLocalization.Tooltip_MegaBrickedBlastFurnace_04)
-            .addInfo(TextLocalization.Tooltip_MegaBrickedBlastFurnace_05)
-            .addInfo(TextLocalization.Tooltip_MegaBrickedBlastFurnace_06)
-            .addInfo(TextLocalization.Tooltip_MegaBrickedBlastFurnace_07)
-            .addInfo(TextLocalization.Tooltip_MegaBrickedBlastFurnace_08)
-            .addInfo(TextLocalization.Tooltip_MegaBrickedBlastFurnace_09)
+        tt.addMachineType(TextLocalization.Tooltip_MegaBrickedBlastFurnace_MachineType.toString())
+            .addInfo(TextLocalization.Tooltip_MegaBrickedBlastFurnace_Controller.toString())
+            .addInfo(TextLocalization.Tooltip_MegaBrickedBlastFurnace_00.toString())
+            .addInfo(TextLocalization.Tooltip_MegaBrickedBlastFurnace_01.toString())
+            .addInfo(TextLocalization.Tooltip_MegaBrickedBlastFurnace_02.toString())
+            .addInfo(TextLocalization.Tooltip_MegaBrickedBlastFurnace_03.toString())
+            .addInfo(TextLocalization.Tooltip_MegaBrickedBlastFurnace_04.toString())
+            .addInfo(TextLocalization.Tooltip_MegaBrickedBlastFurnace_05.toString())
+            .addInfo(TextLocalization.Tooltip_MegaBrickedBlastFurnace_06.toString())
+            .addInfo(TextLocalization.Tooltip_MegaBrickedBlastFurnace_07.toString())
+            .addInfo(TextLocalization.Tooltip_MegaBrickedBlastFurnace_08.toString())
+            .addInfo(TextLocalization.Tooltip_MegaBrickedBlastFurnace_09.toString())
             .addPollutionAmount(getPollutionPerSecond(null))
-            .addInfo(TextLocalization.StructureTooComplex)
-            .addInfo(TextLocalization.BLUE_PRINT_INFO)
+            .addInfo(TextLocalization.StructureTooComplex.toString())
+            .addInfo(TextLocalization.BLUE_PRINT_INFO.toString())
             .addSeparator()
-            .addStructureInfo(TextLocalization.textMegaBrickedBlastFurnaceTips)
-            .addInputBus(TextLocalization.textMegaBrickedBlastFurnaceLocation, 1)
-            .addOutputBus(TextLocalization.textMegaBrickedBlastFurnaceLocation, 1)
-            .toolTipFinisher(TextLocalization.ModName);
+            .addStructureInfo(TextLocalization.textMegaBrickedBlastFurnaceTips.toString())
+            .addInputBus(TextLocalization.textMegaBrickedBlastFurnaceLocation.toString(), 1)
+            .addOutputBus(TextLocalization.textMegaBrickedBlastFurnaceLocation.toString(), 1)
+            .toolTipFinisher(TextLocalization.ModName.toString());
         return tt;
     }
 

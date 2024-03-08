@@ -84,9 +84,9 @@ public class TST_DeployedNanoCore extends GTCM_MultiMachineBase<TST_DeployedNano
         super.getWailaBody(itemStack, currentTip, accessor, config);
         final NBTTagCompound tag = accessor.getNBTData();
         if (tag.getBoolean("isWirelessMode")) {
-            currentTip.add(EnumChatFormatting.LIGHT_PURPLE + TextLocalization.Waila_WirelessMode);
+            currentTip.add(EnumChatFormatting.LIGHT_PURPLE + TextLocalization.Waila_WirelessMode.toString());
             currentTip.add(
-                EnumChatFormatting.AQUA + TextLocalization.Waila_CurrentEuCost
+                EnumChatFormatting.AQUA + TextLocalization.Waila_CurrentEuCost.toString()
                     + EnumChatFormatting.RESET
                     + ": "
                     + EnumChatFormatting.GOLD
@@ -4614,25 +4614,25 @@ public class TST_DeployedNanoCore extends GTCM_MultiMachineBase<TST_DeployedNano
     @Override
     protected GT_Multiblock_Tooltip_Builder createTooltip() {
         final GT_Multiblock_Tooltip_Builder tt = new GT_Multiblock_Tooltip_Builder();
-        tt.addMachineType(TextLocalization.Tooltip_DeployedNanoCore_MachineType)
-            .addInfo(TextLocalization.Tooltip_DeployedNanoCore_Controller)
-            .addInfo(TextLocalization.Tooltip_DeployedNanoCore_01)
-            .addInfo(TextLocalization.Tooltip_DeployedNanoCore_02)
-            .addInfo(TextLocalization.Tooltip_DeployedNanoCore_03)
-            .addInfo(TextLocalization.Tooltip_DeployedNanoCore_04)
+        tt.addMachineType(TextLocalization.Tooltip_DeployedNanoCore_MachineType.toString())
+            .addInfo(TextLocalization.Tooltip_DeployedNanoCore_Controller.toString())
+            .addInfo(TextLocalization.Tooltip_DeployedNanoCore_01.toString())
+            .addInfo(TextLocalization.Tooltip_DeployedNanoCore_02.toString())
+            .addInfo(TextLocalization.Tooltip_DeployedNanoCore_03.toString())
+            .addInfo(TextLocalization.Tooltip_DeployedNanoCore_04.toString())
             .addSeparator()
-            .addInfo(TextLocalization.StructureTooComplex)
-            .addInfo(TextLocalization.BLUE_PRINT_INFO)
-            .addStructureInfo(TextLocalization.Tooltips_JoinWirelessNetWithoutEnergyHatch)
-            .addStructureInfo(TextLocalization.Tooltip_DoNotNeedMaintenance)
+            .addInfo(TextLocalization.StructureTooComplex.toString())
+            .addInfo(TextLocalization.BLUE_PRINT_INFO.toString())
+            .addStructureInfo(TextLocalization.Tooltips_JoinWirelessNetWithoutEnergyHatch.toString())
+            .addStructureInfo(TextLocalization.Tooltip_DoNotNeedMaintenance.toString())
             .beginStructureBlock(81, 167, 81, false)
-            .addController(TextLocalization.textUseBlueprint)
-            .addInputHatch(TextLocalization.textUseBlueprint, 1)
-            .addOutputHatch(TextLocalization.textUseBlueprint, 1)
-            .addInputBus(TextLocalization.textUseBlueprint, 1)
-            .addOutputBus(TextLocalization.textUseBlueprint, 1)
-            .addEnergyHatch(TextLocalization.textUseBlueprint, 1)
-            .toolTipFinisher(TextLocalization.ModName);
+            .addController(TextLocalization.textUseBlueprint.toString())
+            .addInputHatch(TextLocalization.textUseBlueprint.toString(), 1)
+            .addOutputHatch(TextLocalization.textUseBlueprint.toString(), 1)
+            .addInputBus(TextLocalization.textUseBlueprint.toString(), 1)
+            .addOutputBus(TextLocalization.textUseBlueprint.toString(), 1)
+            .addEnergyHatch(TextLocalization.textUseBlueprint.toString(), 1)
+            .toolTipFinisher(TextLocalization.ModName.toString());
         return tt;
     }
 

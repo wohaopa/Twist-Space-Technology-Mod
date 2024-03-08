@@ -269,24 +269,24 @@ public class GT_TileEntity_PhysicalFormSwitcher extends GTCM_MultiMachineBase<GT
     @Override
     protected GT_Multiblock_Tooltip_Builder createTooltip() {
         final GT_Multiblock_Tooltip_Builder tt = new GT_Multiblock_Tooltip_Builder();
-        tt.addMachineType(TextLocalization.Tooltip_PhysicalFormSwitcher_MachineType)
-            .addInfo(TextLocalization.Tooltip_PhysicalFormSwitcher_00)
-            .addInfo(TextLocalization.Tooltip_PhysicalFormSwitcher_01)
-            .addInfo(TextLocalization.Tooltip_PhysicalFormSwitcher_02)
-            .addInfo(TextLocalization.Tooltip_PhysicalFormSwitcher_03)
-            .addInfo(TextLocalization.Tooltip_PhysicalFormSwitcher_04)
-            .addInfo(TextLocalization.Tooltip_PhysicalFormSwitcher_05)
+        tt.addMachineType(TextLocalization.Tooltip_PhysicalFormSwitcher_MachineType.toString())
+            .addInfo(TextLocalization.Tooltip_PhysicalFormSwitcher_00.toString())
+            .addInfo(TextLocalization.Tooltip_PhysicalFormSwitcher_01.toString())
+            .addInfo(TextLocalization.Tooltip_PhysicalFormSwitcher_02.toString())
+            .addInfo(TextLocalization.Tooltip_PhysicalFormSwitcher_03.toString())
+            .addInfo(TextLocalization.Tooltip_PhysicalFormSwitcher_04.toString())
+            .addInfo(TextLocalization.Tooltip_PhysicalFormSwitcher_05.toString())
             .addSeparator()
-            .addInfo(TextLocalization.StructureTooComplex)
-            .addInfo(TextLocalization.BLUE_PRINT_INFO)
+            .addInfo(TextLocalization.StructureTooComplex.toString())
+            .addInfo(TextLocalization.BLUE_PRINT_INFO.toString())
             .beginStructureBlock(15, 20, 15, false)
-            .addInputHatch(TextLocalization.textAnyCasing, 1)
-            .addOutputHatch(TextLocalization.textAnyCasing, 1)
-            .addInputBus(TextLocalization.textAnyCasing, 1)
-            .addOutputBus(TextLocalization.textAnyCasing, 1)
-            .addMaintenanceHatch(TextLocalization.textAnyCasing, 1)
-            .addEnergyHatch(TextLocalization.textAnyCasing, 1)
-            .toolTipFinisher(TextLocalization.ModName);
+            .addInputHatch(TextLocalization.textAnyCasing.toString(), 1)
+            .addOutputHatch(TextLocalization.textAnyCasing.toString(), 1)
+            .addInputBus(TextLocalization.textAnyCasing.toString(), 1)
+            .addOutputBus(TextLocalization.textAnyCasing.toString(), 1)
+            .addMaintenanceHatch(TextLocalization.textAnyCasing.toString(), 1)
+            .addEnergyHatch(TextLocalization.textAnyCasing.toString(), 1)
+            .toolTipFinisher(TextLocalization.ModName.toString());
         return tt;
     }
 

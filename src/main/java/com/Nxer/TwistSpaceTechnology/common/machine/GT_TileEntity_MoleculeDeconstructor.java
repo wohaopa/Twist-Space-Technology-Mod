@@ -4,19 +4,6 @@ import static com.Nxer.TwistSpaceTechnology.common.machine.ValueEnum.Mode_Defaul
 import static com.Nxer.TwistSpaceTechnology.common.machine.ValueEnum.Parallel_PerPiece_MoleculeDeconstructor;
 import static com.Nxer.TwistSpaceTechnology.common.machine.ValueEnum.PieceAmount_EnablePerfectOverclock_MoleculeDeconstructor;
 import static com.Nxer.TwistSpaceTechnology.common.machine.ValueEnum.SpeedBonus_MultiplyPerTier_MoleculeDeconstructor;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.BLUE_PRINT_INFO;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.ModName;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.StructureTooComplex;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_MoleculeDeconstructor_00;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_MoleculeDeconstructor_01;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_MoleculeDeconstructor_02;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_MoleculeDeconstructor_03;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_MoleculeDeconstructor_04;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_MoleculeDeconstructor_05;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.Tooltip_MoleculeDeconstructor_MachineType;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.textFrontBottom;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.textScrewdriverChangeMode;
-import static com.Nxer.TwistSpaceTechnology.util.TextLocalization.textUseBlueprint;
 import static com.github.technus.tectech.thing.casing.TT_Container_Casings.sBlockCasingsTT;
 import static com.gtnewhorizon.structurelib.structure.StructureUtility.ofBlock;
 import static com.gtnewhorizon.structurelib.structure.StructureUtility.withChannel;
@@ -42,6 +29,7 @@ import net.minecraft.util.StatCollector;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import com.Nxer.TwistSpaceTechnology.common.machine.multiMachineClasses.GTCM_MultiMachineBase;
+import com.Nxer.TwistSpaceTechnology.util.TextLocalization;
 import com.github.bartimaeusnek.bartworks.API.BorosilicateGlass;
 import com.gtnewhorizon.structurelib.alignment.constructable.IConstructable;
 import com.gtnewhorizon.structurelib.alignment.constructable.ISurvivalConstructable;
@@ -429,25 +417,25 @@ I -> ofFrame...();
     @Override
     protected GT_Multiblock_Tooltip_Builder createTooltip() {
         final GT_Multiblock_Tooltip_Builder tt = new GT_Multiblock_Tooltip_Builder();
-        tt.addMachineType(Tooltip_MoleculeDeconstructor_MachineType)
-            .addInfo(Tooltip_MoleculeDeconstructor_00)
-            .addInfo(Tooltip_MoleculeDeconstructor_01)
-            .addInfo(Tooltip_MoleculeDeconstructor_02)
-            .addInfo(Tooltip_MoleculeDeconstructor_03)
-            .addInfo(Tooltip_MoleculeDeconstructor_04)
-            .addInfo(Tooltip_MoleculeDeconstructor_05)
-            .addInfo(textScrewdriverChangeMode)
+        tt.addMachineType(TextLocalization.Tooltip_MoleculeDeconstructor_MachineType.toString())
+            .addInfo(TextLocalization.Tooltip_MoleculeDeconstructor_00.toString())
+            .addInfo(TextLocalization.Tooltip_MoleculeDeconstructor_01.toString())
+            .addInfo(TextLocalization.Tooltip_MoleculeDeconstructor_02.toString())
+            .addInfo(TextLocalization.Tooltip_MoleculeDeconstructor_03.toString())
+            .addInfo(TextLocalization.Tooltip_MoleculeDeconstructor_04.toString())
+            .addInfo(TextLocalization.Tooltip_MoleculeDeconstructor_05.toString())
+            .addInfo(TextLocalization.textScrewdriverChangeMode.toString())
             .addSeparator()
-            .addInfo(StructureTooComplex)
-            .addInfo(BLUE_PRINT_INFO)
-            .addController(textFrontBottom)
-            .addInputHatch(textUseBlueprint, 4)
-            .addOutputHatch(textUseBlueprint, 2)
-            .addInputBus(textUseBlueprint, 4)
-            .addOutputBus(textUseBlueprint, 2)
-            .addMaintenanceHatch(textUseBlueprint, 3)
-            .addEnergyHatch(textUseBlueprint, 1)
-            .toolTipFinisher(ModName);
+            .addInfo(TextLocalization.StructureTooComplex.toString())
+            .addInfo(TextLocalization.BLUE_PRINT_INFO.toString())
+            .addController(TextLocalization.textFrontBottom.toString())
+            .addInputHatch(TextLocalization.textUseBlueprint.toString(), 4)
+            .addOutputHatch(TextLocalization.textUseBlueprint.toString(), 2)
+            .addInputBus(TextLocalization.textUseBlueprint.toString(), 4)
+            .addOutputBus(TextLocalization.textUseBlueprint.toString(), 2)
+            .addMaintenanceHatch(TextLocalization.textUseBlueprint.toString(), 3)
+            .addEnergyHatch(TextLocalization.textUseBlueprint.toString(), 1)
+            .toolTipFinisher(TextLocalization.ModName.toString());
         return tt;
     }
 
